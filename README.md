@@ -1,2 +1,0 @@
-# DSYS
-Drake's System
