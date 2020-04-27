@@ -1,7 +1,5 @@
 using System;
 
-int fishstick; 
-
 class app {
 	
 	static void Main(string[] args) {
