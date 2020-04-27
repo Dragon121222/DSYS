@@ -2,11 +2,11 @@
 // Written By Daniel Drake 
 //****************************************************************************************************************
 
-#ifndef __DSERVER__
-#define __DSERVER__
+#ifndef __DSERVERTCP__
+#define __DSERVERTCP__
 
-#ifndef __DOBJ__
-#include "../DOBJ/DOBJ.h"
+#ifndef __DNETWORK__
+#include "../DNETWORK/DNETWORK.h"
 #endif
 
 #include <stdio.h>
@@ -18,35 +18,37 @@
 #include <netinet/in.h>
 #include <iostream>
 
-class DSERVER : public DOBJ {
+class DSERVERTCP : public DNETWORK {
 
     public: 
 
-        DSERVER(); 
-        ~DSERVER(); 
+        // Constructor / Deconstructors
+        DSERVERTCP(); 
+        ~DSERVERTCP(); 
 
-        void error(const char *msg); 
-        void openSocket(int domain, int type, int protocol); 
-        void setPortNumber(int portNumber); 
-        void populateSocketStruct(int domain); 
-        void bindSocketAndStructure(); 
-        void listenAndAccept(); 
+        // Virtual function override
+        void defaultSetup(); 
+        void populateSocketStruct(int domain);         
         void closeConnection(); 
+
         void readMsg(); 
         void sendMsg(std::string msg); 
-        void establishMsgSize(int size); 
 
         void demo(); 
 
+        // Class specific functions
+
+        void listenAndAccept(); 
+        void establishMsgSize(int size); 
 
     private: 
-
+/*
         int sockfd, newsockfd, portno;
         socklen_t clilen;
         char buffer[256];
         struct sockaddr_in serv_addr, cli_addr;
         int n;
-
+*/
 
 
 

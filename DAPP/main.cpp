@@ -39,18 +39,28 @@
 #include "../DSRC/DKINECT/DKINECT.h"
 #endif
 
-#ifndef __DSERVER__
-#include "../DSRC/DSERVER/DSERVER.h"
+#ifndef __DNETWORK__
+#include "../DSRC/DNETWORK/DNETWORK.h"
 #endif
 
-#ifndef __DCLIENT__
-#include "../DSRC/DCLIENT/DCLIENT.h"
+#ifndef __DSERVERTCP__
+#include "../DSRC/DSERVERTCP/DSERVERTCP.h"
+#endif
+
+#ifndef __DCLIENTTCP__
+#include "../DSRC/DCLIENTTCP/DCLIENTTCP.h"
+#endif
+
+#ifndef __DSERVERUDP__
+#include "../DSRC/DSERVERUDP/DSERVERUDP.h"
+#endif
+
+#ifndef __DCLIENTUDP__
+#include "../DSRC/DCLIENTUDP/DCLIENTUDP.h"
 #endif
 
 int argcCOPY;
 char** argvCOPY; 
-
-
 
 void DGLUTDEMO(GtkButton * widget, gpointer ptr) { 
 
@@ -201,6 +211,8 @@ void DKINECT_DEMO(GtkButton * widget, gpointer ptr) {
 
 }
 
+/*
+
 void DKINECT_NETWORK_STREAM(GtkButton * widget, gpointer ptr) { 
 
     static std::vector<uint8_t> mark(640);
@@ -211,7 +223,7 @@ void DKINECT_NETWORK_STREAM(GtkButton * widget, gpointer ptr) {
     device = &freenect.createDevice<MyFreenectDevice>(0);
 
     DKINECT * c = new DKINECT(); 
-    DCLIENT * client = new DCLIENT(); 
+    DCLIENTTCP * client = new DCLIENTTCP(); 
     client->setPortNumber(4444);
     client->openSocket(AF_INET, SOCK_STREAM, 0); 
     client->getServer("192.168.0.2"); 
@@ -254,18 +266,20 @@ void DKINECT_NETWORK_STREAM(GtkButton * widget, gpointer ptr) {
 
 }
 
-void DCLIENT_DSERVER_DEMO(GtkButton * widget, gpointer ptr) {
+*/
+
+void DCLIENTTCP_DSERVERTCP_DEMO(GtkButton * widget, gpointer ptr) {
  
 	std::cout << "Enter s to launch server, c to launch client\n"; 
 	char x; 
 	std::cin >> x; 
 
 	if(x == 'c') { 
-		DCLIENT * client = new DCLIENT(); 
+		DCLIENTTCP * client = new DCLIENTTCP(); 
 		client->demo(); 
 		delete(client); 
 	} else if(x == 's') { 
-		DSERVER * server = new DSERVER(); 
+		DSERVERTCP * server = new DSERVERTCP(); 
 		server->demo(); 
 		delete(server); 
 	} else { 
@@ -274,13 +288,35 @@ void DCLIENT_DSERVER_DEMO(GtkButton * widget, gpointer ptr) {
 
 }
 
-void DCLIENT_UNITY_CONNECT(GtkButton * widget, gpointer ptr) { 
+void DCLIENTUDP_DSERVERUDP_DEMO(GtkButton * widget, gpointer ptr) {
+ 
+    std::cout << "Enter s to launch server, c to launch client\n"; 
+    char x; 
+    std::cin >> x; 
 
-	DCLIENT * client = new DCLIENT(); 
+    if(x == 'c') { 
+        DCLIENTUDP * client = new DCLIENTUDP(); 
+        client->demo(); 
+        delete(client); 
+    } else if(x == 's') { 
+        DSERVERUDP * server = new DSERVERUDP(); 
+        server->demo(); 
+        delete(server); 
+    } else { 
+        std::cout << "Error\n"; 
+    }
+
+}
+
+/*
+void DCLIENTTCP_UNITY_CONNECT(GtkButton * widget, gpointer ptr) { 
+
+	DCLIENTTCP * client = new DCLIENTTCP(); 
 	client->unityClientExample(); 
 	delete(client); 
 
 }
+*/
 
 // Callback method prototypes
 void defaultCallback(GtkButton * widget, gpointer ptr); 
@@ -303,12 +339,13 @@ int main(int argc,  char** argv) {
 	std::cout << "\t\tCalling Demo Window\n"; 
 
 
-	dwindow->addWidget("DCLIENT_UNITY_CONNECT","button_with_label",0,0,&DCLIENT_UNITY_CONNECT,"clicked"); 
-	dwindow->addWidget("DCLIENT_DSERVER_DEMO","button_with_label",1,0,&DCLIENT_DSERVER_DEMO,"clicked"); 
+//	dwindow->addWidget("DCLIENTTCP_UNITY_CONNECT","button_with_label",0,0,&DCLIENTTCP_UNITY_CONNECT,"clicked"); 
+    dwindow->addWidget("DCLIENTUDP_DSERVERUDP_DEMO","button_with_label",0,0,&DCLIENTUDP_DSERVERUDP_DEMO,"clicked"); 
+	dwindow->addWidget("DCLIENTTCP_DSERVERTCP_DEMO","button_with_label",1,0,&DCLIENTTCP_DSERVERTCP_DEMO,"clicked"); 
 	dwindow->addWidget("DGTKDEMO","button_with_label",2,0,&DGTKDEMO,"clicked"); 
 	dwindow->addWidget("DGLUTDEMO","button_with_label",3,0,&DGLUTDEMO,"clicked"); 
 	dwindow->addWidget("DKINECT_DEMO","button_with_label",4,0,&DKINECT_DEMO,"clicked"); 
-    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
+//    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
     dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
 
 	dwindow->constructWindow(); 
