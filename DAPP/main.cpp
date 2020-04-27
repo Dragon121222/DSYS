@@ -321,10 +321,9 @@ void DCLIENTTCP_UNITY_CONNECT(GtkButton * widget, gpointer ptr) {
 // Callback method prototypes
 void defaultCallback(GtkButton * widget, gpointer ptr); 
 
+
 #define __DAPP_MANAGER_SYSTEM__	
-
 #ifdef __DAPP_MANAGER_SYSTEM__	
-
 int main(int argc,  char** argv) { 
 
 	argcCOPY = argc;
@@ -358,7 +357,6 @@ int main(int argc,  char** argv) {
 
 	return 0;
 }
-
 #endif
 
 // Callbacks
