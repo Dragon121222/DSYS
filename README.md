@@ -6,7 +6,7 @@ There is some missing code, specifically the kinect driver stuff, but I didn't w
 I'll make a script to add it later. 
 
 This is an OOP system. 
-The DOBJ is the parent class which all the other classes inherit from. 
+The DOBJ is the base class which all the other classes inherit from. 
 It will hold the general purpose methods and variables. 
 
 The DAPP holds the main functions and code to run various apps defined throughout the system. 
