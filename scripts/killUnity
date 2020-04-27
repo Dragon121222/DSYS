@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ps -x | grep -i unity | awk '{print $1}' >> file
+
+filename='file'
+echo Start
+while read p; do 
+    kill -9 $p
+done < $filename
+
+rm -f $filename

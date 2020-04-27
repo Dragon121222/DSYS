@@ -1,0 +1,11 @@
+// Add all files to the staging area
+git add *
+
+// Saves changes to local repository
+git commit
+
+// Saves changes to remote repository
+git push
+
+// Update local repository from remote repository
+git pull origin master
