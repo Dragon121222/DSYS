@@ -36,14 +36,14 @@ public class DCLIENTTCP : DOBJ {
 	    client.Close();   	
     }
 
-	public void test() { 
+	new public void demo() { 
 		defaultSetup(); 
 		sendMsg(Encoding.ASCII.GetBytes("Hello there")); 
 		readMsg(); 
 		close(); 
 	}
 
-	public void stressTest() { 
+	public void stressDemo() { 
 		string msg = null; 
 		defaultSetup(); 
 		for(int i = 0; i < 5000; i++) { 

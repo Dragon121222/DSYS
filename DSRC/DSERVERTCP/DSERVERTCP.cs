@@ -45,7 +45,7 @@ public class DSERVERTCP : DOBJ {
 		server.Stop();
 	}
 
-	public void test() { 
+	new public void demo() { 
 		defaultSetup(); 
 		startListening(); 
 		readMsg(); 
@@ -53,7 +53,7 @@ public class DSERVERTCP : DOBJ {
 		close(); 
 	}
 
-	public void stressTest() { 
+	public void stressDemo() { 
 		string msg = "Received"; 
 		defaultSetup(); 
 		startListening(); 

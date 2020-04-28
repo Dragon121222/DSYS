@@ -6,38 +6,35 @@ class app {
 
 		if (args.Length == 0) {
 			Console.WriteLine("Hello world.");
-
 		} else { 
 			if(args[0] == "UDPclientDemo") { 
-				Console.WriteLine("Starting UDP client");
+				Console.WriteLine("Starting UDP client demo");
 				DCLIENTUDP client = new DCLIENTUDP(); 
-				client.test(); 
-
+				client.demo(); 
 			} else if(args[0] == "UDPserverDemo") { 
-				Console.WriteLine("Starting UDP server");
+				Console.WriteLine("Starting UDP server demo");
 				DSERVERUDP server = new DSERVERUDP(); 
-				server.test(); 
-
+				server.demo(); 
 			} else if(args[0] == "TCPserverDemo") { 
-				Console.WriteLine("Starting TCP server");
+				Console.WriteLine("Starting TCP server demo");
 				DSERVERTCP server = new DSERVERTCP(); 
-				server.test(); 
-
+				server.demo(); 
 			} else if(args[0] == "TCPclientDemo") { 
-				Console.WriteLine("Starting TCP client");
+				Console.WriteLine("Starting TCP client demo");
 				DCLIENTTCP client = new DCLIENTTCP(); 
-				client.test(); 
-
-			} else if(args[0] == "TCPserverStressTest") { 
-				Console.WriteLine("Starting TCP server");
+				client.demo(); 
+			} else if(args[0] == "TCPserverStressDemo") { 
+				Console.WriteLine("Starting TCP server demo");
 				DSERVERTCP server = new DSERVERTCP(); 
-				server.stressTest(); 
-
-			} else if(args[0] == "TCPclientStressTest") { 
-				Console.WriteLine("Starting TCP client");
+				server.stressDemo(); 
+			} else if(args[0] == "TCPclientStressDemo") { 
+				Console.WriteLine("Starting TCP client demo");
 				DCLIENTTCP client = new DCLIENTTCP(); 
-				client.stressTest(); 
-
+				client.stressDemo(); 
+			} else if(args[0] == "threadDemo") { 
+				Console.WriteLine("Starting thread demo");
+				DTHREAD thred = new DTHREAD(); 
+								
 			}
 
 		}
