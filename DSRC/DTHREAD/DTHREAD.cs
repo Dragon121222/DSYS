@@ -14,6 +14,7 @@ public class DTHREAD : DOBJ {
 	}
 
 	new public void demo() { 
+		defaultSetup(); 
 		Thread thread = new Thread(new ThreadStart(runDemo));
 		thread.Start();
 	}

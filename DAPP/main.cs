@@ -33,8 +33,12 @@ class app {
 				client.stressDemo(); 
 			} else if(args[0] == "threadDemo") { 
 				Console.WriteLine("Starting thread demo");
-				DTHREAD thred = new DTHREAD(); 
-								
+				DTHREAD thread = new DTHREAD(); 
+				thread.demo(); 
+			} else if(args[0] == "fileDemo") { 
+				Console.WriteLine("Starting file demo");
+				DFILE file = new DFILE(); 
+				file.demo(); 
 			}
 
 		}
