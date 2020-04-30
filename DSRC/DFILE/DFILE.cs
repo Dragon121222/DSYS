@@ -48,7 +48,7 @@ class DFILE : DOBJ {
 
         DateTime localDate = DateTime.Now;
         var culture = new CultureInfo("en-US");
-        string date = (localDate.ToString(culture)).Replace(" ", "_")
+        string date = (localDate.ToString(culture)).Replace(" ", "_"); 
 
         setPath("DLOG/Demo.log"); 
         createFile(); 

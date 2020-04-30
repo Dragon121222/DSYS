@@ -13,7 +13,7 @@ public class DOBJ {
         string date = (localDate.ToString(culture)).Replace(" ", "_"); 
 
 		logger = new DFILE(); 
-		logger.setPath("DLOG." + name + "." + date + ".log")
+		logger.setPath("DLOG." + name + "." + date + ".log"); 
 		logger.createFile(); 
 
 	}
