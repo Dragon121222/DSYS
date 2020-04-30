@@ -12,3 +12,6 @@ It will hold the general purpose methods and variables.
 The DAPP holds the main functions and code to run various apps defined throughout the system. 
 By organizing my code this way and not having indivaual projects per app, 
 I have a centralized system and no need to rebuild stuff like the cmakelist files which would be unique to each project. 
+
+Turns out I may be using this as more than just a system to do specific things. 
+It's more like a general way which I am organizing information. 
