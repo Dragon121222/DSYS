@@ -12,7 +12,7 @@ public class DCLIENTTCP : DOBJ {
 	TcpClient client; 
 	NetworkStream stream; 
 
-    public void defaultSetup() { 
+    new public void defaultSetup() { 
 	    serverPort = 50000;
 		serverIP = "192.168.0.3"; 
 	    client = new TcpClient(serverIP, serverPort);

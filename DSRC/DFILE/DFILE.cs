@@ -7,7 +7,7 @@ class DFILE : DOBJ {
     string path; 
     StreamWriter sw; 
 
-    public void defaultSetup() { 
+    new public void defaultSetup() { 
         setPath("DLOG/D.log"); 
     }
 

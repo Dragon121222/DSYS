@@ -87,6 +87,10 @@ void DGTKDEMO(GtkButton * widget, gpointer ptr) {
 Freenect::Freenect freenect;
 MyFreenectDevice* device;
 
+static std::vector<std::vector<uint8_t>> videoRGB;
+static std::vector<std::vector<uint16_t>> videoDEPTH;    
+bool record = false; 
+
 void demoDrawGLScene() {
 
     static std::vector<uint8_t> rgb(640*480*3);
@@ -94,6 +98,11 @@ void demoDrawGLScene() {
 
     device->getRGB(rgb);
     device->getDepth(depth);
+
+    if(record) { 
+        videoRGB.push_back(rgb); 
+        videoDEPTH.push_back(depth); 
+    }
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
@@ -177,6 +186,43 @@ void DKINECT_UNIT_TESTS(GtkButton * widget, gpointer ptr) {
 } 
 
 void DKINECT_DEMO(GtkButton * widget, gpointer ptr) {
+
+    device = &freenect.createDevice<MyFreenectDevice>(0);
+    device->startVideo();
+    device->startDepth();
+    
+    glutInit(&argcCOPY, argvCOPY);
+
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+    glutInitWindowSize(640, 480);
+    glutInitWindowPosition(0, 0);
+
+    window = glutCreateWindow("LibFreenect");
+    glClearColor(0.45f, 0.45f, 0.45f, 0.0f);
+
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_ALPHA_TEST);
+    glAlphaFunc(GL_GREATER, 0.0f);
+
+    glMatrixMode(GL_PROJECTION);
+    gluPerspective(50.0, 1.0, 900.0, 11000.0);
+        
+    glutDisplayFunc(&demoDrawGLScene);
+    glutIdleFunc(&idleGLScene);
+    glutReshapeFunc(&resizeGLScene);
+    glutKeyboardFunc(&demokeyPressed);
+    glutMotionFunc(&mouseMoved);
+    glutMouseFunc(&mouseButtonPressed);
+
+    printInfo();
+
+    glutMainLoop();
+
+}
+
+void DKINECT_DEMO_RECORD(GtkButton * widget, gpointer ptr) {
+
+    record = true; 
 
     device = &freenect.createDevice<MyFreenectDevice>(0);
     device->startVideo();
@@ -344,6 +390,7 @@ int main(int argc,  char** argv) {
 	dwindow->addWidget("DGTKDEMO","button_with_label",2,0,&DGTKDEMO,"clicked"); 
 	dwindow->addWidget("DGLUTDEMO","button_with_label",3,0,&DGLUTDEMO,"clicked"); 
 	dwindow->addWidget("DKINECT_DEMO","button_with_label",4,0,&DKINECT_DEMO,"clicked"); 
+    dwindow->addWidget("DKINECT_DEMO_RECORD","button_with_label",4,0,&DKINECT_DEMO_RECORD,"clicked");     
 //    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
     dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
 

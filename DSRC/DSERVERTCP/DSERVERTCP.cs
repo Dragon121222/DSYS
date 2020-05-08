@@ -15,7 +15,7 @@ public class DSERVERTCP : DOBJ {
 	TcpClient client; 
 	NetworkStream stream; 
 
-	public void defaultSetup() { 
+	new public void defaultSetup() { 
 		serverPort = 50000; 
 		serverIP = IPAddress.Parse("192.168.0.3"); 
 		server = new TcpListener(serverIP, serverPort);

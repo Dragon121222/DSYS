@@ -9,7 +9,7 @@ public class DTHREAD : DOBJ {
 
 	public DOBJ obj; 
 
-	public void defaultSetup() { 
+	new public void defaultSetup() { 
 		obj = new DOBJ(); 
 	}
 

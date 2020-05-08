@@ -39,7 +39,11 @@ class app {
 				Console.WriteLine("Starting file demo");
 				DFILE file = new DFILE(); 
 				file.demo(); 
-			}
+			} else if(args[0] == "DOBJDemo") { 
+				Console.WriteLine("Starting DOBJ demo");
+				DOBJ obj = new DOBJ(); 
+				obj.demo(); 
+			} 
 
 		}
 
