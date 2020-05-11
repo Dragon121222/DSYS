@@ -63,10 +63,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS"
+CMAKE_SOURCE_DIR = /home/drake/DSYS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS"
+CMAKE_BINARY_DIR = /home/drake/DSYS
 
 # Include any dependencies generated for this target.
 include CMakeFiles/exe.dir/depend.make
@@ -79,146 +79,172 @@ include CMakeFiles/exe.dir/flags.make
 
 CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o: DSRC/DOBJ/DOBJ.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DOBJ/DOBJ.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o -c /home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp
 
 CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DOBJ/DOBJ.cpp" > CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp > CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DOBJ/DOBJ.cpp" -o CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp -o CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o: DSRC/DGTKWINDOW/DGTKWINDOW.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o -c /home/drake/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp
 
 CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" > CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp > CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" -o CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp -o CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o: DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o -c /home/drake/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" > CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp > CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o: DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o -c /home/drake/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" > CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp > CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp -o CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o: DSRC/DKINECT/DKINECT.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DKINECT/DKINECT.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o -c /home/drake/DSYS/DSRC/DKINECT/DKINECT.cpp
 
 CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DKINECT/DKINECT.cpp" > CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DKINECT/DKINECT.cpp > CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DKINECT/DKINECT.cpp" -o CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DKINECT/DKINECT.cpp -o CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o: DSRC/DNETWORK/DNETWORK.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DNETWORK/DNETWORK.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o -c /home/drake/DSYS/DSRC/DNETWORK/DNETWORK.cpp
 
 CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DNETWORK/DNETWORK.cpp" > CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DNETWORK/DNETWORK.cpp > CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DNETWORK/DNETWORK.cpp" -o CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DNETWORK/DNETWORK.cpp -o CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o: DSRC/DSERVERTCP/DSERVERTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o -c /home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp
 
 CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" > CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp > CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" -o CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp -o CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o: DSRC/DCLIENTTCP/DCLIENTTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o -c /home/drake/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp
 
 CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" > CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp > CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" -o CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp -o CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o: DSRC/DSERVERUDP/DSERVERUDP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o -c /home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp
 
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" > CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp > CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" -o CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp -o CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s
 
 CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o: DSRC/DCLIENTUDP/DCLIENTUDP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o -c /home/drake/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp
 
 CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" > CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp > CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.i
 
 CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" -o CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp -o CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.s
+
+CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o: CMakeFiles/exe.dir/flags.make
+CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o: DSRC/DML/DML.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o -c /home/drake/DSYS/DSRC/DML/DML.cpp
+
+CMakeFiles/exe.dir/DSRC/DML/DML.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DML/DML.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DML/DML.cpp > CMakeFiles/exe.dir/DSRC/DML/DML.cpp.i
+
+CMakeFiles/exe.dir/DSRC/DML/DML.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DML/DML.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DML/DML.cpp -o CMakeFiles/exe.dir/DSRC/DML/DML.cpp.s
+
+CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o: CMakeFiles/exe.dir/flags.make
+CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o: DSRC/DML/DOP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o -c /home/drake/DSYS/DSRC/DML/DOP.cpp
+
+CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DSRC/DML/DOP.cpp > CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.i
+
+CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DSRC/DML/DOP.cpp -o CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.s
 
 CMakeFiles/exe.dir/DAPP/main.cpp.o: CMakeFiles/exe.dir/flags.make
 CMakeFiles/exe.dir/DAPP/main.cpp.o: DAPP/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exe.dir/DAPP/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DAPP/main.cpp.o -c "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DAPP/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/exe.dir/DAPP/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/exe.dir/DAPP/main.cpp.o -c /home/drake/DSYS/DAPP/main.cpp
 
 CMakeFiles/exe.dir/DAPP/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exe.dir/DAPP/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DAPP/main.cpp" > CMakeFiles/exe.dir/DAPP/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drake/DSYS/DAPP/main.cpp > CMakeFiles/exe.dir/DAPP/main.cpp.i
 
 CMakeFiles/exe.dir/DAPP/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exe.dir/DAPP/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DAPP/main.cpp" -o CMakeFiles/exe.dir/DAPP/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drake/DSYS/DAPP/main.cpp -o CMakeFiles/exe.dir/DAPP/main.cpp.s
 
 # Object files for target exe
 exe_OBJECTS = \
@@ -232,6 +258,8 @@ exe_OBJECTS = \
 "CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o" \
 "CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o" \
 "CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o" \
+"CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o" \
+"CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o" \
 "CMakeFiles/exe.dir/DAPP/main.cpp.o"
 
 # External object files for target exe
@@ -247,6 +275,8 @@ exe: CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o
 exe: CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o
 exe: CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o
 exe: CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o
+exe: CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o
+exe: CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o
 exe: CMakeFiles/exe.dir/DAPP/main.cpp.o
 exe: CMakeFiles/exe.dir/build.make
 exe: /usr/lib/libafcpu.so.3.7.1
@@ -262,7 +292,7 @@ exe: /usr/lib64/libboost_graph.so.1.72.0
 exe: /usr/lib/libusb.so
 exe: /usr/lib64/libboost_regex.so.1.72.0
 exe: CMakeFiles/exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/drake/DSYS/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -275,6 +305,6 @@ CMakeFiles/exe.dir/clean:
 .PHONY : CMakeFiles/exe.dir/clean
 
 CMakeFiles/exe.dir/depend:
-	cd "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/drake/DSYS && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/drake/DSYS /home/drake/DSYS /home/drake/DSYS /home/drake/DSYS /home/drake/DSYS/CMakeFiles/exe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/exe.dir/depend
 

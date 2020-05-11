@@ -4,17 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DAPP/main.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DAPP/main.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DKINECT/DKINECT.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DNETWORK/DNETWORK.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DOBJ/DOBJ.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
-  "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
+  "/home/drake/DSYS/DAPP/main.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DAPP/main.cpp.o"
+  "/home/drake/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
+  "/home/drake/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
+  "/home/drake/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
+  "/home/drake/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
+  "/home/drake/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
+  "/home/drake/DSYS/DSRC/DKINECT/DKINECT.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o"
+  "/home/drake/DSYS/DSRC/DML/DML.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o"
+  "/home/drake/DSYS/DSRC/DML/DOP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o"
+  "/home/drake/DSYS/DSRC/DNETWORK/DNETWORK.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
+  "/home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
+  "/home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
+  "/home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

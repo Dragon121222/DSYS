@@ -59,6 +59,10 @@
 #include "../DSRC/DCLIENTUDP/DCLIENTUDP.h"
 #endif
 
+#ifndef __DML__
+#include "../DSRC/DML/DML.h"
+#endif
+
 int argcCOPY;
 char** argvCOPY; 
 
@@ -367,6 +371,25 @@ void DCLIENTTCP_UNITY_CONNECT(GtkButton * widget, gpointer ptr) {
 // Callback method prototypes
 void defaultCallback(GtkButton * widget, gpointer ptr); 
 
+void DML_DEMO(GtkButton * widget, gpointer ptr) { 
+
+    DML * dml = new DML(); 
+
+    dml->appendOp(add,"add",5,5); 
+    dml->appendOp(add,"add",5,5);     
+
+    af::array testInput = af::constant(5,5); 
+    af::array testOutput = af::array(5); 
+
+    dml->fire(testInput,testOutput); 
+
+    af::print("testOutput", testOutput); 
+
+    dml->debugMachine(); 
+
+    delete(dml); 
+
+}
 
 #define __DAPP_MANAGER_SYSTEM__	
 #ifdef __DAPP_MANAGER_SYSTEM__	
@@ -383,7 +406,6 @@ int main(int argc,  char** argv) {
 
 	std::cout << "\t\tCalling Demo Window\n"; 
 
-
 //	dwindow->addWidget("DCLIENTTCP_UNITY_CONNECT","button_with_label",0,0,&DCLIENTTCP_UNITY_CONNECT,"clicked"); 
     dwindow->addWidget("DCLIENTUDP_DSERVERUDP_DEMO","button_with_label",0,0,&DCLIENTUDP_DSERVERUDP_DEMO,"clicked"); 
 	dwindow->addWidget("DCLIENTTCP_DSERVERTCP_DEMO","button_with_label",1,0,&DCLIENTTCP_DSERVERTCP_DEMO,"clicked"); 
@@ -393,6 +415,7 @@ int main(int argc,  char** argv) {
     dwindow->addWidget("DKINECT_DEMO_RECORD","button_with_label",4,0,&DKINECT_DEMO_RECORD,"clicked");     
 //    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
     dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
+    dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
 
 	dwindow->constructWindow(); 
 

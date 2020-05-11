@@ -68,10 +68,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS"
+CMAKE_SOURCE_DIR = /home/drake/DSYS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS"
+CMAKE_BINARY_DIR = /home/drake/DSYS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/DSYS/CMakeFiles /home/drake/DSYS/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/DSYS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -332,6 +332,60 @@ DSRC/DKINECT/DKINECT.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s
 .PHONY : DSRC/DKINECT/DKINECT.cpp.s
 
+DSRC/DML/DML.o: DSRC/DML/DML.cpp.o
+
+.PHONY : DSRC/DML/DML.o
+
+# target to build an object file
+DSRC/DML/DML.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o
+.PHONY : DSRC/DML/DML.cpp.o
+
+DSRC/DML/DML.i: DSRC/DML/DML.cpp.i
+
+.PHONY : DSRC/DML/DML.i
+
+# target to preprocess a source file
+DSRC/DML/DML.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DML.cpp.i
+.PHONY : DSRC/DML/DML.cpp.i
+
+DSRC/DML/DML.s: DSRC/DML/DML.cpp.s
+
+.PHONY : DSRC/DML/DML.s
+
+# target to generate assembly for a file
+DSRC/DML/DML.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DML.cpp.s
+.PHONY : DSRC/DML/DML.cpp.s
+
+DSRC/DML/DOP.o: DSRC/DML/DOP.cpp.o
+
+.PHONY : DSRC/DML/DOP.o
+
+# target to build an object file
+DSRC/DML/DOP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o
+.PHONY : DSRC/DML/DOP.cpp.o
+
+DSRC/DML/DOP.i: DSRC/DML/DOP.cpp.i
+
+.PHONY : DSRC/DML/DOP.i
+
+# target to preprocess a source file
+DSRC/DML/DOP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.i
+.PHONY : DSRC/DML/DOP.cpp.i
+
+DSRC/DML/DOP.s: DSRC/DML/DOP.cpp.s
+
+.PHONY : DSRC/DML/DOP.s
+
+# target to generate assembly for a file
+DSRC/DML/DOP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.s
+.PHONY : DSRC/DML/DOP.cpp.s
+
 DSRC/DNETWORK/DNETWORK.o: DSRC/DNETWORK/DNETWORK.cpp.o
 
 .PHONY : DSRC/DNETWORK/DNETWORK.o
@@ -470,6 +524,12 @@ help:
 	@echo "... DSRC/DKINECT/DKINECT.o"
 	@echo "... DSRC/DKINECT/DKINECT.i"
 	@echo "... DSRC/DKINECT/DKINECT.s"
+	@echo "... DSRC/DML/DML.o"
+	@echo "... DSRC/DML/DML.i"
+	@echo "... DSRC/DML/DML.s"
+	@echo "... DSRC/DML/DOP.o"
+	@echo "... DSRC/DML/DOP.i"
+	@echo "... DSRC/DML/DOP.s"
 	@echo "... DSRC/DNETWORK/DNETWORK.o"
 	@echo "... DSRC/DNETWORK/DNETWORK.i"
 	@echo "... DSRC/DNETWORK/DNETWORK.s"

@@ -1,4 +1,4 @@
-# Install script for directory: /run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS
+# Install script for directory: /home/drake/DSYS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/drake/DSYS/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
