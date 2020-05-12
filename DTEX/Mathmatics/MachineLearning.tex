@@ -32,7 +32,7 @@
 \begin{document}
 		\maketitle			
 \section{Gradients, Jacobian, Ferchet Drivative, and Sub-Gradients} 
-\begin{thm} \textbf{Gradient} \\ 
+\begin{def.} \textbf{Gradient} \\ 
 	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function. \\ 
 	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
 	\[
@@ -46,9 +46,9 @@
 	\]
 	is called the Gradient of f. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference}
-\end{thm}
+\end{def.}
 
-\begin{thm} \textbf{Jacobian} \\ 
+\begin{def.} \textbf{Jacobian} \\ 
 	Let $f : \mathbb{R}^n \to \mathbb{R}^m$ where: 
 	\[
 	f(x) = 
@@ -69,17 +69,36 @@
 	\end{bmatrix}
 	\]
 	\href{https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant}{Reference}
-\end{thm}
+\end{def.}
 
 \begin{thm} \textbf{When the Jacobian is the Gradient} \\
 	Let $f : \mathbb{R}^n \to \mathbb{R}$ \\ 
 	Then $(\nabla f(x) = (J_f(x))^T) (\forall x \in \mathbb{R}^n)$ \\ 	
 \end{thm}
 
-\begin{thm} \textbf{Chain Rule}
-	Let $f : \mathbb{R}^n \to \mathbb{R}^m$ and $g : \mathbb{R}^m \to \mathbb{R}^k$ be differentiable functions. \\ 
-	Then: $J_{g \circ f}(x) = J_g(f(x))J_f(x)$ \\ 
+\begin{def.} \textbf{Fréchet derivative} \\ 
+		Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
+		An operator $f : U \to W$ is said to be Fréchet differentiable if there exists a bounded linear operator $A : V \to W$ such that: \\ 
+		$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
+\end{def.} 
+
+\begin{thm} \textbf{Fréchet derivative of a linear operator} \\ 
+	Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
+	Let $\hat{f} : V \to W$ be a bounded linear operator. \\
+	Then lets look at $f = \hat{f}|_{U}$ \\ 
+	My guess is that $A = \hat{f}$ \\ 
+	Let $x \in U$ and $h \in U \pitchfork ||h|| \not = 0$ and $x+h \in U$, Then: \\ 
+	$$\frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = \frac{||f(x)+f(h) - f(x) + \hat{f}(h)||_W}{||h||_V} = \frac{||f(x)+f(h) - f(x) + f(h)||_W}{||h||_V}= 0$$
+	Thus let $\epsilon > 0$ and $\delta > 0$ \\ 
+	Then if $0 < ||h|| < \delta$ we know that  
+	$\frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0 < \epsilon$ \\ 
+	Therefore: 
+	$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
+	Thus $A = \hat{f}$ is the Fréchet derivative  of f. 
 \end{thm}
+
+
+\newpage
 
 \begin{exmp} 
 	Let $T : \mathbb{R}^n \to \mathbb{R}^n$ such that:
@@ -134,13 +153,13 @@
 \end{exmp}
 
 \begin{exmp} 
-	Let $T_b : \mathbb{R}^n \to \mathbb{R}^n$ such that:
+	Let $T_x : \mathbb{R}^n \to \mathbb{R}^n$ for each $x \in \mathbb{R}^n$ such that:
 	\[
-	T_b(x) := 
+	T_x(b) := 
 	\begin{bmatrix}
-	\pi_1(x) + b_1 \\ 
+	x_1 + \pi_1(b) \\ 
 	\vdots \\ 
-	\pi_n(x) + b_n
+	x_n + \pi_n(b) \\ 
 	\end{bmatrix}
 	= 
 	\begin{bmatrix}
@@ -151,68 +170,49 @@
 	\]
 	Then
 	\[
-	J_{T_b}(x) = 
+	J_{T_x}(b) = 
 	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}[x_1 + b_1] & \cdots & \frac{\partial }{\partial x_n}[x_1 + b_1] \\
+	\frac{\partial }{\partial b_1}[x_1 + b_1] & \cdots & \frac{\partial }{\partial b_n}[x_1 + b_1] \\
 	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_1}[x_1 + b_1] & \cdots & \frac{\partial }{\partial x_n}[x_n + b_n] 
+	\frac{\partial }{\partial b_1}[x_1 + b_1] & \cdots & \frac{\partial }{\partial b_n}[x_n + b_n] 
 	\end{bmatrix}
 	=
 	\begin{bmatrix} 
-	x_1 & \cdots & 0 \\
+	b_1 & \cdots & 0 \\
 	\vdots & \ddots & \vdots \\ 
-	0 & \cdots & x_n
+	0 & \cdots & b_n
 	\end{bmatrix}
-	= Ix
+	= Ib
 	\]
 \end{exmp}
 
 \begin{exmp}
-	Let $T_A : \mathbb{R}^n \to \mathbb{R}^m$ such that:
-	\[
-	T_A(x) := 
-	\begin{bmatrix}
-	\langle a_1 , x \rangle \\
-	\vdots \\
-	\langle a_m , x \rangle
-	\end{bmatrix}
-	=
-	\begin{bmatrix}
-	\sum_{j=1}^{n} a_{1,j}x_j \\ 
-	\vdots \\ 
-	\sum_{j=1}^{n} a_{m,j}x_j \\ 	
-	\end{bmatrix}
-	= 
-	\begin{bmatrix}
-	a_{1,1} & \cdots & a_{1,n} \\ 
-	\vdots & \ddots & \vdots \\ 
-	a_{m,1} & \cdots & a_{m,n} \\ 	
-	\end{bmatrix}
-	\begin{bmatrix}
-	x_1 \\ 
-	\vdots \\ 
-	x_n
-	\end{bmatrix}
-	= Ax
-	\]
-	Then: 
-	\[
-	J_{T_A}(x) = 
-	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}\left[\sum_{j=1}^{n} a_{1,j}x_j\right] & \cdots & \frac{\partial }{\partial x_n}\left[\sum_{j=1}^{n} a_{1,j}x_j\right] \\
-	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_1}\left[\sum_{j=1}^{n} a_{m,j}x_j\right]& \cdots & \frac{\partial }{\partial x_n}\left[\sum_{j=1}^{n} a_{m,j}x_j\right] 
-	\end{bmatrix}
-	= 
-	\begin{bmatrix} 
-	a_{1,1}x_1 & \cdots & a_{1,n}x_n \\
-	\vdots & \ddots & \vdots \\ 
-	a_{m,1}x_1 & \cdots & a_{m,n}x_n 
-	\end{bmatrix}		
-	\] 
+		Let $Z_x : \mathbb{R}^n \to \mathbb{R}$ where $x \in \mathbb{R}^n$ such that: \\ 
+		$$Z_x(a) = \langle a,x \rangle_e$$
+		\[
+		\Rightarrow J_{Z_x} (a) = 
+		\begin{bmatrix}
+		\frac{\partial}{\partial a_1} Z_x(a) & \cdots & \frac{\partial}{\partial a_n} Z_x(a)
+		\end{bmatrix}		
+		= 
+		\begin{bmatrix}
+		\frac{\partial}{\partial a_1} \langle x,a\rangle_e & \cdots & \frac{\partial}{\partial a_n} \langle x,a\rangle_e
+		\end{bmatrix}		
+		\]
+		\[
+		= 
+		\begin{bmatrix}
+		\frac{\partial}{\partial a_1} \sum_{j=1}^n x_j,a_j & \cdots & \frac{\partial}{\partial a_n} \sum_{j=1}^n x_j,a_j
+		\end{bmatrix}		
+		= 
+		\begin{bmatrix}
+		x_1 a_1 & \cdots & x_n a_n
+		\end{bmatrix}		
+		\]
+
 \end{exmp}
 
-\section{Finite Composition Operator}
+\subsection{Finite Composition Operator}
 \begin{def.} \textbf{Finite Composition Operator} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^{n}$ be a finite sequence of sets. \\ 
 	Further let $\{T_j\}_{j=0}^{n-1}$ be a finite sequence of operators such that $(\forall j \in \mathbb{N}_{n-1})(T_j : X_j \to X_{j+1})$ \\ 
@@ -230,6 +230,19 @@
 
 \end{thm}
 
+\begin{def.} \textbf{Gradient Descent} \\ 
+Let $E : \mathbb{R}^n \to \mathbb{R}$ be a differentiable operator. \\ 
+The method of Gradient Descent says that a local minimum of $E$ can be found using the following iteration: \\ 
+$$a_{n+1} = a_n - \gamma \nabla E(a_n)$$
+Where $\gamma > 0$ \\ 
+\end{def.}
+
+\begin{exmp} \textbf{Objective Operator for Data Set Defined Operator Approximation} \\ 		
+Let $X \subset \mathbb{R}^n, Y \subset \mathbb{R}^m$ such that $X\times Y$ defines an operator T. \\ 
+		
+		
+		
+\end{exmp}
 
 \newpage
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
