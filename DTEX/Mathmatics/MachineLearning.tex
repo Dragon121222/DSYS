@@ -80,9 +80,10 @@
 		Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 		An operator $f : U \to W$ is said to be Fréchet differentiable if there exists a bounded linear operator $A : V \to W$ such that: \\ 
 		$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
+		\href{https://en.wikipedia.org/wiki/Fr%C3%A9chet_derivative}{Reference}
 \end{def.} 
 
-\begin{thm} \textbf{Fréchet derivative of a linear operator} \\ 
+\begin{thm} \textbf{Fréchet derivative of a bounded linear operator} \\ 
 	Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 	Let $\hat{f} : V \to W$ be a bounded linear operator. \\
 	Then lets look at $f = \hat{f}|_{U}$ \\ 
@@ -97,13 +98,10 @@
 	Thus $A = \hat{f}$ is the Fréchet derivative  of f. 
 \end{thm}
 
-
-\newpage
-
 \begin{exmp} 
-	Let $T : \mathbb{R}^n \to \mathbb{R}^n$ such that:
+	Let $A : \mathbb{R}^n \to \mathbb{R}^n$ such that:
 	\[
-	T(x) := 
+	A(x) := 
 	\begin{bmatrix}
 	\arctan(\pi_1(x)) \\ 
 	\vdots \\ 
@@ -118,11 +116,11 @@
 	\]
 	Then
 	\[
-	J_T(x) = 
+	J_A(x) = 
 	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}T_1(x) & \cdots & \frac{\partial }{\partial x_n}T_1(x) \\
+	\frac{\partial }{\partial x_1}A_1(x) & \cdots & \frac{\partial }{\partial x_n}A_1(x) \\
 	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_1}T_n(x) & \cdots & \frac{\partial }{\partial x_n}T_n(x) 
+	\frac{\partial }{\partial x_1}A_n(x) & \cdots & \frac{\partial }{\partial x_n}A_n(x) 
 	\end{bmatrix}
 	=
 	\begin{bmatrix} 
@@ -187,29 +185,12 @@
 \end{exmp}
 
 \begin{exmp}
-		Let $Z_x : \mathbb{R}^n \to \mathbb{R}$ where $x \in \mathbb{R}^n$ such that: \\ 
-		$$Z_x(a) = \langle a,x \rangle_e$$
-		\[
-		\Rightarrow J_{Z_x} (a) = 
-		\begin{bmatrix}
-		\frac{\partial}{\partial a_1} Z_x(a) & \cdots & \frac{\partial}{\partial a_n} Z_x(a)
-		\end{bmatrix}		
-		= 
-		\begin{bmatrix}
-		\frac{\partial}{\partial a_1} \langle x,a\rangle_e & \cdots & \frac{\partial}{\partial a_n} \langle x,a\rangle_e
-		\end{bmatrix}		
-		\]
-		\[
-		= 
-		\begin{bmatrix}
-		\frac{\partial}{\partial a_1} \sum_{j=1}^n x_j,a_j & \cdots & \frac{\partial}{\partial a_n} \sum_{j=1}^n x_j,a_j
-		\end{bmatrix}		
-		= 
-		\begin{bmatrix}
-		x_1 a_1 & \cdots & x_n a_n
-		\end{bmatrix}		
-		\]
-
+		Let $Z_x : \mathbb{R}^{m\times n} \to \mathbb{R}^m$ such that: \\ 
+		$Z_x(A) = Ax$ \\
+		Let $A,B \in \mathbb{R}^{m\times n}$ and $\alpha,\beta \in \mathbb{R}$ \\ 
+		$Z_x(\alpha A + \beta B) =  (\alpha A + \beta B)x = \alpha Ax + \beta Bx = \alpha Z_x(A) + \beta Z_x(B)$ and so $Z_x$ is linear. \\ 
+		Since $Z_x$ is continuous, it is also bounded. \\ 
+		Thus by Theorem 1.2, it is Frechet differentiable everywhere. 
 \end{exmp}
 
 \subsection{Finite Composition Operator}
