@@ -256,16 +256,38 @@
 
 \newpage
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
-	Let $a,b \in \mathbb{R}$ where $a < 0 < b$ \\ 
-	Let $B = \{f : [a,b] \to [0,1] | f \text{ is surjective, continuous, and non-decreasing.}\}$ \\ 
+	Let $B = \{f : \mathbb{R} \to [0,1] | f \text{ is surjective, continuous, and non-decreasing.}\}$ \\ 
 	\begin{thm} \textbf{B is convex. } \\
-			Let $f,g \in B$ \\ 
-			$h(x) := \lambda f(x) + (1-\lambda)g(x)$ where $\lambda \in [0,1]$ \\ 
-			Then $h$ is still continuous since the linear combination of continuous function is continuous.  \\
-			Since both f and g are surjective and non-decreasing, then $f(a) = g(a) = 0$ and $f(b) = g(b) = 1$
+			Let $f,g \in B$ and $h(x) := \lambda f(x) + (1-\lambda)g(x)$ where $\lambda \in [0,1]$ \\ 
+			Then $h$ is still continuous since the linear combination of continuous functions is continuous.  \\ \\
+			Since both f and g are surjective and non-decreasing, then there exists $x_0,y_0,x_1,y_1$ in $\mathbb{R}$ such that: \\ 
+			$f(x_0) = 0 = g(y_0)$ and $f(x_1) = 1 = g(y_1)$ \\ 
+			Suppose WLOG that $x_0 \leq y_0$ and $x_1 \leq y_1$ \\
+			Then we know that: 
+			$$h(x_0) = \lambda f(x_0) + (1-\lambda)g(x_0) = \lambda 0 + (1-\lambda)0 = 0$$
+			and 
+			$$h(y_1) = \lambda f(y_1) + (1-\lambda)g(y_1) = \lambda 1 + (1-\lambda)1 = 1$$
+			Now if we pick $\alpha \in [0,1]$ by the intermediate value theorem, we know that there exists an $x_\alpha \in [x_0,y_1]$ such that: 
+			$$h(x_\alpha) = \alpha$$
+			Since $\alpha$ was arbitrary element, I have shown that $h$ is surjective. \\ \\
+			Finally, let $x_0 < x_1$ be elements in $\mathbb{R}$ \\ 
+			Then we know that $f(x_0) \leq f(x_1)$ and $g(x_0) \leq g(x_1)$ \\ 
+			$\Rightarrow \lambda f(x_0) \leq \lambda f(x_1)$ and $(1-\lambda)g(x_0) \leq (1-\lambda)g(x_1)$ \\ 
+			$\Rightarrow \lambda f(x_0) + (1-\lambda)g(x_0) \leq \lambda f(x_1) + (1-\lambda)g(x_1)$ \\ 
+			$\Rightarrow h(x_0) \leq h(x_1)$ \\ 
+			Thus $h$ is non-decreasing. \\ 
+			Since h is surjective, continuous, and non-decreasing, then $h \in B$ \\ 
+			Thus $B$ is convex. 
 	\end{thm}
 	\begin{thm} \textbf{B is translation invariant.} \\
-	
+			Let $f \in B$ and $g(x) := f(x+c)$ where $c \in \mathbb{R}$ \\
+			f is continuous and so is the addition operator so g is continuous. \\
+			Let $\alpha \in [0,1]$ since f is surjective then $\exists x \in \mathbb{R} \pitchfork f(x) = \alpha$ \\ 
+			Then $g(x-c) = f(x+c-c) = f(x) = \alpha$ and so g is surjective. \\ 
+			Let $x < y$ be elements in $\mathbb{R}$ \\
+			Then $f(x) \leq f(y) \Rightarrow f(x+c) \leq f(y+c)$ \\ 
+			$\Rightarrow g(x) \leq f(y)$ and so g is non-decreasing. \\ 
+			Thus $g \in B$ and B is therefore translation invariant. 
 	\end{thm}
 	\begin{thm} \textbf{B is not complete.} \\
 	
