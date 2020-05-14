@@ -47,7 +47,6 @@
 	is called the Gradient of f. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference}
 \end{def.}
-
 \begin{def.} \textbf{Jacobian} \\ 
 	Let $f : \mathbb{R}^n \to \mathbb{R}^m$ where: 
 	\[
@@ -70,13 +69,7 @@
 	\]
 	\href{https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant}{Reference}
 \end{def.}
-
-\begin{thm} \textbf{When the Jacobian is the Gradient} \\
-	Let $f : \mathbb{R}^n \to \mathbb{R}$ \\ 
-	Then $(\nabla f(x) = (J_f(x))^T) (\forall x \in \mathbb{R}^n)$ \\ 	
-\end{thm}
-
-\begin{def.} \textbf{Derivative with respect to a vector.} \\ 
+\begin{def.} \textbf{Derivative with respect to a vector and the subspace gradient.} \\ 
 	Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
 	Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
 	Let $x \in X_j$ for some $j \in \{0,...,n-1\}$ \\ 
@@ -88,16 +81,14 @@
 	\frac{\partial}{\partial x_1} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{k_j}} T_{k_y}(z) \\	
 	\end{bmatrix}
 	\]
-	
+	If $k_y = 1$ then $[D_xT(z)]^T$ is called the subspace gradient with respect to $X_j$ at the point z and is written $\nabla_x T(z)$
 \end{def.}
-
 \begin{def.} \textbf{Fréchet derivative} \\ 
 		Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 		An operator $f : U \to W$ is said to be Fréchet differentiable if there exists a bounded linear operator $A : V \to W$ such that: \\ 
 		$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
 		\href{https://en.wikipedia.org/wiki/Fr%C3%A9chet_derivative}{Reference}
 \end{def.} 
-
 \begin{thm} \textbf{Fréchet derivative of a bounded linear operator} \\ 
 	Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 	Let $\hat{f} : V \to W$ be a bounded linear operator. \\
@@ -112,7 +103,6 @@
 	$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
 	Thus $A = \hat{f}$ is the Fréchet derivative  of f. 
 \end{thm}
-
 \begin{exmp} 
 	Let $atan : \mathbb{R}^n \to \mathbb{R}^n$ such that:
 	\[
@@ -158,7 +148,6 @@
 	\end{bmatrix}
 	\]
 \end{exmp}
-
 \begin{exmp} 
 	Let $T_x : \mathbb{R}^n \to \mathbb{R}^n$ for each $x \in \mathbb{R}^n$ such that:
 	\[
@@ -192,7 +181,6 @@
 	= Ib
 	\]
 \end{exmp}
-
 \begin{exmp}
 		Let $Z_x : \mathbb{R}^{m\times n} \to \mathbb{R}^m$ such that: \\ 
 		$Z_x(A) = Ax$ \\
@@ -201,7 +189,6 @@
 		Since $Z_x$ is continuous, it is also bounded. \\ 
 		Thus by Theorem 1.2, it is Frechet differentiable everywhere. 
 \end{exmp}
-
 \subsection{Finite Composition Operator}
 \begin{def.} \textbf{Finite Composition Operator} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^{n}$ be a finite sequence of sets. \\ 
@@ -210,9 +197,6 @@
 	$$T^n := \bigcirc_{j=0}^{n-1} T_j$$ 
 	is called the \textbf{Finite Composition Operator defined on X}. \\ 
 \end{def.}
-
-
-
 \begin{thm} \textbf{Finite Composition Jacobian} \\ 
 		Let $T^n$ be defined as above. \\ 
 		Then: 
@@ -220,14 +204,12 @@
 		where: 
 		$$J_{T^1}(x) = J_{T_0}(x)$$	
 \end{thm}
-
 \begin{def.} \textbf{Multi-variable Finite Composition Iteration} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^n$ and $Y = \{Y_j\}_{j=0}^{n-1}$ be finite sequences of sets. \\ 
 	Further let $\{T_j\}_{j=0}^{n-1}$ be a finite sequence of operators such that: $(\forall j \in \mathbb{N}_{n-1})(T_j : X_j \times Y_j \to X_{j+1})$ \\
 	Let $T^n : X_0 \times \prod_{j=0}^{n-1}Y_j \to X_n$ where: \\ 
 	$$T^n (x,y) = z_n \text{ where } z_{j+1} = T_j( z_{j},\pi_j (y) ) \text{ or } z_{j+1} = T_j( z_{j} )  \text{ and } z_0 = x \in X_0$$
 \end{def.}
-
 \begin{exmp} \textbf{MVFCI} \\ 
 		Let $X_0 = \mathbb{R}^n, X_1 = \mathbb{R}^m, X_2 = \mathbb{R}^m, X_3 = \mathbb{R}^m$ \\
 		Let $Y_0 = \mathbb{R}^{n\times m}, Y_1 = \mathbb{R}^m, Y_2 = \{0\}$
@@ -237,20 +219,16 @@
 		$$T_2(x) = atan(x)$$ 
 		$$T^3(x,A,a,0) = T_2(T_1(T_0(x,A),a) )$$ 
 \end{exmp}
-
 \begin{def.} \textbf{Gradient Descent} \\ 
 Let $E : \mathbb{R}^n \to \mathbb{R}$ be a differentiable operator. \\ 
 The method of Gradient Descent says that a local minimum of $E$ can be found using the following iteration: \\ 
 $$a_{n+1} = a_n - \gamma \nabla E(a_n)$$
 Where $\gamma > 0$ \\ 
 \end{def.}
-
 \begin{exmp} \textbf{Objective Operator for Data Set Defined Operator Approximation} \\ 		
 Let $X \subset \mathbb{R}^n, Y \subset \mathbb{R}^m$ such that $X\times Y$ defines an operator T. \\ 
 $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$ 
-		
 \end{exmp}
-
 \newpage
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
 	Let $B = \{f : \mathbb{R} \to [0,1] | f \text{ is surjective, continuous, and non-decreasing.}\}$ \\ 
