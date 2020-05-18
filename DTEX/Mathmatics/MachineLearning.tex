@@ -111,7 +111,6 @@ $$T_x(y) = T^3(x,y) \text{ and } y = (A,a,0)$$
 With all this we can now look at this: \\ 
 Let $z \in \prod_{j=0}^{2} Y_j$ 
 $$D_X ||T_x(z)|| \text{ where } ||\cdot|| \text{ is the one norm.}$$
-
 First: \\ 
 \[
 \nabla_{y_0} ||T_x(z)|| = 
@@ -120,20 +119,21 @@ First: \\
 \vdots & \ddots & \vdots \\ 
 \frac{\partial}{\partial a_{m,1}} ||T_x(z)|| & \cdots & \frac{\partial}{\partial a_{m,n}} ||T_x(z)|| \\
 \end{bmatrix}
+\text{Since } y_0 = A
 \]
 So then we will just look at: $\frac{\partial}{\partial a_{i,j}} ||T_x(z)||$ \\ 
 $\frac{\partial}{\partial a_{i,j}} ||T_x(z)|| = \frac{\partial}{\partial a_{i,j}} ||atan(a + Ax)||$ \\
 \[
 atan(Ax +a) = 
 \begin{bmatrix}
-arctan(\sum_{j=1}^n a_{1,j}x_j + a_1)\\ 
+\arctan(\sum_{l=1}^n a_{1,l}x_l + a_1)\\ 
 \vdots \\ 
-arctan(\sum_{j=1}^n a_{m,j}x_j + a_m)\\ 
+\arctan(\sum_{l=1}^n a_{m,l}x_l + a_m)\\ 
 \end{bmatrix}
 \]
-and so $||atan(Ax +a)|| = \sum_{i=1}^m | arctan(\sum_{j=1}^n a_{i,j}x_j + a_i)|$ \\
+and so $||atan(Ax +a)|| = \sum_{i=1}^m | \arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)|$ \\
 Thus the partial with respect to $a_{i,j}$ zeros out all but: \\
-$\frac{\partial}{\partial a_{i,j}}| arctan(\sum_{j=1}^n a_{i,j}x_j + a_i)|$
+$$\frac{\partial}{\partial a_{i,j}}| \arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)| = \frac{\arctan(\sum_{l=1}^n a_{i,l}x_j + a_i)}{((\sum_{l=1}^n a_{i,l}x_l + a_i)^2 + 1  )|\arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)|}a_{i,j}x_j \text{ by the chain rule. }$$
 \end{exmp}
 
 
