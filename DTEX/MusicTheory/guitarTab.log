@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  19 MAY 2020 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  19 MAY 2020 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,41 +419,46 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 24--47
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--47
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--47
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--47
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--47
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--50
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
  (./guitarTab.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `guitarTab.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
  7359 strings out of 492167
@@ -467,7 +472,7 @@ Here is how much of TeX's memory you used:
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmtt12.pfb>
-Output written on guitarTab.pdf (1 page, 34526 bytes).
+Output written on guitarTab.pdf (1 page, 34925 bytes).
 PDF statistics:
  29 PDF objects out of 1000 (max. 8388607)
  21 compressed objects within 1 object stream
