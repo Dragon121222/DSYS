@@ -31,7 +31,53 @@
 
 \begin{document}
 		\maketitle			
-\section{Gradients, Jacobian, Ferchet Drivative, and Sub-Gradients} 
+\section{Metric Space, Limit, Derivative, and Partial Derivative}
+\begin{def.} \textbf{Metric} \\ 
+	Let X be a non-empty set.. \\ 
+	Let $d : X \times X \to \mathbb{R}^+_0$ such that: 
+	\begin{itemize}
+		\item $(\forall x \in X) d(x,x) = 0$
+		\item $(\forall x,y \in X) d(x,y) = 0 \Leftrightarrow x = y$ 
+		\item $(\forall x,y \in X) d(x,y) = d(y,x)$
+		\item $(\forall x,y,z \in X) d(x,z) \leq d(x,y) + d(y,z)$
+	\end{itemize}	
+	Then $d$ is called a metric and $(X,d)$ is called a metric space. \\
+	\href{https://en.wikipedia.org/wiki/Metric_space}{Reference}
+\end{def.}
+%\begin{def.} \textbf{Sequence} \\ 
+%	Let $X$ be a non-empty set. \\ 
+%	An operator $s : \mathbb{N} \to X$ is called a sequence in X, and written: 
+%	$$s = (s_1, s_2, ... , s_n , ...) = \{s_j\}_{j=1}^\infty = \{s_j\}_{j \in \mathbb{N}}$$
+%\end{def.}
+%\begin{def.} \textbf{Limit of a sequence} \\ 
+%	Let $(X,d)$ be a metric space and $s_n$ be a sequence in X. \\ 
+%	If 
+%	$$(\exists L \in X)(\forall \epsilon > 0)(\exists N \in \mathbb{N})(\forall n \geq N)(d(s_n,L) < \epsilon)$$ 
+%	Then $s$ is said to converge to $L$ and this is written as: \\ 
+%	$$s_n \to L \text{ as } n \to \infty$$
+%	or: 
+%	$$\lim_{n\to\infty} s_n = L$$	
+%\end{def.}
+\begin{def.} \textbf{Limit of a function} \\ 
+	Let $T : X \to Y$ where $(X,d_X)$ and $(Y,d_Y)$ are metric spaces. \\ 
+	Then fix $x_0 \in X$. \\
+	If:
+	$$(\exists L \in Y)( \forall \epsilon > 0 )(\exists \delta > 0)(\forall x \in X)(d(x,x_0) < \delta \Rightarrow d(f(x),L) < \epsilon)$$
+	Then: $$\lim_{x \to x_0} f(x) = L$$ 
+	\href{https://en.wikipedia.org/wiki/Limit_of_a_function}{Reference}
+\end{def.}
+\begin{def.} \textbf{Derivative} \\ 
+	Let $\hat{f} : \mathbb{R} \to \mathbb{R}$ \\ 
+	Further let $f = \hat{f}|_U$ where $U \in \tau_\mathbb{R}$ \\ 
+	Then $f$ is said to be differentiable at $a \in U$ if: \\ 
+	$$f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}$$
+	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
+\end{def.}
+\begin{def.} \textbf{Partial Derivative} \\
+	\href{https://en.wikipedia.org/wiki/Partial_derivative}{Reference}
+\end{def.}
+\newpage
+\section{Gradients, Jacobian, Fréchet derivative, and Sub-Gradients} 
 \begin{def.} \textbf{Gradient} \\ 
 	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function. \\ 
 	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
@@ -62,26 +108,62 @@
 	\[
 	J_f(x) := 
 	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}f_1(x) & \cdots & \frac{\partial }{\partial x_n}f_1(x) \\
+	\frac{\partial }{\partial x_1}f_1(x) & \cdots & \frac{\partial }{\partial x_1}f_m(x) \\
 	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_1}f_m(x) & \cdots & \frac{\partial }{\partial x_n}f_m(x) 
+	\frac{\partial }{\partial x_n}f_1(x) & \cdots & \frac{\partial }{\partial x_n}f_m(x) 
 	\end{bmatrix}
 	\]
 	\href{https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant}{Reference}
 \end{def.}
+\begin{thm}
+	Let $f : \mathbb{R}^n \to \mathbb{R}^k$ and $g : \mathbb{R}^k \to \mathbb{R}^m$ \\ 
+	Define: $h(x) = f(g(x))$ \\ 
+	where: \\ 
+	\[
+	h(x) = 
+	\begin{bmatrix}
+	f_1(g(x)) \\ 
+	\vdots \\
+	f_k(g(x))
+	\end{bmatrix}
+	\]	
+	\[
+	J_h(x) := 
+	\begin{bmatrix} 
+	\frac{\partial }{\partial x_1}h_1(x) & \cdots & \frac{\partial }{\partial x_1}h_m(x) \\
+	\vdots & \ddots & \vdots \\ 
+	\frac{\partial }{\partial x_n}h_1(x) & \cdots & \frac{\partial }{\partial x_n}h_m(x) 
+	\end{bmatrix}
+	= 
+	\begin{bmatrix} 
+	\frac{\partial }{\partial x_1}f_1(g(x)) & \cdots & \frac{\partial }{\partial x_1}f_m(g(x)) \\
+	\vdots & \ddots & \vdots \\ 
+	\frac{\partial }{\partial x_n}f_1(g(x)) & \cdots & \frac{\partial }{\partial x_n}f_m(g(x)) 
+	\end{bmatrix}
+	\]
+\end{thm}
 \begin{def.} \textbf{Derivative with respect to a vector and the subspace gradient.} \\ 
-	Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
+	Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
 	Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
 	Let $x \in X_j$ for some $j \in \{0,...,n-1\}$ \\ 
+	Where 
+	\[
+	x = 
+	\begin{bmatrix}
+	x_{1,1} & \cdots & x_{1,n_j} \\ 
+	\vdots & \ddots & \vdots \\
+	x_{m_j,1} & \cdots & x_{m_j,n_j} \\ 	
+	\end{bmatrix}
+	\]
 	\[
 	D_x T(z) = 
 	\begin{bmatrix}
-	\frac{\partial}{\partial x_1} T_1(z) & \cdots & \frac{\partial}{\partial x_{k_j}} T_1(z) \\
-	\vdots & \ddots & \vdots \\ 
-	\frac{\partial}{\partial x_1} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{k_j}} T_{k_y}(z) \\	
+	\frac{\partial}{\partial x_{1,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_1(z) & \cdots &  \frac{\partial}{\partial x_{1,1}} T_{n-1}(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_{n-1}(z)\\
+	\vdots & \ddots & \vdots & \cdots & \vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{m_j,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_{n-1}(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{n-1}(z)\\
 	\end{bmatrix}
 	\]
-	If $k_y = 1$ then $[D_xT(z)]^T$ is called the subspace gradient with respect to $X_j$ at the point z and is written $\nabla_x T(z)$
+	If $k_y = 1$ then $D_xT(z)$ is called the subspace gradient with respect to $X_j$ at the point z and is written $\nabla_x T(z)$
 \end{def.}
 \begin{def.} \textbf{Product space Derivative} \\ 
 		Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
@@ -91,9 +173,9 @@
 		\[
 		D_{X} T(z) = 
 		\begin{bmatrix}
-		\nabla_{x_0} T(z) \\ 
+		D_{x_0} T(z) \\ 
 		\vdots \\ 
-		\nabla_{x_{n-1}} T(z) \\ 		
+		D_{x_{n-1}} T(z) \\ 		
 		\end{bmatrix}
 		\]
 \end{def.}
@@ -119,7 +201,12 @@ First: \\
 \vdots & \ddots & \vdots \\ 
 \frac{\partial}{\partial a_{m,1}} ||T_x(z)|| & \cdots & \frac{\partial}{\partial a_{m,n}} ||T_x(z)|| \\
 \end{bmatrix}
-\text{Since } y_0 = A
+\text{Since } y_0 = A = 
+\begin{bmatrix}
+a_{1,1} & \cdots & a_{1,n} \\ 
+\vdots & \ddots & \vdots \\ 
+a_{m,1} & \cdots & a_{m,n} \\ 
+\end{bmatrix}
 \]
 So then we will just look at: $\frac{\partial}{\partial a_{i,j}} ||T_x(z)||$ \\ 
 $\frac{\partial}{\partial a_{i,j}} ||T_x(z)|| = \frac{\partial}{\partial a_{i,j}} ||atan(a + Ax)||$ \\

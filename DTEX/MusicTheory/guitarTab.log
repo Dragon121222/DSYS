@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  18 MAY 2020 19:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  19 MAY 2020 10:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MachineLearning.tex
-(./MachineLearning.tex
+**guitarTab.tex
+(./guitarTab.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -306,48 +306,36 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip52
 \thm@headsep=\skip53
 \dth@everypar=\toks26
-)
-\c@thm=\count117
+) (./guitarTab.aux)
+\openout1 = `guitarTab.aux'.
 
-
-Package amsthm Warning: Unknown theoremstyle `Definition' on input line 23.
-
-\c@def.=\count118
-
-Package amsthm Warning: Unknown theoremstyle `Definition' on input line 26.
-
-\c@prf=\count119
-\c@exmp=\count120
-(./MachineLearning.aux)
-\openout1 = `MachineLearning.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
+\scratchcounter=\count117
 \scratchdimen=\dimen136
 \scratchbox=\box30
-\nofMPsegments=\count122
-\nofMParguments=\count123
+\nofMPsegments=\count118
+\nofMParguments=\count119
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count124
+\MPscratchCnt=\count120
 \MPscratchDim=\dimen137
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
+\MPnumerator=\count121
+\makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks28
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -367,7 +355,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 22.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -375,15 +363,15 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count127
+\c@section@level=\count123
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
-LaTeX Info: Redefining \nameref on input line 32.
+LaTeX Info: Redefining \ref on input line 22.
+LaTeX Info: Redefining \pageref on input line 22.
+LaTeX Info: Redefining \nameref on input line 22.
 
-(./MachineLearning.out) (./MachineLearning.out)
+(./guitarTab.out) (./guitarTab.out)
 \@outlinefile=\write3
-\openout3 = `MachineLearning.out'.
+\openout3 = `guitarTab.out'.
 
 
 *geometry* driver: auto-detecting
@@ -420,168 +408,54 @@ LaTeX Info: Redefining \nameref on input line 32.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
-9.
-
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--73
+Underfull \hbox (badness 10000) in paragraph at lines 24--35
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--35
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--122
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 168--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--267
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 278--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--298
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
-
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
- (./MachineLearning.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
-Package rerunfilecheck Info: File `MachineLearning.out' has not changed.
-(rerunfilecheck)             Checksum: C8C78E58AD5E830A9C314DE45DFF1727;353.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
+ (./guitarTab.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
+Package rerunfilecheck Info: File `guitarTab.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 7473 strings out of 492167
- 108758 string characters out of 6131558
- 217522 words of memory out of 5000000
- 11722 multiletter control sequences out of 15000+600000
- 13810 words of font info for 52 fonts, out of 8000000 for 9000
+ 7359 strings out of 492167
+ 107558 string characters out of 6131558
+ 205157 words of memory out of 5000000
+ 11652 multiletter control sequences out of 15000+600000
+ 7312 words of font info for 29 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,37p,285b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,6n,37p,226b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb>
-Output written on MachineLearning.pdf (6 pages, 186870 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmtt12.pfb>
+Output written on guitarTab.pdf (1 page, 33257 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 29 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
