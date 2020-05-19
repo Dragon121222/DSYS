@@ -31,7 +31,7 @@
 
 \begin{document}
 		\maketitle			
-\section{Metric Space, Limit, Derivative, and Partial Derivative}
+\section{Change}
 \begin{def.} \textbf{Metric} \\ 
 	Let X be a non-empty set.. \\ 
 	Let $d : X \times X \to \mathbb{R}^+_0$ such that: 
@@ -44,20 +44,6 @@
 	Then $d$ is called a metric and $(X,d)$ is called a metric space. \\
 	\href{https://en.wikipedia.org/wiki/Metric_space}{Reference}
 \end{def.}
-%\begin{def.} \textbf{Sequence} \\ 
-%	Let $X$ be a non-empty set. \\ 
-%	An operator $s : \mathbb{N} \to X$ is called a sequence in X, and written: 
-%	$$s = (s_1, s_2, ... , s_n , ...) = \{s_j\}_{j=1}^\infty = \{s_j\}_{j \in \mathbb{N}}$$
-%\end{def.}
-%\begin{def.} \textbf{Limit of a sequence} \\ 
-%	Let $(X,d)$ be a metric space and $s_n$ be a sequence in X. \\ 
-%	If 
-%	$$(\exists L \in X)(\forall \epsilon > 0)(\exists N \in \mathbb{N})(\forall n \geq N)(d(s_n,L) < \epsilon)$$ 
-%	Then $s$ is said to converge to $L$ and this is written as: \\ 
-%	$$s_n \to L \text{ as } n \to \infty$$
-%	or: 
-%	$$\lim_{n\to\infty} s_n = L$$	
-%\end{def.}
 \begin{def.} \textbf{Limit of a function} \\ 
 	Let $T : X \to Y$ where $(X,d_X)$ and $(Y,d_Y)$ are metric spaces. \\ 
 	Then fix $x_0 \in X$. \\
@@ -69,15 +55,50 @@
 \begin{def.} \textbf{Derivative} \\ 
 	Let $\hat{f} : \mathbb{R} \to \mathbb{R}$ \\ 
 	Further let $f = \hat{f}|_U$ where $U \in \tau_\mathbb{R}$ \\ 
-	Then $f$ is said to be differentiable at $a \in U$ if: \\ 
-	$$f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}$$
+	Then $f$ is said to be differentiable at $x \in U$ if there exists an $L_x$ such that: \\ 
+	$$L_x = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
+	If $L_x$ exists for all $x \in U$ then we write: \\ 
+	$$\frac{d}{dx}f(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
 	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
 \end{def.}
 \begin{def.} \textbf{Partial Derivative} \\
+	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ \\
+	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
+	Then $f$ is said to be differentiable at $x \in U$ with respect to the i'th component of $x$ if there exists an $L_{x_i}$ such that: \\  
+	$$L_{x_i} = \lim_{h \to 0} \frac{f(x_1,...,x_i + h,...,x_n) - f(x_1,...,x_i,...,x_n)}{h}$$
+	If $L_{x_i}$ exists for all $x \in U$ then we write: \\ 
+	$$\frac{\partial}{\partial x_i} f(x) = \lim_{h \to 0} \frac{f(x_1,...,x_i + h,...,x_n) - f(x_1,...,x_i,...,x_n)}{h}$$ 
 	\href{https://en.wikipedia.org/wiki/Partial_derivative}{Reference}
 \end{def.}
-\newpage
-\section{Gradients, Jacobian, Fréchet derivative, and Sub-Gradients} 
+\begin{def.} \textbf{Differentiability of a multi-variable function.} \\
+	Let $\hat{f} : \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
+	\[
+	\hat{f}(x) = 
+	\begin{bmatrix}
+	f_1(x) \\ 
+	\vdots \\
+	f_n(x) \\
+	\end{bmatrix}
+	\text{ and } 
+	(\forall j \in \mathbb{N}_n)(f_j : \mathbb{R}^m \to \mathbb{R})
+	\]
+	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^m}$ \\ 
+	Then $f$ is said to be differentiable at $x \in U$ if there exists a linear operator $J_f: \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
+	$$\lim_{h \to \vec{0}} \frac{||f(x + h) - f(x) + J_f(h)||_{\mathbb{R}^m}}{||h||_{\mathbb{R}^n}} = 0$$
+	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
+\end{def.}
+\begin{thm} \textbf{If a multi-variable function, f, is differentiable at x then the linear operator J is the Jacobian matrix.} \\ 
+	So our guess is that: \\ 
+	\[
+	J_f = 
+	\begin{bmatrix}
+	\frac{\partial}{\partial x_1} f_1(x) & \cdots & \frac{\partial}{\partial x_n} f_1(x) \\ 
+	\vdots & \ddots & \vdots \\ 
+	\frac{\partial}{\partial x_1} f_m(x) & \cdots & \frac{\partial}{\partial x_n} f_m(x) \\ 
+	\end{bmatrix}
+	\]
+	since this form is a linear operator mapping from the appropriate space to the appropriate space. It should be noted that the transpose of this matrix can not satisfy the definition of differentiability of a multi-variable function and so it is not the correct linear operator. 
+\end{thm}
 \begin{def.} \textbf{Gradient} \\ 
 	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function. \\ 
 	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
@@ -93,55 +114,6 @@
 	is called the Gradient of f. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference}
 \end{def.}
-\begin{def.} \textbf{Jacobian} \\ 
-	Let $f : \mathbb{R}^n \to \mathbb{R}^m$ where: 
-	\[
-	f(x) = 
-	\begin{bmatrix}
-	f_1(x) \\ 
-	\vdots \\ 
-	f_m(x) 
-	\end{bmatrix}
-	\forall x \in \mathbb{R}^n \text{ and } (\forall j \in \mathbb{N}_m) (f_j : \mathbb{R}^n \to \mathbb{R}) 
-	\]
-	Then $J_f : \mathbb{R}^n \to \mathbb{R}^{m \times n}$ where: \\  
-	\[
-	J_f(x) := 
-	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}f_1(x) & \cdots & \frac{\partial }{\partial x_1}f_m(x) \\
-	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_n}f_1(x) & \cdots & \frac{\partial }{\partial x_n}f_m(x) 
-	\end{bmatrix}
-	\]
-	\href{https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant}{Reference}
-\end{def.}
-\begin{thm}
-	Let $f : \mathbb{R}^n \to \mathbb{R}^k$ and $g : \mathbb{R}^k \to \mathbb{R}^m$ \\ 
-	Define: $h(x) = f(g(x))$ \\ 
-	where: \\ 
-	\[
-	h(x) = 
-	\begin{bmatrix}
-	f_1(g(x)) \\ 
-	\vdots \\
-	f_k(g(x))
-	\end{bmatrix}
-	\]	
-	\[
-	J_h(x) := 
-	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}h_1(x) & \cdots & \frac{\partial }{\partial x_1}h_m(x) \\
-	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_n}h_1(x) & \cdots & \frac{\partial }{\partial x_n}h_m(x) 
-	\end{bmatrix}
-	= 
-	\begin{bmatrix} 
-	\frac{\partial }{\partial x_1}f_1(g(x)) & \cdots & \frac{\partial }{\partial x_1}f_m(g(x)) \\
-	\vdots & \ddots & \vdots \\ 
-	\frac{\partial }{\partial x_n}f_1(g(x)) & \cdots & \frac{\partial }{\partial x_n}f_m(g(x)) 
-	\end{bmatrix}
-	\]
-\end{thm}
 \begin{def.} \textbf{Derivative with respect to a vector and the subspace gradient.} \\ 
 	Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
 	Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
@@ -158,12 +130,15 @@
 	\[
 	D_x T(z) = 
 	\begin{bmatrix}
-	\frac{\partial}{\partial x_{1,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_1(z) & \cdots &  \frac{\partial}{\partial x_{1,1}} T_{n-1}(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_{n-1}(z)\\
-	\vdots & \ddots & \vdots & \cdots & \vdots & \ddots & \vdots \\
-	\frac{\partial}{\partial x_{m_j,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_{n-1}(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{n-1}(z)\\
+	\frac{\partial}{\partial x_{1,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_1(z) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{m_j,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(z) \\
+	\vdots & \vdots & \vdots \\ 
+	\frac{\partial}{\partial x_{1,1}} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_{k_y}(z) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{m_j,1}} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{k_y}(z) \\	
 	\end{bmatrix}
 	\]
-	If $k_y = 1$ then $D_xT(z)$ is called the subspace gradient with respect to $X_j$ at the point z and is written $\nabla_x T(z)$
 \end{def.}
 \begin{def.} \textbf{Product space Derivative} \\ 
 		Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
@@ -179,49 +154,6 @@
 		\end{bmatrix}
 		\]
 \end{def.}
-\begin{exmp} \textbf{} \\
-Let $X_0 = \mathbb{R}^n, X_1 = \mathbb{R}^m, X_2 = \mathbb{R}^m, X_3 = \mathbb{R}^m$ \\
-Let $Y_0 = \mathbb{R}^{n\times m}, Y_1 = \mathbb{R}^m, Y_2 = \{0\}$ and $Y = \prod_{j=0}^{2} Y_j$ 
-$$T^3 : X_0 \times \prod_{j=0}^{2} Y_j \to X_3  \text{ where } T^3(x,A,a,0) = atan(a + Ax)$$ 
-$$T_0 : X_0 \times Y_0 \to X_1 \text{ where } T_0(x,A) = Ax$$ 
-$$T_1(x,a) = a+x$$ 
-$$T_2(x) = atan(x)$$ 
-$$T^3(x,A,a,0) = T_2(T_1(T_0(x,A),a) )$$ 
-Now fix $x \in X_0$ \\ 
-Then we have a new operator, $T_x : \prod_{j=0}^{2} Y_j \to X_3$ where: \\ 
-$$T_x(y) = T^3(x,y) \text{ and } y = (A,a,0)$$
-With all this we can now look at this: \\ 
-Let $z \in \prod_{j=0}^{2} Y_j$ 
-$$D_X ||T_x(z)|| \text{ where } ||\cdot|| \text{ is the one norm.}$$
-First: \\ 
-\[
-\nabla_{y_0} ||T_x(z)|| = 
-\begin{bmatrix}
-\frac{\partial}{\partial a_{1,1}} ||T_x(z)|| & \cdots & \frac{\partial}{\partial a_{1,n}} ||T_x(z)|| \\
-\vdots & \ddots & \vdots \\ 
-\frac{\partial}{\partial a_{m,1}} ||T_x(z)|| & \cdots & \frac{\partial}{\partial a_{m,n}} ||T_x(z)|| \\
-\end{bmatrix}
-\text{Since } y_0 = A = 
-\begin{bmatrix}
-a_{1,1} & \cdots & a_{1,n} \\ 
-\vdots & \ddots & \vdots \\ 
-a_{m,1} & \cdots & a_{m,n} \\ 
-\end{bmatrix}
-\]
-So then we will just look at: $\frac{\partial}{\partial a_{i,j}} ||T_x(z)||$ \\ 
-$\frac{\partial}{\partial a_{i,j}} ||T_x(z)|| = \frac{\partial}{\partial a_{i,j}} ||atan(a + Ax)||$ \\
-\[
-atan(Ax +a) = 
-\begin{bmatrix}
-\arctan(\sum_{l=1}^n a_{1,l}x_l + a_1)\\ 
-\vdots \\ 
-\arctan(\sum_{l=1}^n a_{m,l}x_l + a_m)\\ 
-\end{bmatrix}
-\]
-and so $||atan(Ax +a)|| = \sum_{i=1}^m | \arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)|$ \\
-Thus the partial with respect to $a_{i,j}$ zeros out all but: \\
-$$\frac{\partial}{\partial a_{i,j}}| \arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)| = \frac{\arctan(\sum_{l=1}^n a_{i,l}x_j + a_i)}{((\sum_{l=1}^n a_{i,l}x_l + a_i)^2 + 1  )|\arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)|}a_{i,j}x_j \text{ by the chain rule. }$$
-\end{exmp}
 
 
 \newpage
@@ -253,28 +185,12 @@ $$\frac{\partial}{\partial a_{i,j}}| \arctan(\sum_{l=1}^n a_{i,l}x_l + a_i)| = \
 	$$T^n := \bigcirc_{j=0}^{n-1} T_j$$ 
 	is called the \textbf{Finite Composition Operator defined on X}. \\ 
 \end{def.}
-\begin{thm} \textbf{Finite Composition Jacobian} \\ 
-		Let $T^n$ be defined as above. \\ 
-		Then: 
-		$$J_{T^n}(x) = J_{T_{n-1} \circ T^{n-1}}(x) = J_{T_{n-1}}(T^{n-1}(x))J_{T^{n-1}}(x) $$
-		where: 
-		$$J_{T^1}(x) = J_{T_0}(x)$$	
-\end{thm}
 \begin{def.} \textbf{Multi-variable Finite Composition Iteration} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^n$ and $Y = \{Y_j\}_{j=0}^{n-1}$ be finite sequences of sets. \\ 
 	Further let $\{T_j\}_{j=0}^{n-1}$ be a finite sequence of operators such that: $(\forall j \in \mathbb{N}_{n-1})(T_j : X_j \times Y_j \to X_{j+1})$ \\
 	Let $T^n : X_0 \times \prod_{j=0}^{n-1}Y_j \to X_n$ where: \\ 
 	$$T^n (x,y) = z_n \text{ where } z_{j+1} = T_j( z_{j},\pi_j (y) ) \text{ or } z_{j+1} = T_j( z_{j} )  \text{ and } z_0 = x \in X_0$$
 \end{def.}
-\begin{exmp} \textbf{MVFCI} \\ 
-		Let $X_0 = \mathbb{R}^n, X_1 = \mathbb{R}^m, X_2 = \mathbb{R}^m, X_3 = \mathbb{R}^m$ \\
-		Let $Y_0 = \mathbb{R}^{n\times m}, Y_1 = \mathbb{R}^m, Y_2 = \{0\}$
-		$$T^3 : X_0 \times \prod_{j=0}^{2} Y_j \to X_n  \text{ where } T^3(x,A,a,0) = atan(a + Ax)$$ 
-		$$T_0 : X_0 \times Y_0 \to X_1 \text{ where } T_0(x,A) = Ax$$ 
-		$$T_1(x,a) = a+x$$ 
-		$$T_2(x) = atan(x)$$ 
-		$$T^3(x,A,a,0) = T_2(T_1(T_0(x,A),a) )$$ 
-\end{exmp}
 \begin{def.} \textbf{Gradient Descent} \\ 
 Let $E : \mathbb{R}^n \to \mathbb{R}$ be a differentiable operator. \\ 
 The method of Gradient Descent says that a local minimum of $E$ can be found using the following iteration: \\ 

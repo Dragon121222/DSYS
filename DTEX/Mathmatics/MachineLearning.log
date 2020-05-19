@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  18 MAY 2020 19:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  19 MAY 2020 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,130 +440,130 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--73
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--68
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 81--84
+Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--122
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 168--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 189--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 143--148
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--240
+Underfull \hbox (badness 10000) in paragraph at lines 166--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 253--255
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--267
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 278--281
+Underfull \hbox (badness 10000) in paragraph at lines 188--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
+Underfull \hbox (badness 10000) in paragraph at lines 194--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--286
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--298
+Underfull \hbox (badness 10000) in paragraph at lines 200--202
+
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--312
+Underfull \hbox (badness 10000) in paragraph at lines 207--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
+Underfull \hbox (badness 10000) in paragraph at lines 218--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (./MachineLearning.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 246.
 Package rerunfilecheck Info: File `MachineLearning.out' has not changed.
-(rerunfilecheck)             Checksum: C8C78E58AD5E830A9C314DE45DFF1727;353.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+(rerunfilecheck)             Checksum: 81BC00429489D422B2786FAC600DA563;208.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 246.
  ) 
 Here is how much of TeX's memory you used:
- 7473 strings out of 492167
- 108758 string characters out of 6131558
- 217522 words of memory out of 5000000
- 11722 multiletter control sequences out of 15000+600000
+ 7468 strings out of 492167
+ 108718 string characters out of 6131558
+ 212522 words of memory out of 5000000
+ 11721 multiletter control sequences out of 15000+600000
  13810 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,37p,285b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,9n,37p,301b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -578,10 +578,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb>
-Output written on MachineLearning.pdf (6 pages, 186870 bytes).
+Output written on MachineLearning.pdf (6 pages, 181571 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 124 compressed objects within 2 object streams
- 33 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
