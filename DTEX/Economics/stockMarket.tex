@@ -1,0 +1,62 @@
+\documentclass[12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage[margin=0.5in]{geometry}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{collectbox}
+\DeclarePairedDelimiter\ceil{\lceils}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{amsthm}
+%opening
+\title{Stock Markets}
+\author{Daniel Drake}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{def.}{Definition}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{prf}{Proof}[section] 
+
+\theoremstyle{plain}
+\newtheorem{exmp}{Example}[section]
+
+\begin{document}
+	\maketitle
+
+	\section{Introduction}
+	Before we get into strategies such as the wheel, we need to have a basic model for what stocks are and how they work. 
+	
+	\section{Symbols}
+	$\mathbb{R} = (-\infty,\infty)$ \\ 
+	$\mathbb{R}^+ = [0,\infty)$
+
+	\section{Stock Market}
+	
+	Suppose that we are looking at the stock value for company E. \\
+	A stock is a function $S_E : T \to V$ \\
+	where T is set of possible times, $T = \mathbb{R}^+$ and V is the set of possible values. $V = \mathbb{R}^+$ \\ 
+
+	The function $S_E$ is continuous almost everywhere meaning that most of the time, there will only be rather small changes in value, but at any point, there could be large changes in value. \\
+
+	The time $t_0$ is the point in time when the company goes public. \\
+
+	The time $\tau$ is the current point in time. \\
+	Time 0 is the start of the universe, so of course, most stocks had zero value for most of existence. \\
+
+	We can know the value of $S_E$ on the set $[t_0,\tau]$ \\
+	
+	\section{Step 1}
+	Sell cash covered put. \\ \\
+
+
+	
+\end{document}

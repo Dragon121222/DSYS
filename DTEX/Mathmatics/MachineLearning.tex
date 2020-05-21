@@ -61,6 +61,21 @@
 	$$\frac{d}{dx}f(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$$
 	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
 \end{def.}
+\begin{thm} \textbf{Fundamental increment lemma} \\ 
+	Let $f$ be described as above and be differentiable at x. \\ 
+	Then there exists a function $\phi : \mathbb{R} \to \mathbb{R}$ such that: \\ 
+	$$f(x + h) = f(x) + \frac{d}{dx} f(x)h + \phi(x)h$$
+	and 
+	$$\lim_{h \to 0} \phi(h) = 0$$ 
+	Proof: \\ 
+	Define: $\phi(h) = \frac{f(x+h) - f(x)}{h} - \frac{d}{dx} f(x)$ \\ 
+	Then: $\phi(h)h = f(x+h) - f(x) - \frac{d}{dx} f(x)h$ \\ 
+	Then: $\phi(h)h + f(x) - \frac{d}{dx} f(x)h = f(x + h)$ \\ 
+	And so we have property 1. \\ 
+	Next: \\ 
+	$$\lim_{h \to 0} \phi(h) = \lim_{h \to 0} \left[\frac{f(x+h) - f(x) - \frac{d}{dx} f(x)h}{h}\right] = \lim_{h \to 0} \left[\frac{f(x+h) - f(x)}{h} - \frac{d}{dx} f(x)\right] $$
+	$$= \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} - \lim_{h \to 0} \frac{d}{dx} f(x) = \frac{d}{dx} f(x) - \frac{d}{dx} f(x) = 0$$
+\end{thm}
 \begin{def.} \textbf{Partial Derivative} \\
 	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ \\
 	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
@@ -100,7 +115,12 @@
 	since this form is a linear operator mapping from the appropriate space to the appropriate space. It should be noted that the transpose of this matrix can not satisfy the definition of differentiability of a multi-variable function and so it is not the correct linear operator. 
 \end{thm}
 \begin{def.} \textbf{Gradient} \\ 
-	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function. \\ 
+	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ and let $f : U \to \mathbb{R}$ such that $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
+	$f$ is said to be differentiable at $x \in U$ if $\exists \nabla f : \mathbb{R}^n \to \mathbb{R}^n$ such that: \\  	
+	$$\lim_{h \to 0}\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = 0$$ 
+\end{def.} 
+\begin{thm} \textbf{Form of the Gradient} \\ 
+	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function with respect to $x_j$ for all $j \in \mathbb{N}_n$. \\ 
 	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
 	\[
 	\nabla f(x) := 
@@ -113,33 +133,126 @@
 	\]
 	is called the Gradient of f. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference}
+\end{thm}
+\newpage
+\begin{def.} \textbf{Matrix operator differentiability} \\ 
+	Let $T : \mathbb{R}^{n\times m} \to \mathbb{R}^n$ such that: \\
+	\[
+	T(A) = 
+	\begin{bmatrix}
+	T_1(A) \\ 
+	\vdots \\ 
+	T_n(A) \\ 	
+	\end{bmatrix}
+	\forall A \in \mathbb{R}^{n\times m}
+	\text{ and } (\forall j \in \mathbb{N}_n)(T_j : \mathbb{R}^{n \times m} \to \mathbb{R})
+	\]
+	Then T is said to be differentiable at $A \in \mathbb{R}^{n \times m}$ if there exists a linear operator $D : \mathbb{R}^{n \times m} \to \mathbb{R}^n$ where: \\ 
+	$$\lim_{h \to 0} \frac{||T(A + h) - T(A) + D(h)||_{\mathbb{R}^n}}{||h||_{\mathbb{R}^{n\times m}}} = 0$$
 \end{def.}
-\begin{def.} \textbf{Derivative with respect to a vector and the subspace gradient.} \\ 
-	Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
-	Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
-	Let $x \in X_j$ for some $j \in \{0,...,n-1\}$ \\ 
+If $D$ exists then it is called the Matrix operator derivative and is written: $D_{\mathbb{R}^{n \times m}}T(A)$ \\ 
+\begin{thm} \textbf{The form of the Matrix operator derivative.} \\ 
+	Let $T$ be described as above and differentiable at $A \in \mathbb{R}^{n \times m}$ \\ 
+	\[
+	\frac{T(A + h) - T(A)}{||h||} = 
+	\begin{bmatrix}
+	\frac{T_1(A + h) - T_1(A)}{||h||} \\ 
+	\vdots \\ 
+	\frac{T_n(A + h) - T_n(A)}{||h||} \\ 	
+	\end{bmatrix}
+	\]
+	and so: \\ 
+	\[
+	\lim_{h \to 0} \frac{T(A + h) - T(A)}{||h||} = 
+	\begin{bmatrix}
+	\lim_{h \to 0} \frac{T_1(A + h) - T_1(A)}{||h||} \\ 
+	\vdots \\ 
+	\lim_{h \to 0} \frac{T_n(A + h) - T_n(A)}{||h||} \\ 	
+	\end{bmatrix}
+	\]	
+\end{thm}
+\newpage
+a
+\newpage
+\begin{def.} \textbf{Subspace Differentiability} \\ 
+	Let $X = \{X_j\}_{j=1}^{n}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
+	Let $T : \prod_{j=1}^{n} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
+	Let $x_j \in X_j$ for some $j \in \mathbb{N}_n$ \\ 
 	Where 
 	\[
-	x = 
+	x_j = 
 	\begin{bmatrix}
 	x_{1,1} & \cdots & x_{1,n_j} \\ 
 	\vdots & \ddots & \vdots \\
 	x_{m_j,1} & \cdots & x_{m_j,n_j} \\ 	
 	\end{bmatrix}
 	\]
+	$T$ is said to be differentiable at $x \in X$ where $x = (x_0,...,x_j,...,x_{n-1})$ with respect to $X_j$ if there exists a linear operator $D : X_j \to Y$: \\ 
+	Given $h \in X_j \setminus \{\vec{0}\}$ define $\hat{h} = (0,...,h,...,0) \in X \text{ where } h$ is in the j'th place of $\hat{h}$: \\
+	$$\lim_{h \to 0} \frac{||T(x + \hat{h}) - T(x) + D(h)||_{X}}{||h||_{X_j}} = 0$$
+	Then $D$ is called the subspace derivative of $T$ at x with respect to $X_j$ and is written: $D_{x_j} T(x)$ \\ 
+\end{def.}
+\begin{thm} \textbf{The form of the subspace derivative} \\
+	Let $X = \{X_j\}_{j=1}^{n}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
+	Let $T : \prod_{j=1}^{n} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
+	Let $x_j \in X_j$ for some $j \in \mathbb{N}_n$ \\ 
+	Where 
 	\[
-	D_x T(z) = 
+	x_j = 
 	\begin{bmatrix}
-	\frac{\partial}{\partial x_{1,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_1(z) \\
+	x_{1,1} & \cdots & x_{1,n_j} \\ 
 	\vdots & \ddots & \vdots \\
-	\frac{\partial}{\partial x_{m_j,1}} T_1(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(z) \\
-	\vdots & \vdots & \vdots \\ 
-	\frac{\partial}{\partial x_{1,1}} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{1,n_j}} T_{k_y}(z) \\
-	\vdots & \ddots & \vdots \\
-	\frac{\partial}{\partial x_{m_j,1}} T_{k_y}(z) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{k_y}(z) \\	
+	x_{m_j,1} & \cdots & x_{m_j,n_j} \\ 	
 	\end{bmatrix}
 	\]
-\end{def.}
+	Further let $T$ be differentiable at $x \in X$ where $x = (x_0,...,x_j,...,x_{n-1})$ with respect to $X_j$
+	My guess is that: 
+	\[
+	D_{x_j} T(x) = 
+	\begin{bmatrix}
+	\frac{\partial}{\partial x_{1,1}} T_1(x) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_1(x) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{1,n_j}} T_1(x) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(x) \\
+	\vdots & \vdots & \vdots \\ 
+	\frac{\partial}{\partial x_{1,1}} T_{k_y}(x) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_{k_y}(x) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{1,n_j}} T_{k_y}(x) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{k_y}(x) \\
+	\end{bmatrix}
+	\]		
+	Let $h \in X_j$ \\ 
+	Then: 
+	\[
+	D_{x_j}T(x)(h) = 
+	\begin{bmatrix}
+	\frac{\partial}{\partial x_{1,1}} T_1(x) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_1(x) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{1,n_j}} T_1(x) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_1(x) \\
+	\vdots & \vdots & \vdots \\ 
+	\frac{\partial}{\partial x_{1,1}} T_{k_y}(x) & \cdots & \frac{\partial}{\partial x_{m_j,1}} T_{k_y}(x) \\
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{1,n_j}} T_{k_y}(x) & \cdots & \frac{\partial}{\partial x_{m_j,n_j}} T_{k_y}(x) \\
+	\end{bmatrix}	
+	\begin{bmatrix}
+	h_{1,1} & \cdots & h_{1,n_j} \\ 
+	\vdots & \ddots & \vdots \\
+	h_{m_j,1} & \cdots & h_{m_j,n_j} \\ 	
+	\end{bmatrix}
+	\]
+	\[
+	= 
+	\begin{bmatrix}
+	\sum_{i = 1}^{m_j} h_{i,1}\frac{\partial}{\partial x_{i,1}} T_1(x) & \cdots & \sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,1}} T_1(x) \\
+	\vdots & \ddots & \vdots \\
+	\sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,n_j}} T_1(x) & \cdots & \sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,n_j}} T_1(x) \\ 
+	\vdots & \vdots & \vdots \\ 
+	\sum_{i = 1}^{m_j} h_{i,1}\frac{\partial}{\partial x_{i,1}} T_{k_y}(x) & \cdots & \sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,1}} T_{k_y}(x) \\
+	\vdots & \ddots & \vdots \\
+	\sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,n_j}} T_{k_y}(x) & \cdots & \sum_{i = 1}^{m_j} h_{i,n_j}\frac{\partial}{\partial x_{i,n_j}} T_{k_y}(x) \\ 	
+	\end{bmatrix}
+	\]
+\end{thm}
+
+\newpage
 \begin{def.} \textbf{Product space Derivative} \\ 
 		Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
 		Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\
