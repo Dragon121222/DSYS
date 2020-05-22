@@ -67,7 +67,7 @@
 	$$f(x + h) = f(x) + \frac{d}{dx} f(x)h + \phi(x)h$$
 	and 
 	$$\lim_{h \to 0} \phi(h) = 0$$ 
-	Proof: \\ 
+	\textbf{Proof:} \\ 
 	Define: $\phi(h) = \frac{f(x+h) - f(x)}{h} - \frac{d}{dx} f(x)$ \\ 
 	Then: $\phi(h)h = f(x+h) - f(x) - \frac{d}{dx} f(x)h$ \\ 
 	Then: $\phi(h)h + f(x) - \frac{d}{dx} f(x)h = f(x + h)$ \\ 
@@ -76,6 +76,9 @@
 	$$\lim_{h \to 0} \phi(h) = \lim_{h \to 0} \left[\frac{f(x+h) - f(x) - \frac{d}{dx} f(x)h}{h}\right] = \lim_{h \to 0} \left[\frac{f(x+h) - f(x)}{h} - \frac{d}{dx} f(x)\right] $$
 	$$= \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} - \lim_{h \to 0} \frac{d}{dx} f(x) = \frac{d}{dx} f(x) - \frac{d}{dx} f(x) = 0$$
 \end{thm}
+
+
+
 \begin{def.} \textbf{Partial Derivative} \\
 	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ \\
 	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
@@ -94,6 +97,50 @@
 	$$\Leftrightarrow 0 = \lim_{h \to 0} \left[\frac{f(x_1,...,x_i + h,...,x_n) - f(x_1,...,x_i,...,x_n)}{h} - \frac{L_{x_i} \cdot h}{h}\right]$$
 	$$\Leftrightarrow 0 = \lim_{h \to 0} \left[\frac{f(x_1,...,x_i + h,...,x_n) - f(x_1,...,x_i,...,x_n) - \langle L_{x_i} , h \rangle}{h}  \right]$$	
 \end{thm}
+\begin{def.} \textbf{Gradient} \\ 
+	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ and let $f : U \to \mathbb{R}$ such that $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
+	$f$ is said to be differentiable at $x \in U$ if $\exists \nabla f : \mathbb{R}^n \to \mathbb{R}^n$ such that: \\  	
+	$$\lim_{h \to 0}\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = 0$$ 
+\end{def.} 
+\begin{thm} \textbf{Form of the Gradient} \\ 
+	Let $f$ be defined as above. \\ 
+	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
+	\[
+	\nabla f(x) = 
+	\begin{bmatrix}
+	\frac{\partial }{\partial x_1}f(x) \\ 
+	\vdots \\
+	\frac{\partial }{\partial x_n}f(x) \\ 				
+	\end{bmatrix}
+	\forall x \in \mathbb{R}^n
+	\]
+	is called the Gradient of f. \\
+	\href{https://en.wikipedia.org/wiki/Gradient}{Reference} \\ \\
+	\textbf{Proof:} \\ 
+	Suppose $\nabla f$ is defined as above and all the partial derivatives exist. \\ 
+	Then: 
+	$$\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = \left|\frac{f(x + h) - f(x)}{||h||} - \frac{\langle \nabla f(x),h \rangle}{||h||} \right| = \left| \frac{f(x + h) - f(x)}{||h||} - \langle \nabla f(x), \hat{h} \rangle \right|$$
+	where $\hat{h} = \frac{h}{||h||}$
+	$$ = \left| \frac{f(x + h) - f(x)}{||h||} - \sum_{j=1}^n \frac{\partial}{\partial x_j} f(x)  \hat{h}_j \right| = ...$$
+\end{thm}
+\newpage
+\begin{def.} \textbf{Matrix Functional Differentiability} \\ 
+	Let $\hat{T} : \mathbb{R}^{n \times m} \to \mathbb{R}$ and let $T : U \to \mathbb{R}$ such that $T = \hat{T}|_U$ where $U \in \tau_{\mathbb{R}^{n \times m}}$ \\ 
+	T is said to be differentiable at $x \in U$ if $\exists D : \mathbb{R}^{n \times m} \to \mathbb{R}^{n \times m}$ such that: \\  
+	$$\lim_{h \to 0}\frac{|T(x + h) - T(x) - \langle D T(x),h \rangle|}{||h||} = 0$$
+	where $\langle \cdot, \cdot \rangle$ is an inner product defined on $\mathbb{R}^{n \times m}$
+\end{def.}
+\begin{def.} \textbf{Frobenius inner product} \\
+	The Frobenius inner product is defined as: \\ 
+	$$\langle \cdot , \cdot \rangle_{FB} : \mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R} \text{ such that: } \langle A,B \rangle_{FB} = \sum_{i=1}^n \sum_{j=1}^m a_{i,j}b_{i,j} \text{ for all } A,B \in \mathbb{R}^{n \times m}$$
+\end{def.}
+\begin{thm} \textbf{Form of Matrix Functional Derivative} \\
+	
+
+\end{thm}
+
+
+\newpage
 \begin{def.} \textbf{Differentiability of a multi-variable function.} \\
 	Let $\hat{f} : \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
 	\[
@@ -123,44 +170,6 @@
 	\]
 	since this form is a linear operator mapping from the appropriate space to the appropriate space. It should be noted that the transpose of this matrix can not satisfy the definition of differentiability of a multi-variable function and so it is not the correct linear operator. 
 \end{thm}
-\begin{def.} \textbf{Gradient} \\ 
-	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ and let $f : U \to \mathbb{R}$ such that $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
-	$f$ is said to be differentiable at $x \in U$ if $\exists \nabla f : \mathbb{R}^n \to \mathbb{R}^n$ such that: \\  	
-	$$\lim_{h \to 0}\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = 0$$ 
-\end{def.} 
-\begin{thm} \textbf{Form of the Gradient} \\ 
-	Let $f : \mathbb{R}^n \to \mathbb{R}$ be a Differentiable function with respect to $x_j$ for all $j \in \mathbb{N}_n$. \\ 
-	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
-	\[
-	\nabla f(x) := 
-	\begin{bmatrix}
-	\frac{\partial }{\partial x_1}f(x) \\ 
-	\vdots \\
-	\frac{\partial }{\partial x_n}f(x) \\ 				
-	\end{bmatrix}
-	\forall x \in \mathbb{R}^n
-	\]
-	is called the Gradient of f. \\
-	\href{https://en.wikipedia.org/wiki/Gradient}{Reference}
-\end{thm}
-\newpage
-\begin{def.} \textbf{Matrix Functional Differentiability} \\ 
-	Let $\hat{T} : \mathbb{R}^{n \times m} \to \mathbb{R}$ and let $T : U \to \mathbb{R}$ such that $T = \hat{T}|_U$ where $U \in \tau_{\mathbb{R}^{n \times m}}$ \\ 
-	T is said to be differentiable at $x \in U$ if $\exists D : \mathbb{R}^{n \times m} \to \mathbb{R}^{n \times m}$ such that: \\  
-	$$\lim_{h \to 0}\frac{|T(x + h) - T(x) - \langle D T(x),h \rangle|}{||h||} = 0$$
-	where $\langle \cdot, \cdot \rangle$ is an inner product defined on $\mathbb{R}^{n \times m}$
-\end{def.}
-\begin{def.} \textbf{Frobenius inner product} \\
-	The Frobenius inner product is defined as: \\ 
-	$$\langle \cdot , \cdot \rangle_{FB} : \mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R} \text{ such that: } \langle A,B \rangle_{FB} = \sum_{i=1}^n \sum_{j=1}^m a_{i,j}b_{i,j} \text{ for all } A,B \in \mathbb{R}^{n \times m}$$
-\end{def.}
-\begin{thm} \textbf{Form of Matrix Functional Derivative} \\
-	
-
-\end{thm}
-
-
-\newpage
 \begin{def.} \textbf{Matrix operator differentiability} \\ 
 	Let $T : \mathbb{R}^{n\times m} \to \mathbb{R}^n$ such that: \\
 	\[
