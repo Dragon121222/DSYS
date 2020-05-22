@@ -114,14 +114,12 @@
 	\end{bmatrix}
 	\forall x \in \mathbb{R}^n
 	\]
-	is called the Gradient of f. \\
+	is the form of $\nabla f$ which satisfies the above statement if $f$ is differentiable. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference} \\ \\
 	\textbf{Proof:} \\ 
 	Suppose $\nabla f$ is defined as above and all the partial derivatives exist. \\ 
 	Then: 
-	$$\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = \left|\frac{f(x + h) - f(x)}{||h||} - \frac{\langle \nabla f(x),h \rangle}{||h||} \right| = \left| \frac{f(x + h) - f(x)}{||h||} - \langle \nabla f(x), \hat{h} \rangle \right|$$
-	where $\hat{h} = \frac{h}{||h||}$
-	$$ = \left| \frac{f(x + h) - f(x)}{||h||} - \sum_{j=1}^n \frac{\partial}{\partial x_j} f(x)  \hat{h}_j \right| = ...$$
+	$$\frac{1}{||h||} |f(x + h) - f(x) - \langle \nabla f(x),h \rangle| = \frac{1}{||h||} \left|f(x + h) - f(x) - \sum_{j=1}^n \frac{\partial}{\partial x_j} f(x)\cdot h_j\right|$$
 \end{thm}
 \newpage
 \begin{def.} \textbf{Matrix Functional Differentiability} \\ 
