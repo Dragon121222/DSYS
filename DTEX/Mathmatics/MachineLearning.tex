@@ -133,7 +133,15 @@
 	$$\langle \cdot , \cdot \rangle_{FB} : \mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R} \text{ such that: } \langle A,B \rangle_{FB} = \sum_{i=1}^n \sum_{j=1}^m a_{i,j}b_{i,j} \text{ for all } A,B \in \mathbb{R}^{n \times m}$$
 \end{def.}
 \begin{thm} \textbf{Form of Matrix Functional Derivative} \\
-	
+	\[
+	DT(x) = 
+	\begin{bmatrix}
+	\frac{\partial}{\partial x_{1,1}} & \cdots & \frac{\partial}{\partial x_{1,m}} \\ 
+	\vdots & \ddots & \vdots \\
+	\frac{\partial}{\partial x_{n,1}} & \cdots & \frac{\partial}{\partial x_{n,m}} \\ 
+	\end{bmatrix}	
+	\]
+
 
 \end{thm}
 
@@ -152,14 +160,14 @@
 	(\forall j \in \mathbb{N}_n)(f_j : \mathbb{R}^m \to \mathbb{R})
 	\]
 	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^m}$ \\ 
-	Then $f$ is said to be differentiable at $x \in U$ if there exists a linear operator $J_f: \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
-	$$\lim_{h \to \vec{0}} \frac{||f(x + h) - f(x) + J_f(h)||_{\mathbb{R}^m}}{||h||_{\mathbb{R}^n}} = 0$$
+	Then $f$ is said to be differentiable at $x \in U$ if there exists a linear operator $J_{f(x)}: \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
+	$$\lim_{h \to \vec{0}} \frac{||f(x + h) - f(x) + J_{f(x)}(h)||_{\mathbb{R}^m}}{||h||_{\mathbb{R}^n}} = 0$$
 	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
 \end{def.}
 \begin{thm} \textbf{If a multi-variable function, f, is differentiable at x then the linear operator J is the Jacobian matrix.} \\ 
 	So our guess is that: \\ 
 	\[
-	J_f = 
+	J_{f(x)} = 
 	\begin{bmatrix}
 	\frac{\partial}{\partial x_1} f_1(x) & \cdots & \frac{\partial}{\partial x_n} f_1(x) \\ 
 	\vdots & \ddots & \vdots \\ 
