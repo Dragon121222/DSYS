@@ -298,6 +298,9 @@ boost_regex_DIR:PATH=/usr/lib64/cmake/boost_regex-1.72.0
 //The directory containing a CMake configuration file for libfreenect.
 libfreenect_DIR:PATH=/usr/local/share/libfreenect
 
+//The directory containing a CMake configuration file for libmysqlcppconn8.
+libmysqlcppconn8_DIR:PATH=libmysqlcppconn8_DIR-NOTFOUND
+
 //Path to a library.
 pkgcfg_lib_GTK3_atk-1.0:FILEPATH=/usr/lib/libatk-1.0.so
 
@@ -355,7 +358,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=17
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.

@@ -14,7 +14,7 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \usepackage{amsthm}
 %opening
-\title{Machine Learning}
+\title{Analysis, Topology, Optimization, Machine Learning, and Computational Analysis}
 \author{Daniel Drake}
 
 \theoremstyle{plain}
@@ -30,13 +30,78 @@
 \newtheorem{exmp}{Example}[section]
 
 \begin{document}
-		\maketitle			
+\maketitle			
+\section{Notation, Set Theory, and Logic}
+\begin{def.} \textbf{Common Sets of Numbers} \\ 
+	$$\mathbb{N} = \{1,2,...\}$$	
+	$$\mathbb{N}_0 = \{0,1,2,...\}$$
+	$$\mathbb{N}_m = \{1,2,...,m\} \text{ where } m \in \mathbb{N}$$
+	$$\mathbb{R} \text{ is the set of Real Numbers}$$
+	$$\mathbb{R}^+ = \{x \in \mathbb{R} : x > 0\}$$
+	$$\mathbb{R}_0^+ = \{x \in \mathbb{R} : x \geq 0\}$$
+	$$\mathbb{R}^- = \{x \in \mathbb{R} : x < 0\}$$
+	$$\mathbb{R}_0^- = \{x \in \mathbb{R} : x \leq 0\}$$
+\end{def.}
+\begin{def.} \textbf{Sets and Set Builder Notation} \\ 
+	Set builder notation is a way of describing a set using mathematical or logical symbols. \\
+	Look at the following example: \\ 
+	$$E = \{x \in \mathbb{N}: x = 2n \text{ where } n \in \mathbb{N}\}$$
+	This reads: $E$ is the set of all x in $\mathbb{N}$ such that $x = 2n$ where $n$ is in $\mathbb{N}$ \\
+	This set is also known as the even numbers. \\
+	When talking about functions, another common way of describing a set is: 
+	$$C_X^Y = \{f : X \to Y | f \text{ is continuous} \}$$
+	This reads: $C_X^Y$ is the set of all functions f mapping from $X$ to $Y$ such that $f$ is continuous. \\
+\end{def.}
+
+\begin{def.} \textbf{Subsets} \\ 
+	Let $A,B$ be sets. \\ 
+	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
+\end{def.}
+
+\begin{thm} \textbf{Union and Intersection Distributive Properties} \\ 
+	$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$ 	
+	$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+\end{thm}
+
+\begin{def.} \textbf{Power Set} \\ 
+	Let $X \not = \phi$ \\ 
+	$$2^X := \{V : V \subseteq X\}$$
+\end{def.}
+\section{Topology}
+\begin{def.} \textbf{Topology} \\
+	Let $X \not = \phi$ \\ 
+	Further let $\tau \subseteq 2^X$ such that: \\ 
+	$$\phi,X \in \tau$$
+	$$(\forall A \not = \phi)\left(\{U_\alpha\}_{\alpha \in A} \subseteq \tau \Rightarrow \bigcup_{\alpha \in A} U_\alpha \in \tau\right)$$
+	$$(\forall m \in \mathbb{N})\left(\{U_j\}_{j\in \mathbb{N}_m} \Rightarrow \bigcap_{j=1^m} U_j \in \tau\right)$$
+\end{def.}
+\begin{def.} \textbf{Relative Topology} \\
+	Let $X \not = \phi$ and $Z \subset X$ \\ 
+	Then the relative topology on $Z$ is written as follows: \\ 
+	$$\tau_Z = \{Z \cap U : U \in \tau_X\}$$
+\end{def.}
+\begin{thm} \textbf{The Relative Topology is a Topology on Z} \\
+	Let $E \in \tau_Z$ \\
+	$$\Rightarrow E = Z \cap U \subset Z$$
+	$$\Rightarrow \tau_Z \subseteq 2^Z$$
+	And so we have met the first criteria. \\ 
+	Next: 
+	$$\phi \in \tau \Rightarrow Z \cap \phi \in \tau_Z \Rightarrow Z \cap \phi = \phi \in \tau_Z$$
+	Next: 
+	$$X \in \tau \Rightarrow Z \cap X \in \tau_Z \Rightarrow Z \cap X = Z \in \tau_Z$$
+	Next: 
+	Let $A \not = \phi$ and $\{U_\alpha\}_{\alpha \in A} \in \tau_Z$ \\ 
+	$$\Rightarrow \exists \{V_\alpha\}_{\alpha \in A} \subset \tau \text{ such that: } U_\alpha = Z \cap V_\alpha$$
+	$$\Rightarrow \bigcup_{\alpha \in A} U_\alpha = \bigcup_{\alpha \in A} Z \cap V_\alpha$$
+\end{thm}
+\begin{thm} \textbf{Topologies on Finite Spaces} \\
+	Let $E \not = \phi$ and $card(E) = \phi$ then $\tau_E = 2^E$	
+\end{thm}
 \section{Change}
 \begin{def.} \textbf{Metric} \\ 
 	Let X be a non-empty set.. \\ 
 	Let $d : X \times X \to \mathbb{R}^+_0$ such that: 
 	\begin{itemize}
-		\item $(\forall x \in X) d(x,x) = 0$
 		\item $(\forall x,y \in X) d(x,y) = 0 \Leftrightarrow x = y$ 
 		\item $(\forall x,y \in X) d(x,y) = d(y,x)$
 		\item $(\forall x,y,z \in X) d(x,z) \leq d(x,y) + d(y,z)$
@@ -336,5 +401,14 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\begin{thm} \textbf{Every element in B can be decomposed as a finite non-trivial convex combination from B} \\
 	
 	\end{thm}
+	\newpage
+	\section{K-Operators}
+	Let $\hat{f} : X \to Y$ where $X,Y$ are topological spaces. \\ \\
+	Let $V \subset X$ and $W \subset Y$ where $card(V) < card(\mathbb{N})$ and $card(W) < card(\mathbb{N})$
+	Then define $f : V \to W$ where the associated topological spaces are: \\ 
+	$$\tau_V = \{V \cap U : U \in \tau_X\} \text{ and } \tau_W = \{W \cap U : U \in \tau_Y\}$$
+
+	
+	
 
 \end{document}

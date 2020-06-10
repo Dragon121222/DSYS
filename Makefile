@@ -494,6 +494,33 @@ DSRC/DSERVERUDP/DSERVERUDP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s
 .PHONY : DSRC/DSERVERUDP/DSERVERUDP.cpp.s
 
+DSRC/DSQL/DSQL.o: DSRC/DSQL/DSQL.cpp.o
+
+.PHONY : DSRC/DSQL/DSQL.o
+
+# target to build an object file
+DSRC/DSQL/DSQL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o
+.PHONY : DSRC/DSQL/DSQL.cpp.o
+
+DSRC/DSQL/DSQL.i: DSRC/DSQL/DSQL.cpp.i
+
+.PHONY : DSRC/DSQL/DSQL.i
+
+# target to preprocess a source file
+DSRC/DSQL/DSQL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.i
+.PHONY : DSRC/DSQL/DSQL.cpp.i
+
+DSRC/DSQL/DSQL.s: DSRC/DSQL/DSQL.cpp.s
+
+.PHONY : DSRC/DSQL/DSQL.s
+
+# target to generate assembly for a file
+DSRC/DSQL/DSQL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.s
+.PHONY : DSRC/DSQL/DSQL.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -542,6 +569,9 @@ help:
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.o"
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.i"
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.s"
+	@echo "... DSRC/DSQL/DSQL.o"
+	@echo "... DSRC/DSQL/DSQL.i"
+	@echo "... DSRC/DSQL/DSQL.s"
 .PHONY : help
 
 

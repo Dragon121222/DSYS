@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
   "/home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
   "/home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
+  "/home/drake/DSYS/DSRC/DSQL/DSQL.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

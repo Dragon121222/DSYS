@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
+  "CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o"
   "exe"
   "exe.pdb"
 )

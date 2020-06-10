@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  22 MAY 2020 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  1 JUN 2020 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -431,209 +431,262 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 3
-9.
-
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--67
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 69--76
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--86
+Underfull \hbox (badness 10000) in paragraph at lines 78--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--103
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 105--108
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+05.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 120--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--122
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--141
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 190--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
+Underfull \hbox (badness 10000) in paragraph at lines 196--198
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--192
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 228--231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 237--242
+Underfull \hbox (badness 10000) in paragraph at lines 215--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--266
+Underfull \hbox (badness 10000) in paragraph at lines 296--298
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 302--307
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 319--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--281
+Underfull \hbox (badness 10000) in paragraph at lines 325--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--286
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--291
+Underfull \hbox (badness 10000) in paragraph at lines 347--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--296
-
- []
-
-[8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 356--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--308
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
+
+ []
+
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--322
+Underfull \hbox (badness 10000) in paragraph at lines 366--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
+[13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
  (./MachineLearning.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
 Package rerunfilecheck Info: File `MachineLearning.out' has not changed.
-(rerunfilecheck)             Checksum: 81BC00429489D422B2786FAC600DA563;208.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
+(rerunfilecheck)             Checksum: C788C3CB86DF651FA942B90A13BEAB6D;363.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
  ) 
 Here is how much of TeX's memory you used:
- 7480 strings out of 492167
- 108805 string characters out of 6131558
- 212522 words of memory out of 5000000
- 11721 multiletter control sequences out of 15000+600000
+ 7498 strings out of 492167
+ 108955 string characters out of 6131558
+ 213584 words of memory out of 5000000
+ 11724 multiletter control sequences out of 15000+600000
  13810 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,37p,301b,408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,9n,37p,301b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
@@ -648,10 +701,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb>
-Output written on MachineLearning.pdf (10 pages, 194223 bytes).
+Output written on MachineLearning.pdf (13 pages, 206184 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

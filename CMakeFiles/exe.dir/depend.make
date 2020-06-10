@@ -8364,3 +8364,6 @@ CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o: /usr/include/pango-1.0/pang
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o: /usr/include/pango-1.0/pango/pangocairo.h
 CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o: /usr/lib/glib-2.0/include/glibconfig.h
 
+CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o: DSRC/DSQL/DSQL.cpp
+CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o: DSRC/DSQL/DSQL.h
+

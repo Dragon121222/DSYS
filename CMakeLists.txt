@@ -34,6 +34,9 @@ find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS} ${LIBUSB_INCLUDE_DIR})
 
+#Add mysql Libraries
+
+
 add_executable(exe DSRC/DOBJ/DOBJ.h DSRC/DOBJ/DOBJ.cpp 
 				   DSRC/DGTKWINDOW/DGTKWINDOW.h DSRC/DGTKWINDOW/DGTKWINDOW.cpp 
 				   DSRC/DGLUTWINDOW/DGLUTWINDOW.h DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp 
@@ -44,6 +47,7 @@ add_executable(exe DSRC/DOBJ/DOBJ.h DSRC/DOBJ/DOBJ.cpp
 				   DSRC/DSERVERUDP/DSERVERUDP.h DSRC/DSERVERUDP/DSERVERUDP.cpp 
 				   DSRC/DCLIENTUDP/DCLIENTUDP.h DSRC/DCLIENTUDP/DCLIENTUDP.cpp 		
 				   DSRC/DML/DML.h DSRC/DML/DML.cpp DSRC/DML/DOP.cpp  		   
+				   DSRC/DSQL/DSQL.h DSRC/DSQL/DSQL.cpp 
 				   DAPP/main.cpp )
 
 target_link_libraries(exe  
@@ -56,6 +60,11 @@ target_link_libraries(exe
 					  ${CMAKE_THREAD_LIBS_INIT} 
 					  ${MATH_LIB} ${LIBUSB_LIBRARY} 
 					  ${libfreenect_LIBRARIES} 
+					    mysqlclient
+					    mysqlcppconn
+					    crypto
+					    ssl
+					    resolv
 					  )
 
 

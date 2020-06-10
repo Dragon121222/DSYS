@@ -1,0 +1,71 @@
+\documentclass[12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage[margin=0.5in]{geometry}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{collectbox}
+\DeclarePairedDelimiter\ceil{\lceils}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{amsthm}
+%opening
+\title{Notes On Rudin Functional Analysis}
+\author{Daniel Drake}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{def.}{Definition}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{prf}{Proof}[section] 
+
+\theoremstyle{plain}
+\newtheorem{exmp}{Example}[section]
+
+\begin{document}
+	\maketitle		
+	\section{Chapter 1, Topological Vector Spaces} 
+	\begin{def.} \textbf{Norms and Normed Spaces} \\ 
+		Let $X$ be a non-empty vector space and $||\cdot|| : X \to \mathbb{R}^+_0$ such that:
+		\begin{itemize}
+			\item $(\forall x,y \in X)(||x + y|| \leq ||x|| + ||y||)$ 
+			\item $(\forall x \in X)(\forall \alpha \in \mathbb{R})(||\alpha x|| = |\alpha|||x||)$
+			\item $x \not= \vec{0} \Rightarrow ||x|| > 0$
+		\end{itemize}
+		We then call the ordered pair, $(X,||\cdot||)$ a Normed space. 
+	\end{def.}
+	\begin{thm} \textbf{Every Norm space is also a metric space.} \\
+		Let $(X,||\cdot||)$ be a normed spaced. \\
+		Define: $(d(x,y) = ||x - y||)(\forall x,y \in X)$ \\ 
+		Then: $(X,d)$ is a metric space. \\ \\
+		\textbf{Proof:} \\ 
+		Proving this just comes down to showing that $d$ is a metric. \\ \\
+		First, the identity of indiscernibles. \\ 
+		Let $(x,y \in X)(x = y)(d(x,y) = ||x-y|| = ||\vec{0}|| = ||0\vec{0}|| = |0|||\vec{0}|| = 0)$ \\ 
+		Next let $(x,y \in X)(d(x,y) = 0 \Rightarrow 0 = ||x-y|| \Rightarrow x-y = \vec{0} \Rightarrow x = y)$ \\ \\
+		Next, the symmetry property. \\ 
+		Let $x,y \in X$ \\ 
+		$d(x,y) = ||x - y|| = |-1|||x - y|| = ||-1(x - y)|| = ||-x + y|| = ||y - x|| = d(y,x)$ \\ \\
+		Finally, the triangle inequality. \\ 
+		Let $x,y,z \in X$ \\ 
+		Then $d(x,y) = ||x - y|| = ||x + z - z - y|| = ||(x - z) + ( z - y)|| \leq ||x - z|| + ||z - y|| = d(x,z) + d(z,y)$ 
+	\end{thm}
+	\begin{def.} \textbf{Balls} \\
+		Let $(X,d)$ be a metric space, and $B : X \times \mathbb{R}^+ \to 2^{X}$ such that:
+		$$B(x,r) = \{z \in X : d(x,z) < r\}$$
+		Then $B(x,r)$ is called an open ball centered at $x$ with radius $r$. \\ \\
+		Next let $\bar{B} : X \times \mathbb{R}^+ \to 2^X$ such that: 
+		$$\bar{B}(x,r) = \{z \in X : d(x,z) \leq r\}$$
+		Then $\bar{B}(x,r)$ is called the closed ball centered at $x$ with radius r. \\ \\
+		Finally: $B(\vec{0},1)$ and $\bar{B}(\vec{0},1)$ are called the open and closed unit balls.  
+	\end{def.}
+	`
+
+\end{document}
