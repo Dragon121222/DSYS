@@ -52,15 +52,34 @@
 	$$C_X^Y = \{f : X \to Y | f \text{ is continuous} \}$$
 	This reads: $C_X^Y$ is the set of all functions f mapping from $X$ to $Y$ such that $f$ is continuous. \\
 \end{def.}
-
+\begin{def.} \textbf{Intersection and Union} \\
+	Let $A,B$ be sets. \\ 
+	$$A \cap B = \{ x : x \in A \land x \in B\}$$
+	$$A \cup B = \{ x : x \in A \lor x \in B\}$$
+\end{def.}
 \begin{def.} \textbf{Subsets} \\ 
 	Let $A,B$ be sets. \\ 
 	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
 \end{def.}
-
+\begin{thm} \textbf{The union only makes things larger} \\
+	Let $A,B$ be sets. \\ 
+	Then: $A \subset A \cup B$ \\ 
+\end{thm}
 \begin{thm} \textbf{Union and Intersection Distributive Properties} \\ 
 	$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$ 	
 	$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
+	Proof: \\
+	Let $x \in A \cap (B \cup C) \Rightarrow x \in A \land x \in B \cup C$ \\ \\
+	Suppose that $x \not \in C \Rightarrow x \in B$ \\ 
+	$\Rightarrow x \in A \land x \in B$ \\ 
+	$\Rightarrow x \in A \cap B$ \\ 
+	$\Rightarrow x \in (A \cap B) \cup (A \cap C) \hfill [(A \cap B) \subset (A \cap B) \cup (A \cap C)]$ \\ \\
+	Suppose that $x \not \in B \Rightarrow x \in C$ \\ 
+	$\Rightarrow x \in A \text{ and } x \in C$ \\ 
+	$\Rightarrow x \in A \cap C$ \\ 
+	$\Rightarrow x \in (A \cap B) \cup (A \cap C) \hfill [(A \cap C) \subset (A \cap B) \cup (A \cap C)]$ \\
+	Therefore: \\ 
+	$$A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$$ 	
 \end{thm}
 
 \begin{def.} \textbf{Power Set} \\ 

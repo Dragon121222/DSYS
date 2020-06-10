@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  29 MAY 2020 09:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.6.9)  10 JUN 2020 12:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,7 +473,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
  7431 strings out of 492167
- 108607 string characters out of 6131558
+ 108607 string characters out of 6131559
  214597 words of memory out of 5000000
  11710 multiletter control sequences out of 15000+600000
  9497 words of font info for 36 fonts, out of 8000000 for 9000
@@ -484,7 +484,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on resumeSoftwareEngineeringVersion.pdf (1 page, 79826 bytes).
+Output written on resumeSoftwareEngineeringVersion.pdf (1 page, 79411 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
