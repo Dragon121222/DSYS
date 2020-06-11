@@ -21,7 +21,7 @@
 
 #include "boost/filesystem/operations.hpp"
 #include "boost/filesystem/path.hpp"
-#include "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DRIVERS/KINECTDRIVERS/libfreenect/wrappers/cpp/libfreenect.hpp"
+//#include "/run/media/drake/Seagate Expansion Drive/BackupDesktop/Code/DSYS/DRIVERS/KINECTDRIVERS/libfreenect/wrappers/cpp/libfreenect.hpp"
 
 #ifndef __DOBJ__
 #include "../DSRC/DOBJ/DOBJ.h"
@@ -35,9 +35,9 @@
 #include "../DSRC/DGLUTWINDOW/DGLUTWINDOW.h"
 #endif
 
-#ifndef __DKINECT__
-#include "../DSRC/DKINECT/DKINECT.h"
-#endif
+//#ifndef __DKINECT__
+//#include "../DSRC/DKINECT/DKINECT.h"
+//#endif
 
 #ifndef __DNETWORK__
 #include "../DSRC/DNETWORK/DNETWORK.h"
@@ -87,6 +87,8 @@ void DGTKDEMO(GtkButton * widget, gpointer ptr) {
 	delete(dwindow); 
 
 }
+
+#ifdef __DKINECT__
 
 Freenect::Freenect freenect;
 MyFreenectDevice* device;
@@ -261,6 +263,8 @@ void DKINECT_DEMO_RECORD(GtkButton * widget, gpointer ptr) {
 
 }
 
+#endif
+
 /*
 
 void DKINECT_NETWORK_STREAM(GtkButton * widget, gpointer ptr) { 
@@ -411,10 +415,12 @@ int main(int argc,  char** argv) {
 	dwindow->addWidget("DCLIENTTCP_DSERVERTCP_DEMO","button_with_label",1,0,&DCLIENTTCP_DSERVERTCP_DEMO,"clicked"); 
 	dwindow->addWidget("DGTKDEMO","button_with_label",2,0,&DGTKDEMO,"clicked"); 
 	dwindow->addWidget("DGLUTDEMO","button_with_label",3,0,&DGLUTDEMO,"clicked"); 
+#ifdef __DKINECT__
 	dwindow->addWidget("DKINECT_DEMO","button_with_label",4,0,&DKINECT_DEMO,"clicked"); 
     dwindow->addWidget("DKINECT_DEMO_RECORD","button_with_label",4,0,&DKINECT_DEMO_RECORD,"clicked");     
 //    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
     dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
+#endif
     dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
 
 	dwindow->constructWindow(); 

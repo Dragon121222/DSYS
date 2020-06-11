@@ -32,7 +32,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib64/cmake/boost_regex-1.72.0/boost_regex-config.cmake"
   "/usr/lib64/cmake/boost_regex-1.72.0/libboost_regex-variant-shared.cmake"
   "/usr/lib64/cmake/boost_regex-1.72.0/libboost_regex-variant-static.cmake"
-  "/usr/local/share/libfreenect/libfreenectConfig.cmake"
   "/usr/share/ArrayFire/cmake/ArrayFireCPUTargets-release.cmake"
   "/usr/share/ArrayFire/cmake/ArrayFireCPUTargets.cmake"
   "/usr/share/ArrayFire/cmake/ArrayFireCUDATargets-release.cmake"

@@ -68,10 +68,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/drake/DSYS
+CMAKE_SOURCE_DIR = /home/drake/Documents/Code/DSYS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/drake/DSYS
+CMAKE_BINARY_DIR = /home/drake/Documents/Code/DSYS
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/DSYS/CMakeFiles /home/drake/DSYS/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/Documents/Code/DSYS/CMakeFiles /home/drake/Documents/Code/DSYS/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/DSYS/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drake/Documents/Code/DSYS/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -305,33 +305,6 @@ DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
 .PHONY : DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
 
-DSRC/DKINECT/DKINECT.o: DSRC/DKINECT/DKINECT.cpp.o
-
-.PHONY : DSRC/DKINECT/DKINECT.o
-
-# target to build an object file
-DSRC/DKINECT/DKINECT.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.o
-.PHONY : DSRC/DKINECT/DKINECT.cpp.o
-
-DSRC/DKINECT/DKINECT.i: DSRC/DKINECT/DKINECT.cpp.i
-
-.PHONY : DSRC/DKINECT/DKINECT.i
-
-# target to preprocess a source file
-DSRC/DKINECT/DKINECT.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.i
-.PHONY : DSRC/DKINECT/DKINECT.cpp.i
-
-DSRC/DKINECT/DKINECT.s: DSRC/DKINECT/DKINECT.cpp.s
-
-.PHONY : DSRC/DKINECT/DKINECT.s
-
-# target to generate assembly for a file
-DSRC/DKINECT/DKINECT.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DKINECT/DKINECT.cpp.s
-.PHONY : DSRC/DKINECT/DKINECT.cpp.s
-
 DSRC/DML/DML.o: DSRC/DML/DML.cpp.o
 
 .PHONY : DSRC/DML/DML.o
@@ -494,33 +467,6 @@ DSRC/DSERVERUDP/DSERVERUDP.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.s
 .PHONY : DSRC/DSERVERUDP/DSERVERUDP.cpp.s
 
-DSRC/DSQL/DSQL.o: DSRC/DSQL/DSQL.cpp.o
-
-.PHONY : DSRC/DSQL/DSQL.o
-
-# target to build an object file
-DSRC/DSQL/DSQL.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.o
-.PHONY : DSRC/DSQL/DSQL.cpp.o
-
-DSRC/DSQL/DSQL.i: DSRC/DSQL/DSQL.cpp.i
-
-.PHONY : DSRC/DSQL/DSQL.i
-
-# target to preprocess a source file
-DSRC/DSQL/DSQL.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.i
-.PHONY : DSRC/DSQL/DSQL.cpp.i
-
-DSRC/DSQL/DSQL.s: DSRC/DSQL/DSQL.cpp.s
-
-.PHONY : DSRC/DSQL/DSQL.s
-
-# target to generate assembly for a file
-DSRC/DSQL/DSQL.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DSQL/DSQL.cpp.s
-.PHONY : DSRC/DSQL/DSQL.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -548,9 +494,6 @@ help:
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.o"
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.i"
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.s"
-	@echo "... DSRC/DKINECT/DKINECT.o"
-	@echo "... DSRC/DKINECT/DKINECT.i"
-	@echo "... DSRC/DKINECT/DKINECT.s"
 	@echo "... DSRC/DML/DML.o"
 	@echo "... DSRC/DML/DML.i"
 	@echo "... DSRC/DML/DML.s"
@@ -569,9 +512,6 @@ help:
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.o"
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.i"
 	@echo "... DSRC/DSERVERUDP/DSERVERUDP.s"
-	@echo "... DSRC/DSQL/DSQL.o"
-	@echo "... DSRC/DSQL/DSQL.i"
-	@echo "... DSRC/DSQL/DSQL.s"
 .PHONY : help
 
 
