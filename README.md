@@ -15,3 +15,11 @@ I have a centralized system and no need to rebuild stuff like the cmakelist file
 
 Turns out I may be using this as more than just a system to do specific things. 
 It's more like a general way which I am organizing information. 
+
+Packages needed: 
+arrayfire
+boost
+mysql ?
+mysql-connector-c++ ?
+
+Todo: Figure out conditional compilation
