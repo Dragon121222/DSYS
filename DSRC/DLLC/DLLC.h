@@ -2,7 +2,7 @@
 // Written By Daniel Drake 
 //****************************************************************************************************************
 
-#include "DOBJ.h"
+#include "../DOBJ/DOBJ.h"
 
 #ifndef __DLLC__
 #define __DLLC__
@@ -15,7 +15,11 @@ class DLLC : public DOBJ {
 		~DLLC(); 
 
 		// Low Level Code
-		void itos(unsigned int x, char poz); 
+		void itos3(unsigned int x, char poz); 
+		void itos4(unsigned int x, char poz); 		
+		void fillBufWithNull(void); 
+		void memCpyOp(); 
+		void memMoveOp();
 
 		// Test Function 
 		void unitTests(); 

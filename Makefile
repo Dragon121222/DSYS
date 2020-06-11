@@ -305,6 +305,33 @@ DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
 .PHONY : DSRC/DGTKWINDOW/DGTKWINDOW.cpp.s
 
+DSRC/DLLC/DLLC.o: DSRC/DLLC/DLLC.cpp.o
+
+.PHONY : DSRC/DLLC/DLLC.o
+
+# target to build an object file
+DSRC/DLLC/DLLC.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.o
+.PHONY : DSRC/DLLC/DLLC.cpp.o
+
+DSRC/DLLC/DLLC.i: DSRC/DLLC/DLLC.cpp.i
+
+.PHONY : DSRC/DLLC/DLLC.i
+
+# target to preprocess a source file
+DSRC/DLLC/DLLC.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.i
+.PHONY : DSRC/DLLC/DLLC.cpp.i
+
+DSRC/DLLC/DLLC.s: DSRC/DLLC/DLLC.cpp.s
+
+.PHONY : DSRC/DLLC/DLLC.s
+
+# target to generate assembly for a file
+DSRC/DLLC/DLLC.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.s
+.PHONY : DSRC/DLLC/DLLC.cpp.s
+
 DSRC/DML/DML.o: DSRC/DML/DML.cpp.o
 
 .PHONY : DSRC/DML/DML.o
@@ -494,6 +521,9 @@ help:
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.o"
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.i"
 	@echo "... DSRC/DGTKWINDOW/DGTKWINDOW.s"
+	@echo "... DSRC/DLLC/DLLC.o"
+	@echo "... DSRC/DLLC/DLLC.i"
+	@echo "... DSRC/DLLC/DLLC.s"
 	@echo "... DSRC/DML/DML.o"
 	@echo "... DSRC/DML/DML.i"
 	@echo "... DSRC/DML/DML.s"

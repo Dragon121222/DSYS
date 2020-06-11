@@ -63,8 +63,22 @@
 #include "../DSRC/DML/DML.h"
 #endif
 
+#ifndef __DLLC__ 
+#include "../DSRC/DLLC/DLLC.h"
+#endif
+
 int argcCOPY;
 char** argvCOPY; 
+
+void DLLCDEMO(GtkButton * widget, gpointer ptr) { 
+
+    DLLC * tb = new DLLC(); 
+
+    tb->unitTests(); 
+
+    delete(tb); 
+
+}
 
 void DGLUTDEMO(GtkButton * widget, gpointer ptr) { 
 
@@ -422,6 +436,7 @@ int main(int argc,  char** argv) {
     dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
 #endif
     dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
+    dwindow->addWidget("DLLC_DEMO","button_with_label",8,0,&DLLCDEMO,"clicked"); 
 
 	dwindow->constructWindow(); 
 
