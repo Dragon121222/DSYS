@@ -520,9 +520,15 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		$$||\lambda f(x) + (1-\lambda)g(x) - (\lambda f(y) + (1-\lambda)g(y)) || = ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
 		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
 		$$\leq \lambda K||x-y|| + (1 - \lambda) K||x - y|| = K||x-y||$$
-		Thus: $H(x) = \lambda f(x) + (1-\lambda)g(x)$ is also in $\Lambda(K)$ \\ 
+		Thus: $h(x) = \lambda f(x) + (1-\lambda)g(x)$ is also in $\Lambda(K)$ \\ 
 		Since $f$ and $g$ were arbitrary, then $\Lambda(K)$ is convex. \\ 
 		Since $K$ was also arbitrary, then every $\Lambda(K)$ is convex. \\  
+	\end{lma}
+
+	\begin{lma} \textbf{New operators} \\ 
+		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
+		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space $\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu K + (1-\nu) L)$ \\ 
+		
 	\end{lma}
 
 	\begin{thm} \textbf{Ordering} \\ 
