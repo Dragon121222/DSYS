@@ -20,6 +20,9 @@
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section] 
 
+\theoremstyle{plain}
+\newtheorem{lma}{Lemma}[section] 
+
 \theoremstyle{Definition}
 \newtheorem{def.}{Definition}[section] 
 
@@ -441,17 +444,17 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	
 	\end{thm}
 	\newpage
-	\section{A topological description of finite normed spaces.}
+	\section{A topological description of finite metric spaces.}
 	Finite spaces are of interest because they describe the world of computers. This being the case, we would still like to do analysis on these spaces and analysis starts with topological descriptions. 
 	\begin{thm} \textbf{The first rule of induced topologies on finite subsets is:} \\
-		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a Normed space. \\
+		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a metric space. \\
 		The associated topological space on V is: 
 		$$\tau_V = \{V \cap U : U \in \tau_X\}$$
 		Since V is of finite carnality, we can uniquely number each element. \\ 
 		Thus:
 		$$V = \bigcup_{i=1}^N \{v_i\}$$
 		Further: 
-		$$V_{\min} := \min\{||x-y|| : x,y \in V\} $$
+		$$V_{\min} := \min\{d(x,y) : x,y \in V\} $$
 		Let $v \in V$ and $\epsilon_V = \frac{V_{\min}}{2}$ \\ 
 		Then $B(v,\epsilon_V) \in \tau_X \Rightarrow V \cap B(v,\epsilon_V) \in \tau_V$ \\ 
 		However $V \cap B(v,\epsilon_V)  = \{v\}$ and since $v$ was arbitrary, we thus know that: $(\forall v \in V)(\{v\} \in \tau_V)$ \\
@@ -459,9 +462,40 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		By definition we know that $\tau_V \subset 2^V$ \\ 
 		Let $E \in 2^V$ then $E = \bigcup_{j=1}^M \{v_j\}$ where $M \leq N$ \\ 
 		Since we know ever $\{v_j\}$ is open we know that $E$ is open and thus: $E \in \tau_V$ \\ 
-		\textbf{Thus the induced topology on a finite subset of a Normed space is the discrete topology. }		
+		\textbf{Thus the induced topology on a finite subset of a Metric space is the discrete topology. }		
 	\end{thm}
-	So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
+	\begin{lma} \textbf{Everything is Continuous when your domain is finite.} \\ 
+			Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
+			Then ever $f : V \to Y$ is continuous. \\ \\
+			Proof: \\ 
+			Let $U \in \tau_W$ \\ 
+			Then: $f^{-1}(U) \subset V$ where $f : V \to Y$ is arbitrary. \\
+			Thus: $f^{-1}(U) \in \tau_V$ by the previous theorem. \\
+			And so $f$ is continuous. \\
+			\textbf{And so every $f : V \to Y$ is continuous. }
+	\end{lma}
+	
+	\begin{thm} \textbf{Everything is Lipschitz continuous when your domain is finite.} \\
+		So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
+		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
+		Further let $f : V \to Y$, then $f$ is Lipschitz continuous. \\
+		We can simply look at: \\
+		$$K := \max\left( \left\{\frac{d_Y(f(x),f(y))}{d_X(x,y)} : x,y \in V \right\} \right)$$
+		Then we know that: 
+		$$(\forall x,y \in V)\left( \frac{d_Y(f(x),f(y))}{d_X(x,y)} \leq K\right)$$
+		And therefore: \\ 
+		$$(\forall x,y \in V)\left( d_Y(f(x),f(y)) \leq Kd_X(x,y)\right)$$
+		\textbf{And thus $f$ is Lipschitz continuous.} \\ 
+	\end{thm}
 
+	\begin{def.} \textbf{K - Families} \\ 
+		First we have: \\ 
+		$$\Lambda := \{f | f : V \to Y\}$$
+		We can then look at: 
+		$$\Lambda(K) := \{f \in \Lambda | K \text{ is the Lipschitz constant for f.}\}$$
+		Then $\Lambda(K)$ is called a K - Family. 
+	\end{def.}
+
+	
 	
 \end{document}
