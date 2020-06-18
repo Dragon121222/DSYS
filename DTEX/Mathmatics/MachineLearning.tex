@@ -441,13 +441,27 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	
 	\end{thm}
 	\newpage
-	\section{K-Operators}
-	Let $\hat{f} : X \to Y$ where $X,Y$ are topological spaces. \\ \\
-	Let $V \subset X$ and $W \subset Y$ where $card(V) < card(\mathbb{N})$ and $card(W) < card(\mathbb{N})$
-	Then define $f : V \to W$ where the associated topological spaces are: \\ 
-	$$\tau_V = \{V \cap U : U \in \tau_X\} \text{ and } \tau_W = \{W \cap U : U \in \tau_Y\}$$
+	\section{A topological description of finite normed spaces.}
+	Finite spaces are of interest because they describe the world of computers. This being the case, we would still like to do analysis on these spaces and analysis starts with topological descriptions. 
+	\begin{thm} \textbf{The first rule of induced topologies on finite subsets is:} \\
+		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a Normed space. \\
+		The associated topological space on V is: 
+		$$\tau_V = \{V \cap U : U \in \tau_X\}$$
+		Since V is of finite carnality, we can uniquely number each element. \\ 
+		Thus:
+		$$V = \bigcup_{i=1}^N \{v_i\}$$
+		Further: 
+		$$V_{\min} := \min\{||x-y|| : x,y \in V\} $$
+		Let $v \in V$ and $\epsilon_V = \frac{V_{\min}}{2}$ \\ 
+		Then $B(v,\epsilon_V) \in \tau_X \Rightarrow V \cap B(v,\epsilon_V) \in \tau_V$ \\ 
+		However $V \cap B(v,\epsilon_V)  = \{v\}$ and since $v$ was arbitrary, we thus know that: $(\forall v \in V)(\{v\} \in \tau_V)$ \\
+		We can now prove that $\tau_V = 2^V$ \\ 
+		By definition we know that $\tau_V \subset 2^V$ \\ 
+		Let $E \in 2^V$ then $E = \bigcup_{j=1}^M \{v_j\}$ where $M \leq N$ \\ 
+		Since we know ever $\{v_j\}$ is open we know that $E$ is open and thus: $E \in \tau_V$ \\ 
+		\textbf{Thus the induced topology on a finite subset of a Normed space is the discrete topology. }		
+	\end{thm}
+	So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
 
 	
-	
-
 \end{document}
