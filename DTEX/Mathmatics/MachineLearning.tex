@@ -109,6 +109,19 @@
 	Let $X \not = \phi$ \\ 
 	$$2^X := \{V : V \subseteq X\}$$
 \end{def.}
+\begin{def.} \textbf{Equivalence Relations} \\ 
+	\begin{itemize}
+		\item $a \approxeq a$ \hfill [Reflexive]
+		\item $a \approxeq b \Leftrightarrow b \approxeq a$ \hfill [Symmetric]
+		\item $a \approxeq b \wedge b \approxeq c \Rightarrow a \approxeq c$ \hfill [Transitive] 
+	\end{itemize}
+\href{https://en.wikipedia.org/wiki/Equivalence_relation}{Reference}
+\end{def.}
+\begin{def.} \textbf{Equivalence Class} \\
+	Let $S \not = \phi$ and $a \in S$ and $\approxeq$ be an equivalence relation on $S$. \\
+	Then the equivalence class $[a]$ is defined as follows: 
+		$$[a] := \{x \in S : x \approxeq a\}$$
+\end{def.}
 \section{Topology}
 \begin{def.} \textbf{Topology} \\
 	Let $X \not = \phi$ \\ 
@@ -496,6 +509,14 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		Then $\Lambda(K)$ is called a K - Family. 
 	\end{def.}
 
-	
+	\begin{thm} \textbf{The K - Famlies form an equivalence class on $\Lambda$} \\
+		Let: 
+			$$f \approxeq g \Leftrightarrow f,g \in \Lambda(K)$$
+			Then $\approxeq$ is an equivalence relation on $\Lambda$ \\ 
+	\end{thm}
+
+	\begin{lma} \textbf{Convexity}
+		
+	\end{lma}
 	
 \end{document}
