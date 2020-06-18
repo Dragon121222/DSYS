@@ -56,7 +56,7 @@
 	The logical or and not are both primitives and are written: \\ 
 	$$logical or: \lor$$ 
 	and 
-	$$not: \verb|~|$$
+	$$not: \lnot$$
 	Respectively. \\
 	Statements are written: $L,M,N,O,P,Q,... etc$ \\
 	A statement is a sequence of words or symbols which is either true or false. \\
@@ -67,11 +67,16 @@
 	So N is true if: \\ 
 	L is true, M is true, or N and M are both true. \\
 \end{def.}
+\begin{def.} \textbf{And} \\
+	Let $A,B$ be sets. \\ 
+	$$A \land B := \lnot((\lnot A) \lor (\lnot B))$$ 
+\end{def.}
 \begin{def.} \textbf{Intersection and Union} \\
 	Let $A,B$ be sets. \\ 
 	$$A \cap B = \{ x : x \in A \land x \in B\}$$
 	$$A \cup B = \{ x : x \in A \lor x \in B\}$$
 \end{def.}
+
 \begin{def.} \textbf{Subsets} \\ 
 	Let $A,B$ be sets. \\ 
 	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
