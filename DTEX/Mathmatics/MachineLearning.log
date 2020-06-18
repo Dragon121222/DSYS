@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.6.9)  16 JUN 2020 10:30
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.5.12)  14 JUN 2020 07:33
+>>>>>>> e150b02d849609b929346486e1dd7c8008429912
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,7 +730,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
  ) 
 Here is how much of TeX's memory you used:
  7503 strings out of 492167
+<<<<<<< HEAD
  108993 string characters out of 6131559
+=======
+ 108999 string characters out of 6131558
+>>>>>>> e150b02d849609b929346486e1dd7c8008429912
  213584 words of memory out of 5000000
  11724 multiletter control sequences out of 15000+600000
  13810 words of font info for 52 fonts, out of 8000000 for 9000
