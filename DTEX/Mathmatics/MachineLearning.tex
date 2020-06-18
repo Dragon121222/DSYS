@@ -515,8 +515,28 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			Then $\approxeq$ is an equivalence relation on $\Lambda$ \\ 
 	\end{thm}
 
-	\begin{lma} \textbf{Convexity}
-		
+	\begin{lma} \textbf{Convexity} \\
+		Let $f,g \in \Lambda(K)$ for some $K \geq 0$ \\ 
+		$$||\lambda f(x) + (1-\lambda)g(x) - (\lambda f(y) + (1-\lambda)g(y)) || = ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
+		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
+		$$\leq \lambda K||x-y|| + (1 - \lambda) K||x - y|| = K||x-y||$$
+		Thus: $H(x) = \lambda f(x) + (1-\lambda)g(x)$ is also in $\Lambda(K)$ \\ 
+		Since $f$ and $g$ were arbitrary, then $\Lambda(K)$ is convex. \\ 
+		Since $K$ was also arbitrary, then every $\Lambda(K)$ is convex. \\  
 	\end{lma}
+
+	\begin{thm} \textbf{Ordering} \\ 
+		
+	\end{thm}
+	
+	\section{Convex Operators} 
+			\begin{thm} \textbf{Invariance under Convex Monotonic Operator Composition} \\
+				\href{https://en.wikipedia.org/wiki/Convex_function}{Reference}
+			\end{thm}
+			\begin{thm} \textbf{Invariance under Affine Composition} \\
+					Let $f: \mathbb{R}^m \to \mathbb{R}^n$ be a convex operator, then: \\ 
+					$$g(x) = f(Ax + b)$$
+					Is also a convex operator. \\  
+			\end{thm}
 	
 \end{document}
