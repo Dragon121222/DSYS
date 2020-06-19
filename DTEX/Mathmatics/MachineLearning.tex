@@ -525,14 +525,22 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		Since $K$ was also arbitrary, then every $\Lambda(K)$ is convex. \\  
 	\end{lma}
 
-	\begin{lma} \textbf{New operators} \\ 
+	\begin{lma} \textbf{Paths through Function spaces} \\ 
 		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
-		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space $\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu K + (1-\nu) L)$ \\ 
-		
+		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space $\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu K + (1-\nu) L)$ \\
+		Proof: \\ 
+		$$||h(x) - h(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
+		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
+		$$\leq \lambda K||x-y|| + (1 - \lambda) L||x - y|| = (\lambda K + (1 - \lambda) L)||x - y|| $$		
 	\end{lma}
 
 	\begin{thm} \textbf{Ordering} \\ 
-		
+		For this theorem, we will need both the domain and co-domain to be finite. \\
+		First, Let $V \subset X$ and $W \subset Y$ where $X,Y$ are normed spaces. \\ 
+		Next let $\Lambda := \{f | f : V \to W\}$ where $0 < card(V) =: N < card(\mathbb{N})$ and $0 < card(W) =: M < card(\mathbb{N})$ \\ 
+		And: $\Lambda(K) := \{f \in \Lambda | K \text{ is the Lipschitz constant for f.}\}$ as before. \\ 
+		Then: 
+		$$K < L \Rightarrow card(\Lambda(K)) < card(\Lambda(L))$$ 
 	\end{thm}
 	
 	\section{Convex Operators} 
