@@ -71,7 +71,7 @@
 	L is true, M is true, or N and M are both true. \\
 \end{def.}
 \begin{def.} \textbf{And} \\
-	Let $A,B$ be sets. \\ 
+	Let $A,B$ be statements. \\ 
 	$$A \land B := \lnot((\lnot A) \lor (\lnot B))$$ 
 \end{def.}
 \begin{def.} \textbf{Intersection and Union} \\
@@ -79,7 +79,10 @@
 	$$A \cap B = \{ x : x \in A \land x \in B\}$$
 	$$A \cup B = \{ x : x \in A \lor x \in B\}$$
 \end{def.}
-
+\begin{def.} \textbf{Logical Implication} \\
+	Let $A,B$ be statements: 
+	$$A \Rightarrow B := (\lnot A) \lor B$$
+\end{def.}
 \begin{def.} \textbf{Subsets} \\ 
 	Let $A,B$ be sets. \\ 
 	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
@@ -515,19 +518,19 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			Then $\approxeq$ is an equivalence relation on $\Lambda$ \\ 
 	\end{thm}
 
-	\begin{lma} \textbf{Convexity} \\
-		Let $f,g \in \Lambda(K)$ for some $K \geq 0$ \\ 
-		$$||\lambda f(x) + (1-\lambda)g(x) - (\lambda f(y) + (1-\lambda)g(y)) || = ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
-		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
-		$$\leq \lambda K||x-y|| + (1 - \lambda) K||x - y|| = K||x-y||$$
-		Thus: $h(x) = \lambda f(x) + (1-\lambda)g(x)$ is also in $\Lambda(K)$ \\ 
-		Since $f$ and $g$ were arbitrary, then $\Lambda(K)$ is convex. \\ 
-		Since $K$ was also arbitrary, then every $\Lambda(K)$ is convex. \\  
+	\begin{lma} \textbf{Non-Convexity} \\
+		The K - family of functions is not convex. \\ 
+		Let $K > 0$ \\ 
+		If $f \in \Lambda(K) \Rightarrow -f \in \Lambda(K)$ \\ 
+		However $\frac{f + -f}{2} = 0 \in \Lambda(0) \not = \Lambda(k)$ \\   
 	\end{lma}
 
+	
+
 	\begin{lma} \textbf{Paths through Function spaces} \\ 
-		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
-		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space $\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu K + (1-\nu) L)$ \\
+		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ at most belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
+		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space:
+		$$\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu \cdot \max(L,K))$$
 		Proof: \\ 
 		$$||h(x) - h(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
 		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
