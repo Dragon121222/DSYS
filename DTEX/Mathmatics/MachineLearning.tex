@@ -131,10 +131,28 @@
 	Let $X \not = \phi$ \\ 
 	$$2^X := \{V : V \subseteq X\}$$
 \end{def.}
+
+\begin{def.} \textbf{Injection, Surjection, and Bijection} \\
+	Let $A,B$ be sets and  function $f : A \to B$.
+	f is said to be an Injection if: \\ 
+	$$(\forall x,y \in A)(f(x) = f(y) \Rightarrow x = y)$$
+	f is said to be a Surjection if: \\ 
+	$$(\forall y \in B)(\exists x \in A)(f(x) = y)$$
+	f is said to be a Bijection if it is both an Injection and a Surjection.  
+\end{def.}
+
 \begin{thm} \textbf{It's pretty big.} \\ 
 	Let $X \not = \phi$ and $M := card(X) < card(\mathbb{N})$ \\
 	Then: $card(2^X) = 2^M$ 
 \end{thm}
+
+\begin{def.} \textbf{K - Combinations} \\
+	Let $S$ be a non empty finite set where $n = card(S)$ \\ 
+	A K-combination of S is a subset: $K \subset S$ where $card(K) = k$ \\ 
+	We then have the collection: $C(S,k) = \{K \subset S : card(K) = k\}$ \\
+	The number of K-combinations = $card(C(S,k)) = \binom{n}{k}$
+\end{def.}
+
 \begin{def.} \textbf{Equivalence Relations} \\
 	Let $S \not = \phi$ \\ 
 	Then $\approxeq$ is called an Equivalence Relation if: 
@@ -145,12 +163,15 @@
 	\end{itemize}
 \href{https://en.wikipedia.org/wiki/Equivalence_relation}{Reference}
 \end{def.}
+
 \begin{def.} \textbf{Equivalence Class} \\
 	Let $S \not = \phi$ and $a \in S$ and $\approxeq$ be an equivalence relation on $S$. \\
 	Then the equivalence class $[a]$ is defined as follows: 
 		$$[a] := \{x \in S : x \approxeq a\}$$
 \end{def.}
+
 \section{Topology}
+
 \begin{def.} \textbf{Topology} \\
 	Let $X \not = \phi$ \\ 
 	Further let $\tau \subseteq 2^X$ such that: \\ 
@@ -158,6 +179,7 @@
 	$$(\forall A \not = \phi)\left(\{U_\alpha\}_{\alpha \in A} \subseteq \tau \Rightarrow \bigcup_{\alpha \in A} U_\alpha \in \tau\right)$$
 	$$(\forall m \in \mathbb{N})\left(\{U_j\}_{j\in \mathbb{N}_m} \Rightarrow \bigcap_{j=1^m} U_j \in \tau\right)$$
 \end{def.}
+
 \begin{def.} \textbf{Relative Topology} \\
 	Let $X \not = \phi$ and $Z \subset X$ \\ 
 	Then the relative topology on $Z$ is written as follows: \\ 
@@ -487,7 +509,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\newpage
 	\section{A topological description of finite metric spaces.}
 	Finite spaces are of interest because they describe the world of computers. This being the case, we would still like to do analysis on these spaces and analysis starts with topological descriptions. 
-	\begin{thm} \textbf{The first rule of induced topologies on finite subsets is:} \\
+	\begin{thm} \textbf{The First Rule of Induced Topologies on Finite Metric Subspaces is:} \\
 		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a metric space. \\
 		The associated topological space on V is: 
 		$$\tau_V = \{V \cap U : U \in \tau_X\}$$
@@ -519,7 +541,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\begin{thm} \textbf{Everything is Lipschitz continuous when your domain is finite.} \\
 		So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
 		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
-		Further let $f : V \to Y$, then $f$ is Lipschitz continuous. \\
+		Further let $f : V \to Y$, then $f$ is \textbf{Lipschitz continuous}. \\
 		We can simply look at: \\
 		$$K := \max\left( \left\{\frac{d_Y(f(x),f(y))}{d_X(x,y)} : x,y \in V \right\} \right)$$
 		Then we know that: 
