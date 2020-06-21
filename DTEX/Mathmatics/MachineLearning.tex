@@ -20,6 +20,9 @@
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section] 
 
+\theoremstyle{plain}
+\newtheorem{lma}{Lemma}[section] 
+
 \theoremstyle{Definition}
 \newtheorem{def.}{Definition}[section] 
 
@@ -42,7 +45,12 @@
 	$$\mathbb{R}^- = \{x \in \mathbb{R} : x < 0\}$$
 	$$\mathbb{R}_0^- = \{x \in \mathbb{R} : x \leq 0\}$$
 \end{def.}
-\begin{def.} \textbf{Sets and Set Builder Notation} \\ 
+\begin{def.} \textbf{Sets and Set Builder Notation and Hats} \\ 
+	A set is a collection of objects. \\ 
+	Example: A = The set of all hats. \\ 
+	We call the objects in the set elements. \\ 
+	Example: A Cowboy hat is a type of hat and thus belongs in the set of all hats: A. \\
+	
 	Set builder notation is a way of describing a set using mathematical, logical symbols, or words. \\
 	Look at the following example: \\ 
 	$$E = \{x \in \mathbb{N}: x = 2n \text{ where } n \in \mathbb{N}\}$$
@@ -56,7 +64,7 @@
 	The logical or and not are both primitives and are written: \\ 
 	$$logical or: \lor$$ 
 	and 
-	$$not: \verb|~|$$
+	$$not: \lnot$$
 	Respectively. \\
 	Statements are written: $L,M,N,O,P,Q,... etc$ \\
 	A statement is a sequence of words or symbols which is either true or false. \\
@@ -64,13 +72,35 @@
 	We can then use this as the definition of a new statement: \\ 
 	$$N := L \lor M$$
 	Which is read: N is defined as L or M. \\
-	So N is true if: \\ 
-	L is true, M is true, or N and M are both true. \\
+	So N is true if: 
+	\begin{itemize}
+		\item 	L is true. 
+		\item M is true.
+		\item L and M are both true. 
+	\end{itemize}
+	Further, N is false if: 
+	L and M are both false. \\ \\
+	Similarly, we can define a new statement: $N := \lnot M$ \\ 
+	In this case, if M is true then N is false. \\
+	In the same vain, if M is false then N is true. \\ 	
+\end{def.}
+\begin{def.} \textbf{And} \\
+	Let $A,B$ be statements. \\ 
+	$$A \land B := \lnot((\lnot A) \lor (\lnot B))$$ 
 \end{def.}
 \begin{def.} \textbf{Intersection and Union} \\
 	Let $A,B$ be sets. \\ 
 	$$A \cap B = \{ x : x \in A \land x \in B\}$$
 	$$A \cup B = \{ x : x \in A \lor x \in B\}$$
+\end{def.}
+\begin{def.} \textbf{Logical Implication} \\
+	Let $A,B$ be statements: 
+	$$A \Rightarrow B := (\lnot A) \lor B$$
+\end{def.}
+\begin{def.} \textbf{Logical Deduction} \\
+	Let $P$ and $Q$ be statements. \\ 
+	First, we suppose that $P$ is true. \\
+	If we can then show that $Q$ is true, then proven that $P \Rightarrow Q$
 \end{def.}
 \begin{def.} \textbf{Subsets} \\ 
 	Let $A,B$ be sets. \\ 
@@ -101,7 +131,47 @@
 	Let $X \not = \phi$ \\ 
 	$$2^X := \{V : V \subseteq X\}$$
 \end{def.}
+
+\begin{def.} \textbf{Injection, Surjection, and Bijection} \\
+	Let $A,B$ be sets and  function $f : A \to B$.
+	f is said to be an Injection if: \\ 
+	$$(\forall x,y \in A)(f(x) = f(y) \Rightarrow x = y)$$
+	f is said to be a Surjection if: \\ 
+	$$(\forall y \in B)(\exists x \in A)(f(x) = y)$$
+	f is said to be a Bijection if it is both an Injection and a Surjection.  
+\end{def.}
+
+\begin{thm} \textbf{It's pretty big.} \\ 
+	Let $X \not = \phi$ and $M := card(X) < card(\mathbb{N})$ \\
+	Then: $card(2^X) = 2^M$ 
+\end{thm}
+
+\begin{def.} \textbf{K - Combinations} \\
+	Let $S$ be a non empty finite set where $n = card(S)$ \\ 
+	A K-combination of S is a subset: $K \subset S$ where $card(K) = k$ \\ 
+	We then have the collection: $C(S,k) = \{K \subset S : card(K) = k\}$ \\
+	The number of K-combinations = $card(C(S,k)) = \binom{n}{k}$
+\end{def.}
+
+\begin{def.} \textbf{Equivalence Relations} \\
+	Let $S \not = \phi$ \\ 
+	Then $\approxeq$ is called an Equivalence Relation if: 
+	\begin{itemize}
+		\item $(\forall a \in S)(a \approxeq a)$ \hfill [Reflexive]
+		\item $(\forall a,b \in S)(a \approxeq b \Leftrightarrow b \approxeq a)$ \hfill [Symmetric]
+		\item $(\forall a,b,c \in S)(a \approxeq b \wedge b \approxeq c \Rightarrow a \approxeq c)$ \hfill [Transitive] 
+	\end{itemize}
+\href{https://en.wikipedia.org/wiki/Equivalence_relation}{Reference}
+\end{def.}
+
+\begin{def.} \textbf{Equivalence Class} \\
+	Let $S \not = \phi$ and $a \in S$ and $\approxeq$ be an equivalence relation on $S$. \\
+	Then the equivalence class $[a]$ is defined as follows: 
+		$$[a] := \{x \in S : x \approxeq a\}$$
+\end{def.}
+
 \section{Topology}
+
 \begin{def.} \textbf{Topology} \\
 	Let $X \not = \phi$ \\ 
 	Further let $\tau \subseteq 2^X$ such that: \\ 
@@ -109,6 +179,7 @@
 	$$(\forall A \not = \phi)\left(\{U_\alpha\}_{\alpha \in A} \subseteq \tau \Rightarrow \bigcup_{\alpha \in A} U_\alpha \in \tau\right)$$
 	$$(\forall m \in \mathbb{N})\left(\{U_j\}_{j\in \mathbb{N}_m} \Rightarrow \bigcap_{j=1^m} U_j \in \tau\right)$$
 \end{def.}
+
 \begin{def.} \textbf{Relative Topology} \\
 	Let $X \not = \phi$ and $Z \subset X$ \\ 
 	Then the relative topology on $Z$ is written as follows: \\ 
@@ -436,13 +507,122 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	
 	\end{thm}
 	\newpage
-	\section{K-Operators}
-	Let $\hat{f} : X \to Y$ where $X,Y$ are topological spaces. \\ \\
-	Let $V \subset X$ and $W \subset Y$ where $card(V) < card(\mathbb{N})$ and $card(W) < card(\mathbb{N})$
-	Then define $f : V \to W$ where the associated topological spaces are: \\ 
-	$$\tau_V = \{V \cap U : U \in \tau_X\} \text{ and } \tau_W = \{W \cap U : U \in \tau_Y\}$$
-
+	\section{A topological description of finite metric spaces.}
+	Finite spaces are of interest because they describe the world of computers. This being the case, we would still like to do analysis on these spaces and analysis starts with topological descriptions. 
+	\begin{thm} \textbf{The First Rule of Induced Topologies on Finite Metric Subspaces is:} \\
+		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a metric space. \\
+		The associated topological space on V is: 
+		$$\tau_V = \{V \cap U : U \in \tau_X\}$$
+		Since V is of finite carnality, we can uniquely number each element. \\ 
+		Thus:
+		$$V = \bigcup_{i=1}^N \{v_i\}$$
+		Further: 
+		$$V_{\min} := \min\{d(x,y) : x,y \in V\} $$
+		Let $v \in V$ and $\epsilon_V = \frac{V_{\min}}{2}$ \\ 
+		Then $B(v,\epsilon_V) \in \tau_X \Rightarrow V \cap B(v,\epsilon_V) \in \tau_V$ \\ 
+		However $V \cap B(v,\epsilon_V)  = \{v\}$ and since $v$ was arbitrary, we thus know that: $(\forall v \in V)(\{v\} \in \tau_V)$ \\
+		We can now prove that $\tau_V = 2^V$ \\ 
+		By definition we know that $\tau_V \subset 2^V$ \\ 
+		Let $E \in 2^V$ then $E = \bigcup_{j=1}^M \{v_j\}$ where $M \leq N$ \\ 
+		Since we know ever $\{v_j\}$ is open we know that $E$ is open and thus: $E \in \tau_V$ \\ 
+		\textbf{Thus the induced topology on a finite subset of a Metric space is the discrete topology. }		
+	\end{thm}
+	\begin{lma} \textbf{Everything is Continuous when your domain is finite.} \\ 
+			Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
+			Then ever $f : V \to Y$ is continuous. \\ \\
+			Proof: \\ 
+			Let $U \in \tau_W$ \\ 
+			Then: $f^{-1}(U) \subset V$ where $f : V \to Y$ is arbitrary. \\
+			Thus: $f^{-1}(U) \in \tau_V$ by the previous theorem. \\
+			And so $f$ is continuous. \\
+			\textbf{And so every $f : V \to Y$ is continuous. }
+	\end{lma}
 	
-	
+	\begin{thm} \textbf{Everything is Lipschitz continuous when your domain is finite.} \\
+		So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
+		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
+		Further let $f : V \to Y$, then $f$ is \textbf{Lipschitz continuous}. \\
+		We can simply look at: \\
+		$$K := \max\left( \left\{\frac{d_Y(f(x),f(y))}{d_X(x,y)} : x,y \in V \right\} \right)$$
+		Then we know that: 
+		$$(\forall x,y \in V)\left( \frac{d_Y(f(x),f(y))}{d_X(x,y)} \leq K\right)$$
+		And therefore: \\ 
+		$$(\forall x,y \in V)\left( d_Y(f(x),f(y)) \leq Kd_X(x,y)\right)$$
+		\textbf{And thus $f$ is Lipschitz continuous.} \\ 
+	\end{thm}
 
+	\begin{def.} \textbf{K - Families} \\ 
+		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are Normed spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
+		First we have the set of all operators.  
+		$$\Lambda := \{f | f : V \to Y\}$$
+		Next we have the $K - Families$ 
+		$$\Lambda(K) := \{f \in \Lambda | K \text{ is the smallest Lipschitz constant for f.}\}$$
+		The set: $\Lambda(K)$ is called a K - Family. 
+		Next we have the $K - Nests$ 
+		$$B(K) := \{f : V \to Y | (\forall x,y \in V) (||f(x) - f(y)|| \leq K ||x - y||)\}$$
+	\end{def.}
+
+	\begin{thm} \textbf{K - Properties} 
+		\begin{itemize}
+			\item $B(K) = \bigcup_{L \in [0,K]} \Lambda(L)$ \\
+				\textbf{Proof: } \\
+				Let $f \in B(K) \Rightarrow f \text{ is lipschitz.}$ \\
+				Which means that there exists a unique smallest constant $K'$ where: $0 \leq K' \leq K$ \\
+				Thus $f \in \Lambda(K') \subset \bigcup_{L \in [0,K]} \Lambda(L)$ \\ 
+				Therefore: $B(K) \subseteq \bigcup_{L \in [0,K]} \Lambda(L)$ \\ \\
+				Let $f \in \bigcup_{L \in [0,K]} \Lambda(L) \Rightarrow \exists L \in [0,K] \pitchfork (\forall x,y \in V)(||f(x)-f(y)|| \leq L||x - y|| \leq K||x - y||)$ \\ 
+				$\Rightarrow f \in B(K)$ \\
+				$\Rightarrow \bigcup_{L \in [0,K]} \Lambda(L) \subseteq B(K)$ \\ 
+				$\therefore B(K) = \bigcup_{L \in [0,K]} \Lambda(L)$ 
+			\item $L \leq K \Rightarrow B(L) \subseteq B(K)$ \\
+				\textbf{Proof: } \\
+				Let $f \in B(L) \text{ and } x,y \in V$ \\
+				$\Rightarrow ||f(x) - f(y)|| \leq L ||x - y|| \leq K ||x - y||)$ \\ 
+				$\Rightarrow f \in B(K)$ 
+			\item $B(K) \text{ is convex.}$ \\
+				\textbf{Proof: } \\
+				Let $f,g \in B(K)$ and $h_\lambda(x) = \lambda f(x) + (1-\lambda) g(x)$ for some $\lambda \in [0,1]$ \\
+				Further let $x,y \in V$: \\
+				$$||h_\lambda(x) - h_\lambda(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
+				$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
+				$$\leq \lambda K||x-y|| + (1 - \lambda) K||x - y|| = K||x - y||$$						
+				$\Rightarrow h_\lambda \in B(K)$
+			\item $\Lambda(K)$ is not convex. \\
+				\textbf{Proof: } \\
+				Let $K > 0$ \\ 
+				If $f \in \Lambda(K) \Rightarrow -f \in \Lambda(K)$ \\ 
+				However $\frac{f + -f}{2} = 0 \in \Lambda(0) \not = \Lambda(K)$ \\   
+		\end{itemize}
+	\end{thm}
+
+	\begin{lma} \textbf{Paths through Function spaces} \\ 
+		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ at most belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
+		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space:
+		$$\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu \cdot \max(L,K))$$
+		Proof: \\ 
+		$$||h(x) - h(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
+		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
+		$$\leq \lambda K||x-y|| + (1 - \lambda) L||x - y|| = (\lambda K + (1 - \lambda) L)||x - y|| $$		
+	\end{lma}
+
+	\begin{thm} \textbf{Ordering} \\ 
+		For this theorem, we will need both the domain and co-domain to be finite. \\
+		First, Let $V \subset X$ and $W \subset Y$ where $X,Y$ are normed spaces. \\ 
+		Next let $\Lambda := \{f | f : V \to W\}$ where $0 < card(V) =: N < card(\mathbb{N})$ and $0 < card(W) =: M < card(\mathbb{N})$ \\ 
+		And: $\Lambda(K) := \{f \in \Lambda | K \text{ is the Lipschitz constant for f.}\}$ as before. \\ 
+		Then: 
+		$$K < L \Rightarrow card(\Lambda(K)) < card(\Lambda(L))$$ 
+	\end{thm}
+
+
+	\section{Convex Operators} 
+			\begin{thm} \textbf{Invariance under Convex Monotonic Operator Composition} \\
+				\href{https://en.wikipedia.org/wiki/Convex_function}{Reference}
+			\end{thm}
+			\begin{thm} \textbf{Invariance under Affine Composition} \\
+					Let $f: \mathbb{R}^m \to \mathbb{R}^n$ be a convex operator, then: \\ 
+					$$g(x) = f(Ax + b)$$
+					Is also a convex operator. \\  
+			\end{thm}
+	
 \end{document}

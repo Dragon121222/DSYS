@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.6.9)  19 JUN 2020 16:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.6.9)  16 JUN 2020 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**MachineLearning.tex
-(./MachineLearning.tex
+**CVS_Documentation.tex
+(./CVS_Documentation.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
@@ -308,47 +308,46 @@ Package: amsthm 2017/10/31 v2.20.4
 \dth@everypar=\toks26
 )
 \c@thm=\count117
-\c@lma=\count118
 
+
+Package amsthm Warning: Unknown theoremstyle `Definition' on input line 23.
+
+\c@def.=\count118
 
 Package amsthm Warning: Unknown theoremstyle `Definition' on input line 26.
 
-\c@def.=\count119
+\c@prf=\count119
+\c@exmp=\count120
+(./CVS_Documentation.aux)
+\openout1 = `CVS_Documentation.aux'.
 
-Package amsthm Warning: Unknown theoremstyle `Definition' on input line 29.
-
-\c@prf=\count120
-\c@exmp=\count121
-(./MachineLearning.aux)
-\openout1 = `MachineLearning.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
+\scratchcounter=\count121
 \scratchdimen=\dimen136
 \scratchbox=\box30
-\nofMPsegments=\count123
-\nofMParguments=\count124
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count125
+\MPscratchCnt=\count124
 \MPscratchDim=\dimen137
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks28
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -368,7 +367,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 32.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -376,15 +375,15 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count128
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 
-(./MachineLearning.out) (./MachineLearning.out)
+(./CVS_Documentation.out) (./CVS_Documentation.out)
 \@outlinefile=\write3
-\openout3 = `MachineLearning.out'.
+\openout3 = `CVS_Documentation.out'.
 
 
 *geometry* driver: auto-detecting
@@ -421,418 +420,54 @@ LaTeX Info: Redefining \nameref on input line 35.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
-
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
-7.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
+6.
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--112
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--190
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 225--229
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 239--246
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--278
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--292
-
- []
-
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 295--298
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 301--303
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--334
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 337--339
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--351
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--376
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 398--401
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 401--403
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 407--412
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 430--436
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--451
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 452--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 458--461
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--463
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 464--466
-
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 471--478
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--492
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 506--507
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 530--539
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--546
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 548--550
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 550--552
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 567--577
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 582--586
-
- []
-
-
-Overfull \hbox (17.60507pt too wide) detected at line 586
-\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 h[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/
-cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 h[]\OT1/cmr/m/n/12 (\OML/cmm
-/m/it/12 y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 jj \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/
-12 jj\OML/cmm/m/it/12 ^^Uf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) 
-+ (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12
- g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT
-1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Uf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/
-m/n/12 ) + (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^U\OT1/cmr/m/n/12 )\OML/cm
-m/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 ))\OMS/cmsy/m/n/1
-2 jj \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 ^^Uf\OT1/cmr/m/n/12 
-(\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) + (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12
- ^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 g\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/
-cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 ^^Uf\OT1/cmr/m/n/12 (\OML/cm
-m/m/it/12 y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 (1 \OMS/cmsy/
-m/n/12 ^^@ \OML/cmm/m/it/12 ^^U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 g\OT1/cmr/m/n/
-12 (\OML/cmm/m/it/12 y\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 jj
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--595
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 601--603
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 624--626
-
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 628.
-[17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 628.
- (./MachineLearning.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 628.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 628.
-Package rerunfilecheck Info: File `MachineLearning.out' has not changed.
-(rerunfilecheck)             Checksum: 51226D29956C96A0A5E40B3250BE91FA;453.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 628.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
+ (./CVS_Documentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
+Package rerunfilecheck Info: File `CVS_Documentation.out' has not changed.
+(rerunfilecheck)             Checksum: 9FDB43F43E05F9BA1AA7EA2EB95B1FA9;254.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 7531 strings out of 492167
- 109195 string characters out of 6131559
- 213667 words of memory out of 5000000
- 11732 multiletter control sequences out of 15000+600000
- 13810 words of font info for 52 fonts, out of 8000000 for 9000
+ 7417 strings out of 492167
+ 108273 string characters out of 6131559
+ 207530 words of memory out of 5000000
+ 11702 multiletter control sequences out of 15000+600000
+ 7868 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,9n,37p,301b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,6n,37p,234b,315s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb>
-Output written on MachineLearning.pdf (17 pages, 233695 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt12.pfb>
+Output written on CVS_Documentation.pdf (1 page, 49353 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
- 81 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

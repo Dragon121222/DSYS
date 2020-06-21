@@ -1,0 +1,61 @@
+\documentclass[12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage[margin=0.5in]{geometry}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{collectbox}
+\DeclarePairedDelimiter\ceil{\lceils}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{amsthm}
+%opening
+\title{CVS CLI Documentation}
+\author{Daniel Drake}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{def.}{Definition}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{prf}{Proof}[section] 
+
+\theoremstyle{plain}
+\newtheorem{exmp}{Example}[section]
+
+\begin{document}
+	\maketitle
+	\section{Introduction}
+	cvs is a command in Linux used to do version control.  \\
+	cvs has the following command syntax: 
+	\begin{center}
+		\verb|cvs [cvs_options] cvs_command [command_options] [command_args]|
+	\end{center}
+
+	\section{[cvs\_options]}
+
+	\section{cvs\_command}
+	The essential commands are: 
+	\begin{itemize}
+		\item checkout \\
+		This option creates a private copy of the source. 
+		\item update \\
+		This option will update your source files with the changes other developers have made. 
+		\item add \\
+		Adds new files in the cvs records of your working directory. 
+		\item remove \\
+		Removes files from the repository. 
+		\item commit \\
+		Publishes your changes to the source repository. 
+	\end{itemize}
+	\section{[command\_options]}
+	
+	\section{[command\_args]}
+	
+\end{document}
