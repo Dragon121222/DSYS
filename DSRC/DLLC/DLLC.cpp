@@ -14,6 +14,58 @@ DLLC::~DLLC() {
 
 }
 
+//#define __R_test__
+char DLLC::R(unsigned int a, unsigned int b) { 
+	if(a < b) { 
+		std::cout << std::hex << "0x" << a << " < 0x" << b << "\n"; 
+		std::cout << std::dec << a << " < " << b << "\n"; 
+		return '<'; 
+	} else if (a > b) { 
+		std::cout << std::hex << "0x" << a << " > 0x" << b << "\n"; 
+		std::cout << std::dec << a << " > " << b << "\n"; 
+		return '>';
+	} else { 
+		std::cout << std::hex << "0x" << a << " = 0x" << b << "\n"; 
+		std::cout << std::dec << a << " = " << b << "\n"; 
+		return '='; 
+	}
+}
+
+#define __A_test__
+unsigned int DLLC::A(unsigned int a, unsigned int b) { 
+	std::cout << std::hex << "0x" << a << " + 0x" << b << " = 0x" << a+b << "\n"; 
+	std::cout << std::dec << a << " + " << b << " = " << a+b << "\n"; 
+	return a+b; 
+}
+
+#define __M_test__
+unsigned int DLLC::M(unsigned int a, unsigned int b) { 
+	std::cout << std::hex << "0x" << a << " * 0x" << b << " = 0x" << a*b << "\n"; 
+	std::cout << std::dec << a << " * " << b << " = " << a*b << "\n"; 
+	return a*b; 
+}
+
+//#define __mmw_test__
+int DLLC::mmw(int p) { 
+	std::cout << std::hex << "p: " << p << "\n"; 
+	return p; 
+}
+
+//#define __sw_test__
+unsigned char * DLLC::sw(unsigned int p,unsigned  char * s) { 
+	s[0] = (unsigned char)p; 
+	s[1] = (unsigned char)(p>>8); 
+	return s; 
+}
+
+//#define __sr_test__
+unsigned int DLLC::sr(unsigned char * s) { 
+	unsigned int a = s[0];  
+ 	a << 8; 
+ 	a = a | s[1]; 
+ 	return a; 
+}
+
 //#define __MEMCPYOP_TEST__
 void DLLC::memCpyOp() { 
 
@@ -32,7 +84,7 @@ void DLLC::memCpyOp() {
 
 }
 
-#define __MEMMOVE_TEST__
+//#define __MEMMOVE_TEST__
 void DLLC::memMoveOp() { 
 
 	char a[] = "01234567890000";
@@ -127,6 +179,82 @@ void DLLC::unitTests() {
 
 	#ifdef __MEMMOVE_TEST__
 		memMoveOp(); 
+	#endif
+
+	#ifdef __mmw_test__
+		int x = 0x40; 
+		mmw(x++);
+		mmw(x++);
+		mmw(x++);
+		mmw(x++);
+		mmw(x++);
+		mmw(x);
+		x+=2; 
+
+		for(int i = 0; i < 4; i++) { 
+			std::cout << "*\n";
+			mmw(x++);
+			mmw(x++);
+			mmw(x++);
+			std::cout << "*\n";
+		}
+	    for (int i = 0; i<6; i++) {
+    	    mmw(x++);           
+	    }
+
+	    std::cout << std::hex << "FV: " << x << "\n"; 
+		std::cout << "***************************\n";
+	    x = 0x60; 
+
+	    for(int i = 0; i < 12; i++) { 
+			std::cout << "*\n";
+        	mmw(x); x+=2;     
+        	mmw(x); x+=2;            
+        	mmw(x); x+=2;           
+        	mmw(x); x+=2;            
+        	mmw(x); x+=2;              
+        	mmw(x); x+=2;            
+        	mmw(x++);           
+        	mmw(x++);      
+        	mmw(x++);                
+			std::cout << "*\n";
+	    }
+
+		std::cout << "*\n";
+
+	    x = 0x120;
+	    for (int i = 0; i<12; i++) {
+    		mmw(x++); // 0x120 -> 0x12c
+	    }
+
+	#endif
+
+	#ifdef __sw_test__ 
+	    int x = 150; 
+	    unsigned char s[2]; 
+	    sw(x,s); 
+	    std::cout << "s: " << s[0] << s[1] << "\n"; 
+	    #ifdef __sr_test__
+	    	std::cout << sr(s) << "\n"; 
+	    #endif
+	#endif
+
+	#ifdef __M_test__
+		M(0x06,15); 
+	#endif
+
+	#ifdef __A_test__
+		int x =	A(0x5a,0x60);
+		x =	A(x,2);
+		x =	A(x,2);
+		x =	A(x,2);
+		x =	A(x,2);
+		x =	A(x,2);
+		x =	A(x,2);
+	#endif
+
+	#ifdef __R_test__
+		R(0xa5,0x105); 
 	#endif
 
 }

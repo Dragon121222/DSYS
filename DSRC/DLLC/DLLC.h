@@ -21,6 +21,12 @@ class DLLC : public DOBJ {
 		void fillBufWithNull(void); 
 		void memCpyOp(); 
 		void memMoveOp();
+		int mmw(int p); 
+		unsigned char * sw(unsigned int p,unsigned char * s);
+		unsigned int sr(unsigned char * s); 
+		unsigned int M(unsigned int a, unsigned int b); 
+		unsigned int A(unsigned int a, unsigned int b); 		
+		char R(unsigned int a, unsigned int b);
 
 		// Test Function 
 		void unitTests(); 
