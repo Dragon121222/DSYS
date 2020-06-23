@@ -31,14 +31,14 @@ char DLLC::R(unsigned int a, unsigned int b) {
 	}
 }
 
-#define __A_test__
+//#define __A_test__
 unsigned int DLLC::A(unsigned int a, unsigned int b) { 
 	std::cout << std::hex << "0x" << a << " + 0x" << b << " = 0x" << a+b << "\n"; 
 	std::cout << std::dec << a << " + " << b << " = " << a+b << "\n"; 
 	return a+b; 
 }
 
-#define __M_test__
+//#define __M_test__
 unsigned int DLLC::M(unsigned int a, unsigned int b) { 
 	std::cout << std::hex << "0x" << a << " * 0x" << b << " = 0x" << a*b << "\n"; 
 	std::cout << std::dec << a << " * " << b << " = " << a*b << "\n"; 
@@ -69,7 +69,7 @@ unsigned int DLLC::sr(unsigned char * s) {
 //#define __MEMCPYOP_TEST__
 void DLLC::memCpyOp() { 
 
-    char preset[6];
+    char preset[5];
 
     itos3(123,0); 
     itos3(456,3); 
@@ -87,13 +87,13 @@ void DLLC::memCpyOp() {
 //#define __MEMMOVE_TEST__
 void DLLC::memMoveOp() { 
 
-	char a[] = "01234567890000";
+	char a[] = "41234567896969";
 	char b[] = "000000000000";
 
 	std::cout << "a: " << a << "\n" << std::flush; 
 	std::cout << "b: " << b << "\n" << std::flush; 
 
-	memmove(&b[0],&a[0],4); 
+	memmove(&b[0],&a[3],4); 
 
 	std::cout << "a: " << a << "\n" << std::flush; 
 	std::cout << "b: " << b << "\n" << std::flush; 
@@ -126,7 +126,7 @@ void DLLC::itos3(unsigned int x, char poz) {
 
 }
 
-//#define __ITOS4_TEST__
+#define __ITOS4_TEST__
 void DLLC::itos4(unsigned int x, char poz) {
   
 	char i;
@@ -165,11 +165,46 @@ void DLLC::fillBufWithNull(void) {
 void DLLC::unitTests() { 
 
 	#ifdef __ITOS4_TEST__
-		unsigned int x = 54321; 
-		char i = 5; 
+
 		fillBufWithNull(); 
-		itos4(x,i); 
+
+		unsigned int a = 05; 
+		unsigned int b = 061; 
+		unsigned int c = 062; 
+		unsigned int d = 063; 		
+		unsigned int e = 025; 
+		unsigned int f = 0001; 
+
+		itos3(a,0); 		
+		itos3(b,3); 
+		itos3(c,6); 
+		itos3(d,9);
+		itos3(e,12);
+		itos4(f,15); 		 		 
+
 		std::cout << "sendBuf Data: " << sendBuf << "\n"; 
+
+		a = 0; 
+		b = 0; 
+		c = 0; 
+		d = 0;
+		e = 0;
+		f = 0;		
+
+		char timeout[4]; 
+		
+
+
+
+
+
+
+
+
+
+
+
+
 	#endif
 
 	#ifdef __MEMCPYOP_TEST__
