@@ -27,6 +27,8 @@ class DLLC : public DOBJ {
 		unsigned int M(unsigned int a, unsigned int b); 
 		unsigned int A(unsigned int a, unsigned int b); 		
 		char R(unsigned int a, unsigned int b);
+		void memSetTest(); 
+
 
 		// Test Function 
 		void unitTests(); 

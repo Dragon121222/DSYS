@@ -11,6 +11,8 @@ iostream
 -
 string.h
 -
+cstring
+-
 DLLC.h
 /home/drake/Documents/Code/DSYS/DSRC/DLLC/DLLC.h
 

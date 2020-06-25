@@ -65,7 +65,7 @@
 \end{def.}
 \begin{def.} \textbf{Primitives} \\
 	The logical or and not are both primitives and are written: \\ 
-	$$logical or: \lor$$ 
+	$$\text{logical or: }\lor$$ 
 	and 
 	$$not: \lnot$$
 	Respectively. \\
@@ -122,7 +122,7 @@
 \begin{def.} \textbf{Logical Deduction} \\
 	Let $P$ and $Q$ be statements. \\ 
 	First, we suppose that $P$ is true. \\
-	If we can then show that $Q$ is true, then proven that $P \Rightarrow Q$
+	If we can then show that $Q$ is true, then it is proven that $P \Rightarrow Q$
 \end{def.}
 \begin{thm} \textbf{First Theorem} \\ 
 	Let $A$ be a statement. \\ 
@@ -130,26 +130,43 @@
 	Proof: \\ 
 	We know that: \\ 
 	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2]\\ 
-	$\vdash A \Rightarrow A \lor A$ \hfill [Rule of Substitution.] \\	
+	$\vdash A \Rightarrow A \lor A$ \hfill [Principle of Substitution.] 
 \end{thm}
 
 \begin{thm} \textbf{Second Theorem} \\
 	Let $A$ be a statement. \\ 
 	Then $A \Leftrightarrow A \lor A $ \\ 	
-	Since $A \Rightarrow A \lor A$ and $A \lor A \Rightarrow A$ \\
-	Then by definition of equivalence we know: $A \Leftrightarrow A \lor A$ 
+	\textbf{Proof:} \\
+	Since $\vdash A \Rightarrow A \lor A$ and $\vdash A \lor A \Rightarrow A$ \hfill [Axiom 1 and the first theorem]\\
+	And so we know: \\
+	$\vdash A \Leftrightarrow A \lor A$ \hfill [Definition of Equivalence]
+\end{thm}
+\begin{thm} \textbf{The Commutative Property of OR} \\
+	Let $A,B$ be statements. \\
+	Then: $A \lor B \Leftrightarrow B \lor A$ \\ 
+	By Axiom 3 we know: \\ 
+	$\vdash A \lor B \Rightarrow B \lor A$ \hfill [Axiom 3] \\
+	We can then Substitute B for C: \\
+	$\vdash A \lor C \Rightarrow C \lor A$ \hfill [Principle of Substitution] \\
+	Next we substitute A for B: \\ 
+	$\vdash B \lor C \Rightarrow C \lor B$ \hfill [Principle of Substitution] \\
+	Finally we substitute C for A: \\ 
+	$\vdash B \lor A \Rightarrow A \lor B$ \hfill [Principle of Substitution] \\
+	And so by definition of equivalence we have that: \\
+	$\vdash A \lor B \Leftrightarrow B \lor A$ \hfill [Definition of Equivalence]
 \end{thm}
 \begin{thm} \textbf{Shakespeare's theorem} \\ 
 	Let $B$ be a statement. \\
 	Then $B \lor \lnot B$ \\ 
 	Proof: \\ 
-	We have the theorem: \\
+	We have the Axiom: \\
 	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2] \\ 
-	Suppose that $A =  B$ \\ 
-	Then we have: \\ 
+	We can then replace A with B and  we have: \\ 
 	$\vdash B \Rightarrow B \lor B$ \hfill [Principle of Substitution.] \\ 
 	$\vdash \lnot B \lor (B \lor B)$ \hfill [Def. of Implication]\\ 
-	$\vdash \lnot B \lor B$ \hfill [Second Theorem]
+	$\vdash \lnot B \lor B$ \hfill [Second Theorem] \\ 
+	By the commutative property of OR we can then have that: \\ 
+	$\vdash B \lor \lnot B$ \hfill [Commutative Property of Or] 
 \end{thm}
 \begin{thm} \textbf{If it's true, then it's true} \\ 
 	Let $A$ be a statement. \\ 

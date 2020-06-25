@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-
+#include <cstring>
 
 #ifndef __DLLC__
 #include "DLLC.h"
@@ -11,6 +11,19 @@ DLLC::DLLC() {
 }
 
 DLLC::~DLLC() { 
+
+}
+
+#define __mem_set_test__
+void DLLC::memSetTest() { 
+
+    char timout[5];
+
+    printf("timeout %s\n" , timout); 
+
+    memset(timout,'a',5); 
+
+    printf("timeout %s\n" , timout); 
 
 }
 
@@ -126,7 +139,7 @@ void DLLC::itos3(unsigned int x, char poz) {
 
 }
 
-#define __ITOS4_TEST__
+//#define __ITOS4_TEST__
 void DLLC::itos4(unsigned int x, char poz) {
   
 	char i;
@@ -290,6 +303,10 @@ void DLLC::unitTests() {
 
 	#ifdef __R_test__
 		R(0xa5,0x105); 
+	#endif
+
+	#ifdef __mem_set_test__
+		memSetTest(); 
 	#endif
 
 }
