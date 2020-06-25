@@ -36,6 +36,7 @@
 \newtheorem{exmp}{Example}[section]
 
 \newcommand{\cut}[0]{\noindent\framebox[\linewidth]{\rule{\linewidth}{2pt}}\\}
+\newcommand{\prof}[0]{	\noindent \textbf{Proof:} \rule{500pt}{2pt} \\ }
 
 \begin{document}
 \maketitle			
@@ -138,7 +139,7 @@
 \begin{thm} \textbf{First Theorem} \\ 
 	Let $A$ be a statement. \\ 
 	Then $A \Rightarrow A \lor A $ \\ 
-	\textbf{Proof:} \\ 
+	\prof
 	We know that: \\ 
 	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2]\\ 
 	By replacing B with A we then have: \\ 
@@ -148,7 +149,7 @@
 \begin{thm} \textbf{Second Theorem} \\
 	Let $A$ be a statement. \\ 
 	Then $A \Leftrightarrow A \lor A $ \\ 	
-	\textbf{Proof:} \\
+	\prof
 	Since $\vdash A \Rightarrow A \lor A$ and $\vdash A \lor A \Rightarrow A$ \hfill [Axiom 1 and the first theorem]\\
 	And so we know: \\
 	$\vdash A \Leftrightarrow A \lor A$ \hfill [Definition of Equivalence]
@@ -157,7 +158,7 @@
 \begin{thm} \textbf{The Commutative Property of OR} \\
 	Let $A,B$ be statements. \\
 	Then: $A \lor B \Leftrightarrow B \lor A$ \\ 
-	\textbf{Proof:} \\
+	\prof
 	By Axiom 3 we know: \\ 
 	$\vdash A \lor B \Rightarrow B \lor A$ \hfill [Axiom 3] \\
 	We can then Substitute B for C: \\
@@ -173,7 +174,7 @@
 \begin{thm} \textbf{Shakespeare's theorem} \\ 
 	Let $B$ be a statement. \\
 	Then $B \lor \lnot B$ \\ 
-	\textbf{Proof:} \\ 
+	\prof
 	We have the Axiom: \\
 	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2] \\ 
 	We can then replace A with B and  we have: \\ 
@@ -187,7 +188,7 @@
 \begin{thm} \textbf{If it's true, then it's true} \\ 
 	Let $A$ be a statement. \\ 
 	Then: $A \Rightarrow A$ and further $A \Leftrightarrow A$ \\
-	\textbf{Proof: } \\
+	\prof
 	Let $B$ be a statement. \\ 
 	From the proof Shakespeare's theorem we know that: \\
 	$\vdash \lnot B \lor B$ \hfill [Proof of Shakespeare's theorem.] \\ 
@@ -200,7 +201,7 @@
 \begin{thm} \textbf{The Compliment of a Compliment of a statements is the statement} \\
 	Let $A$ be a statement. \\ 
 	Then $\lnot(\lnot A) \Leftrightarrow A$ \\
-	\textbf{Proof:} \\ 
+	\prof 
 	From Shakespeare's theorem we have: \\ 
 	$\vdash B \lor \lnot B$ \hfill [Shakespeare's Theorem] \\ 
 	Replace $B$ with $\lnot A$ \\ 
@@ -212,7 +213,7 @@
 \begin{thm} \textbf{De Morgan's laws} \\
 	Let $A,B$ be sets. \\ 
 	Then: $(A \cap B)^c = A^c \cup B^c$ and $(A \cup B)^c = A^c \cap B^c$ \\ 
-	\textbf{Proof: } \\ 
+	\prof 
 	Let $x \in (A \cap B)^c \Rightarrow x \not \in A \cap B$ \\ 
 	$\Rightarrow \lnot(x \in A \cap B)$ \\ 
 	$\Rightarrow \lnot(x \in A \land x \in B)$  
@@ -226,12 +227,20 @@
 \begin{thm} \textbf{The union only makes things larger} \\
 	Let $A,B$ be sets. \\ 
 	Then: $A \subset A \cup B$ \\ 
+	\prof 
+	Let $x \in A$ and $x\in B$ be statements. \\
+	Then by Axiom 2 we know: \\ 
+	$x \in A \Rightarrow x \in A \lor x \in B$ \hfill [Axiom 2 where the statements are $x \in A$ and $x \in B$] \\ 
+	Then by definition of union we know: \\ 
+	$x \in A \Rightarrow x \in A \cup B$ \hfill [Def. Union] \\
+	And so by definition of subsets we know: \\ 
+	$A \subset A \cup B$ \hfill [Def. of Subsets] \\
 \end{thm}
 \cut
 \begin{thm} \textbf{Union and Intersection Distributive Properties} \\ 
 	$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$ 	
 	$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
-	Proof: \\
+	\prof
 	Let $x \in A \cap (B \cup C) \Rightarrow x \in A \land x \in B \cup C$ \\ \\
 	Suppose that $x \not \in C \Rightarrow x \in B$ \\ 
 	$\Rightarrow x \in A \land x \in B$ \\ 
@@ -357,7 +366,7 @@
 	$$f(x + h) = f(x) + \frac{d}{dx} f(x)h + \phi(x)h$$
 	and 
 	$$\lim_{h \to 0} \phi(h) = 0$$ 
-	\textbf{Proof:} \\ 
+	\prof 
 	Define: $\phi(h) = \frac{f(x+h) - f(x)}{h} - \frac{d}{dx} f(x)$ \\ 
 	Then: $\phi(h)h = f(x+h) - f(x) - \frac{d}{dx} f(x)h$ \\ 
 	Then: $\phi(h)h + f(x) - \frac{d}{dx} f(x)h = f(x + h)$ \\ 
@@ -407,7 +416,7 @@
 	\]
 	is the form of $\nabla f$ which satisfies the above statement if $f$ is differentiable. \\
 	\href{https://en.wikipedia.org/wiki/Gradient}{Reference} \\ \\
-	\textbf{Proof:} \\ 
+	\prof 
 	Suppose $\nabla f$ is defined as above and all the partial derivatives exist. \\ 
 	Then: 
 	$$\frac{1}{||h||} |f(x + h) - f(x) - \langle \nabla f(x),h \rangle| = \frac{1}{||h||} \left|f(x + h) - f(x) - \sum_{j=1}^n \frac{\partial}{\partial x_j} f(x)\cdot h_j\right|$$
@@ -605,6 +614,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\begin{thm} \textbf{B is convex. } \\
 			Let $f,g \in B$ and $h(x) := \lambda f(x) + (1-\lambda)g(x)$ where $\lambda \in [0,1]$ \\ 
 			Then $h$ is still continuous since the linear combination of continuous functions is continuous.  \\ \\
+			\prof
 			Since both f and g are surjective and non-decreasing, then there exists $x_0,y_0,x_1,y_1$ in $\mathbb{R}$ such that: \\ 
 			$f(x_0) = 0 = g(y_0)$ and $f(x_1) = 1 = g(y_1)$ \\ 
 			Suppose WLOG that $x_0 \leq y_0$ and $x_1 \leq y_1$ \\
@@ -628,6 +638,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\begin{thm} \textbf{B is translation invariant.} \\
 			Let $f \in B$ and $g(x) := f(x+c)$ where $c \in \mathbb{R}$ \\
 			f is continuous and so is the addition operator so g is continuous. \\
+			\prof
 			Let $\alpha \in [0,1]$ since f is surjective then $\exists x \in \mathbb{R} \pitchfork f(x) = \alpha$ \\ 
 			Then $g(x-c) = f(x+c-c) = f(x) = \alpha$ and so g is surjective. \\ 
 			Let $x < y$ be elements in $\mathbb{R}$ \\
@@ -650,6 +661,8 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\cut
 	\begin{thm} \textbf{The First Rule of Induced Topologies on Finite Metric Subspaces is:} \\
 		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a metric space. \\
+		Then the subspace topology on $V$ is the discrete topology. \\ 
+		\prof
 		The associated topological space on V is: 
 		$$\tau_V = \{V \cap U : U \in \tau_X\}$$
 		Since V is of finite carnality, we can uniquely number each element. \\ 
@@ -669,8 +682,8 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\cut
 	\begin{lma} \textbf{Everything is Continuous when your domain is finite.} \\ 
 			Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
-			Then ever $f : V \to Y$ is continuous. \\ \\
-			Proof: \\ 
+			Then ever $f : V \to Y$ is continuous. \\ 
+			\prof
 			Let $U \in \tau_W$ \\ 
 			Then: $f^{-1}(U) \subset V$ where $f : V \to Y$ is arbitrary. \\
 			Thus: $f^{-1}(U) \in \tau_V$ by the previous theorem. \\
@@ -682,6 +695,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
 		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
 		Further let $f : V \to Y$, then $f$ is \textbf{Lipschitz continuous}. \\
+		\prof
 		We can simply look at: \\
 		$$K := \max\left( \left\{\frac{d_Y(f(x),f(y))}{d_X(x,y)} : x,y \in V \right\} \right)$$
 		Then we know that: 
@@ -705,7 +719,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\begin{thm} \textbf{K - Properties} 
 		\begin{itemize}
 			\item $B(K) = \bigcup_{L \in [0,K]} \Lambda(L)$ \\
-				\textbf{Proof: } \\
+				\prof
 				Let $f \in B(K) \Rightarrow f \text{ is lipschitz.}$ \\
 				Which means that there exists a unique smallest constant $K'$ where: $0 \leq K' \leq K$ \\
 				Thus $f \in \Lambda(K') \subset \bigcup_{L \in [0,K]} \Lambda(L)$ \\ 
@@ -715,12 +729,12 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 				$\Rightarrow \bigcup_{L \in [0,K]} \Lambda(L) \subseteq B(K)$ \\ 
 				$\therefore B(K) = \bigcup_{L \in [0,K]} \Lambda(L)$ 
 			\item $L \leq K \Rightarrow B(L) \subseteq B(K)$ \\
-				\textbf{Proof: } \\
+				\prof
 				Let $f \in B(L) \text{ and } x,y \in V$ \\
 				$\Rightarrow ||f(x) - f(y)|| \leq L ||x - y|| \leq K ||x - y||)$ \\ 
 				$\Rightarrow f \in B(K)$ 
 			\item $B(K) \text{ is convex.}$ \\
-				\textbf{Proof: } \\
+				\prof
 				Let $f,g \in B(K)$ and $h_\lambda(x) = \lambda f(x) + (1-\lambda) g(x)$ for some $\lambda \in [0,1]$ \\
 				Further let $x,y \in V$: \\
 				$$||h_\lambda(x) - h_\lambda(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
@@ -728,7 +742,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 				$$\leq \lambda K||x-y|| + (1 - \lambda) K||x - y|| = K||x - y||$$						
 				$\Rightarrow h_\lambda \in B(K)$
 			\item $\Lambda(K)$ is not convex. \\
-				\textbf{Proof: } \\
+				\prof
 				Let $K > 0$ \\ 
 				If $f \in \Lambda(K) \Rightarrow -f \in \Lambda(K)$ \\ 
 				However $\frac{f + -f}{2} = 0 \in \Lambda(0) \not = \Lambda(K)$ \\   
@@ -739,7 +753,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ at most belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
 		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space:
 		$$\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu \cdot \max(L,K))$$
-		Proof: \\ 
+		\prof
 		$$||h(x) - h(y)|| = ||\lambda f(x) + (1-\lambda) g(x) - (\lambda f(y) + (1-\lambda) g(y))|| =  ||\lambda f(x) + (1-\lambda)g(x) - \lambda f(y) - (1-\lambda)g(y) ||$$
 		$$ = ||\lambda(f(x) - f(y)) + (1-\lambda)(g(x) - g(y))|| \leq \lambda||(f(x) - f(y))|| + (1-\lambda)||(g(x) - g(y))||$$
 		$$\leq \lambda K||x-y|| + (1 - \lambda) L||x - y|| = (\lambda K + (1 - \lambda) L)||x - y|| $$		
