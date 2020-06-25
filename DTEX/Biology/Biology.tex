@@ -58,7 +58,7 @@ Next we have the American Horticultural Society (AHS) heat zones. This defines 1
 Zone & 	From &	To
 \\
 \hline 
-0 a & & $<$ -53.9 $^{\circ}$C (-65 $^{\circ}$F) 
+0 a & $<$ &  -53.9 $^{\circ}$C (-65 $^{\circ}$F) 
 \\
 \hline 
 0 b & -53.9 $^{\circ}$C (-65 $^{\circ}$F) &	-51.1 $^{\circ}$C (-60 $^{\circ}$F)
@@ -132,7 +132,7 @@ Zone & 	From &	To
 12 a &	+10 $^{\circ}$C (50 $^{\circ}$F) & +12.8 $^{\circ}$C (55 $^{\circ}$F)
 \\
 \hline 
-12 b &  $>$ +12.8 $^{\circ}$C (55 $^{\circ}$F)  & \\
+12 b &  +12.8 $^{\circ}$C (55 $^{\circ}$F)  & $<$ \\
 \hline 
 \end{tabular}
 \end{center}
@@ -143,7 +143,7 @@ Zone & 	From &	To
 	Zone &	From &	To
 \\
 	\hline
-	1 && $<$ 1
+	1 & $<$ &  1
 \\
 	\hline
 	2 &	1 &	7
@@ -175,7 +175,7 @@ Zone & 	From &	To
 	11 & 181 & 210
 \\
 	\hline
-	12 & $>$210 & \\
+	12 & 210 & $<$ \\
 	\hline
 \end{tabular}
 \end{center}
@@ -198,6 +198,10 @@ We have a heat function which is as follows: \\
 $F : \mathbb{R}^4 \to \mathbb{R}$
 Where the inputs to $F$ are $r,\theta,\phi,\tau$ which are: radial distance r, polar angle $\theta$ (theta), azimuthal angle $\phi$ (phi), time $\tau$ (tau). Additionally, the output is the heat at that point in space-time. 
 Then when you pick a time, you can project the colored 3D shape onto a 2D image. That wouldn't give you either of the figures below however. Those are calculations, based on the tables, are a way of binning the information to make it easier to understand. 
+
+https://wiki.openstreetmap.org/wiki/Smrender
+\href{http://maperitive.net/docs/}{Maperitive} \\
+\href{https://wiki.openstreetmap.org/wiki/Rendering}{wiki on map apis}
 
 
 \end{document}

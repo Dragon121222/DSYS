@@ -21,6 +21,9 @@
 \newtheorem{thm}{Theorem}[section] 
 
 \theoremstyle{plain}
+\newtheorem{axiom}{Axiom}[section] 
+
+\theoremstyle{plain}
 \newtheorem{lma}{Lemma}[section] 
 
 \theoremstyle{Definition}
@@ -90,18 +93,78 @@
 \end{def.}
 \begin{def.} \textbf{Intersection and Union} \\
 	Let $A,B$ be sets. \\ 
-	$$A \cap B = \{ x : x \in A \land x \in B\}$$
-	$$A \cup B = \{ x : x \in A \lor x \in B\}$$
+	$$A \cap B := \{ x : x \in A \land x \in B\}$$
+	$$A \cup B := \{ x : x \in A \lor x \in B\}$$
 \end{def.}
-\begin{def.} \textbf{Logical Implication} \\
+\begin{def.} \textbf{Compliment} \\ 
+	Let $A$ be a set.  \\
+	Then: $x \not \in A := \lnot(x \in A)$ and 
+	$A^c := \{x : x \not \in A\}$
+\end{def.}
+
+\begin{axiom} \textbf{Propositional Logic} \\ 
+	Let $A,B$ and $C$ be a statements.\\
+	Then we have the following axioms: 
+	\begin{itemize}
+		\item $\vdash A \lor A \Rightarrow A$ 
+		\item $\vdash A \Rightarrow A \lor B$ 
+		\item $\vdash A \lor B \Rightarrow B \lor A$ 
+		\item $\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $
+	\end{itemize}
+	These statements I am taking as fundamentally true and not needing to be proven. 
+\end{axiom}
+\begin{def.} \textbf{Logical Implication and Equivalence} \\
 	Let $A,B$ be statements: 
 	$$A \Rightarrow B := (\lnot A) \lor B$$
+	Further: \\ 
+	$$A \Leftrightarrow B := (A \Rightarrow B) \wedge (B \Rightarrow A)$$
 \end{def.}
 \begin{def.} \textbf{Logical Deduction} \\
 	Let $P$ and $Q$ be statements. \\ 
 	First, we suppose that $P$ is true. \\
 	If we can then show that $Q$ is true, then proven that $P \Rightarrow Q$
 \end{def.}
+\begin{thm} \textbf{First Theorem} \\ 
+	Let $A$ be a statement. \\ 
+	Then $A \Rightarrow A \lor A $ \\ 
+	Proof: \\ 
+	We know that: \\ 
+	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2]\\ 
+	$\vdash A \Rightarrow A \lor A$ \hfill [Rule of Substitution.] \\	
+\end{thm}
+
+\begin{thm} \textbf{Second Theorem} \\
+	Let $A$ be a statement. \\ 
+	Then $A \Leftrightarrow A \lor A $ \\ 	
+	Since $A \Rightarrow A \lor A$ and $A \lor A \Rightarrow A$ \\
+	Then by definition of equivalence we know: $A \Leftrightarrow A \lor A$ 
+\end{thm}
+
+\begin{thm} \textbf{Shakespeare's theorem} \\ 
+	Let $B$ be a statement. \\
+	Then $B \lor \lnot B$ \\ 
+	Proof: \\ 
+	We have the theorem: \\
+	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2] \\ 
+	Suppose that $A =  B$ \\ 
+	Then we have: \\ 
+	$\vdash B \Rightarrow B \lor B$ \hfill [Principle of Substitution.] \\ 
+	$\vdash \lnot B \lor (B \lor B)$ \hfill [Def. of Implication]\\ 
+	$\vdash \lnot B \lor B$ \hfill [Second Theorem]
+\end{thm}
+\begin{thm} \textbf{The Compliment of a Compliment of a statements is the statement} \\
+	Let $A$ be a statement. \\ 
+	Then $\lnot(\lnot A) = A$ \\
+\end{thm}
+\begin{thm} \textbf{De Morgan's laws} \\
+	Let $A,B$ be sets. \\ 
+	Then: $(A \cap B)^c = A^c \cup B^c$ and $(A \cup B)^c = A^c \cap B^c$ \\ 
+	\textbf{Proof: } \\ 
+	Let $x \in (A \cap B)^c \Rightarrow x \not \in A \cap B$ \\ 
+	$\Rightarrow \lnot(x \in A \cap B)$ \\ 
+	$\Rightarrow \lnot(x \in A \land x \in B)$ \\ 
+\end{thm}
+
 \begin{def.} \textbf{Subsets} \\ 
 	Let $A,B$ be sets. \\ 
 	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
