@@ -139,7 +139,6 @@
 	Since $A \Rightarrow A \lor A$ and $A \lor A \Rightarrow A$ \\
 	Then by definition of equivalence we know: $A \Leftrightarrow A \lor A$ 
 \end{thm}
-
 \begin{thm} \textbf{Shakespeare's theorem} \\ 
 	Let $B$ be a statement. \\
 	Then $B \lor \lnot B$ \\ 
@@ -152,9 +151,18 @@
 	$\vdash \lnot B \lor (B \lor B)$ \hfill [Def. of Implication]\\ 
 	$\vdash \lnot B \lor B$ \hfill [Second Theorem]
 \end{thm}
+\begin{thm} \textbf{If it's true, then it's true} \\ 
+	Let $A$ be a statement. \\ 
+	Then: $A \Rightarrow A$ and further $A \Leftrightarrow A$ \\
+	
+\end{thm}
 \begin{thm} \textbf{The Compliment of a Compliment of a statements is the statement} \\
 	Let $A$ be a statement. \\ 
-	Then $\lnot(\lnot A) = A$ \\
+	Then $\lnot(\lnot A) \Leftrightarrow A$ \\
+	\textbf{Proof:} \\ 
+	From the previous theorem we know: \\ 
+	$\vdash \lnot B \lor B$ \hfill [Shakespeare's theorem] \\
+	$\vdash \lnot (\lnot A) \lor (\lnot A)$ \hfill [Principle of Substitution.] \\
 \end{thm}
 \begin{thm} \textbf{De Morgan's laws} \\
 	Let $A,B$ be sets. \\ 
