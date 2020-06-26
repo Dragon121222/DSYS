@@ -193,7 +193,7 @@
 	$\vdash B \lor \lnot B$ \hfill [Commutative Property of Or] 
 \end{thm}
 \cut
-\begin{thm} \textbf{If it's true, then it's true} \\ 
+\begin{thm} \textbf{The Tautology Theorem} \\ 
 	Let $A$ be a statement. \\ 
 	Then: $A \Rightarrow A$ and further $A \Leftrightarrow A$ \\
 	\prof
@@ -206,7 +206,7 @@
 	$\vdash A \Rightarrow A$ \hfill [Def. of Logical Implication] 	
 \end{thm}
 \cut
-\begin{thm} \textbf{The Compliment of a Compliment of a statements is the statement} \\
+\begin{thm} \textbf{The Double Negative Theorem} \\
 	Let $A$ be a statement. \\ 
 	Then $\lnot(\lnot A) \Leftrightarrow A$ \\
 	\prof 
@@ -217,7 +217,7 @@
 	Then by the definition of implication we have: \\ 
 	$\vdash A \Rightarrow \lnot (\lnot A)$ \hfill [Def. of Logical Implication] \\
 	For the next proof we will need the following, substitute $A$ with $\lnot A$ \\ 
-	$\vdash \lnot A \Rightarrow \lnot (\lnot (\lnot A))$ \hfill [Principle of Substitution] *1 \\
+	$\vdash \lnot A \Rightarrow \lnot (\lnot (\lnot A))$ \hfill [Principle of Substitution] *1 \\ \\
 	Now for the other direction, start with axiom 4: \\ 
 	$\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $ \hfill [Axiom 4]\\
 	Substitute $C$ with $\lnot (\lnot A)$ \\
@@ -238,15 +238,33 @@
 	$\vdash \lnot (\lnot A) \Leftrightarrow A$	\hfill [Def. of Logical Equivalence. ]
 \end{thm}
 \cut
+\begin{thm} \textbf{Contra positive} \\ 
+	$(A \Rightarrow B) \Leftrightarrow (\lnot B \Rightarrow \lnot A)$ and $(A \Leftrightarrow B) \Leftrightarrow (\lnot A \Leftrightarrow \lnot B)$ 
+	
+\end{thm}
+\cut 
 \begin{thm} \textbf{Captain Morgan's Laws for Logic} \\ 
 	Let $A,B$ be statements. \\ 
 	Then: $\lnot(A \land B) \Leftrightarrow \lnot A \lor \lnot B$ and $\lnot(A \lor B) \Leftrightarrow \lnot A \land \lnot B$ \\
 	\prof
+	Using the Deductive method we start with the assumption that: \\
+	$\lnot(A \land B)$ \hfill [Deductive Method] \\
 	By the definition of and we know the following are equivalent. \\ 
-	$\vdash \lnot(A \land B) \Leftrightarrow \lnot( \lnot( \lnot A \lor \lnot B) )$ \hfill [Def. And] \\ 
+	$ \Leftrightarrow \lnot( \lnot( \lnot A \lor \lnot B) )$ \hfill [Def. And] \\ 
 	By the previous theorem we know that: \\ 
-	$\vdash \lnot( \lnot( \lnot A \lor \lnot B) ) \Leftrightarrow \lnot A \lor \lnot B$ \hfill [Double Negative Theorem] \\ 
-	And so we are done with the first part. \\ 
+	$ \Leftrightarrow \lnot A \lor \lnot B$ \hfill [Double Negative Theorem] \\ 
+	Then the Deductive Method tells us that: \\ 
+	$\vdash \lnot(A \land B) \Leftrightarrow \lnot A \lor \lnot B$ \hfill [Deductive Method Conclusion] \\
+	And so we are done with the first part. \\ \\
+	Using the Deductive Method again, we start with the assumption that: \\ 
+	$\lnot A \land \lnot B$ \hfill [Deductive Method] \\
+	By definition of and, we know that: \\ 
+	$\Leftrightarrow \lnot (\lnot (\lnot A) \lor \lnot (\lnot B)) $ \hfill [Def. of And] \\ 
+	By the double negative theorem we know that: \\ 
+	$\Leftrightarrow \lnot (A \lor B)$ \hfill [Double Negative Theorem] \\
+	And so by the Deductive Method we know: \\ 
+	$\vdash \lnot A \land \lnot B \Leftrightarrow \lnot (A \lor B)$ \hfill [Conclusion of the Deductive Method]
+	Which gives us both statements. 
 \end{thm}
 \cut
 \begin{thm} \textbf{De Morgan's laws} \\
