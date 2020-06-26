@@ -45,7 +45,7 @@
 \maketitle			
 \section{Notation, Set Theory, and Logic}
 \cut
-\begin{def.} \textbf{Common Sets of Numbers} \\ 
+\begin{def.} \underline{\textbf{Common Sets of Numbers}} \\ 
 	$$\mathbb{N} = \{1,2,...\}$$	
 	$$\mathbb{N}_0 = \{0,1,2,...\}$$
 	$$\mathbb{N}_m = \{1,2,...,m\} \text{ where } m \in \mathbb{N}$$
@@ -56,7 +56,7 @@
 	$$\mathbb{R}_0^- = \{x \in \mathbb{R} : x \leq 0\}$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Sets and Set Builder Notation and Hats} \\ 
+\begin{def.} \underline{\textbf{Sets and Set Builder Notation and Hats}} \\ 
 	A set is a collection of objects. \\ 
 	Example: A = The set of all hats. \\ 
 	We call the objects in the set elements. \\ 
@@ -72,7 +72,7 @@
 	This reads: $C_X^Y$ is the set of all functions f mapping from $X$ to $Y$ such that $f$ is continuous. 
 \end{def.}
 \cut
-\begin{def.} \textbf{Primitives} \\
+\begin{def.} \underline{\textbf{Primitives}} \\
 	The logical or and not are both primitives and are written: \\ 
 	$$\text{logical or: }\lor$$ 
 	and 
@@ -97,24 +97,25 @@
 	In the same vain, if M is false then N is true. 
 \end{def.}
 \cut
-\begin{def.} \textbf{And} \\
+\begin{def.} \underline{\textbf{And}} \\
 	Let $A,B$ be statements. \\ 
 	$$A \land B := \lnot((\lnot A) \lor (\lnot B))$$ 
 \end{def.}
 \cut
-\begin{def.} \textbf{Intersection and Union} \\
+\begin{def.} \underline{\textbf{Intersection and Union}} \\
 	Let $A,B$ be sets. \\ 
 	$$A \cap B := \{ x : x \in A \land x \in B\}$$
 	$$A \cup B := \{ x : x \in A \lor x \in B\}$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Compliment} \\ 
+\begin{def.} \underline{\textbf{Compliment}} \\ 
 	Let $A$ be a set.  \\
 	Then: $x \not \in A := \lnot(x \in A)$ and 
 	$A^c := \{x : x \not \in A\}$
 \end{def.}
 \cut
-\begin{axiom} \textbf{Propositional Logic} \\ 
+
+\begin{axiom} \hypertarget{Axioms}{\underline{\textbf{Propositional Logic}} } \\
 	Let $A,B$ and $C$ be a statements.\\
 	Then we have the following axioms: 
 	\begin{itemize}
@@ -126,49 +127,49 @@
 	These statements I am taking as fundamentally true and not needing to be proven. 
 \end{axiom}
 \cut 
-\begin{ruleOfInference} \textbf{Modus Ponens} \\
+\begin{ruleOfInference} \underline{\textbf{Modus Ponens}} \\
 	Let $A,B$ be statements. \\
 	If $\vdash A \Rightarrow B$ and $\vdash A$ then $\vdash B$ 
 \end{ruleOfInference}
 \cut
-\begin{def.} \textbf{Logical Implication and Equivalence} \\
+\begin{def.} \underline{\textbf{Logical Implication and Equivalence}} \\
 	Let $A,B$ be statements: 
 	$$A \Rightarrow B := (\lnot A) \lor B$$
 	Further: 
 	$$A \Leftrightarrow B := (A \Rightarrow B) \wedge (B \Rightarrow A)$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Logical Deduction} \\
+\begin{def.} \underline{\textbf{Logical Deduction}} \\
 	Let $P$ and $Q$ be statements. \\ 
 	First, we suppose that $P$ is true. \\
-	If we can then show that $Q$ is true, then it is proven that $P \Rightarrow Q$
+	If we can then show that $Q$ is true, then it is proven that $\vdash P \Rightarrow Q$
 \end{def.}
 \cut
-\begin{thm} \textbf{First Theorem} \\ 
+\begin{thm} \underline{\textbf{First Theorem}} \\ 
 	Let $A$ be a statement. \\ 
 	Then $A \Rightarrow A \lor A $ \\ 
 	\prof
 	We know that: \\ 
-	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2]\\ 
+	$\vdash A \Rightarrow A \lor B$ \hfill \hyperlink{Axioms}{[Axiom 2]}\\ 
 	By replacing B with A we then have: \\ 
 	$\vdash A \Rightarrow A \lor A$ \hfill [Principle of Substitution.] 
 \end{thm}
 \cut
-\begin{thm} \textbf{Second Theorem} \\
+\begin{thm} \underline{\textbf{Second Theorem}} \\
 	Let $A$ be a statement. \\ 
 	Then $A \Leftrightarrow A \lor A $ \\ 	
 	\prof
-	Since $\vdash A \Rightarrow A \lor A$ and $\vdash A \lor A \Rightarrow A$ \hfill [Axiom 1 and the first theorem]\\
+	Since $\vdash A \Rightarrow A \lor A$ and $\vdash A \lor A \Rightarrow A$ \hfill [\hyperlink{Axioms}{Axiom 1} and the first theorem]\\
 	And so we know: \\
 	$\vdash A \Leftrightarrow A \lor A$ \hfill [Definition of Equivalence]
 \end{thm}
 \cut
-\begin{thm} \textbf{The Commutative Property of OR} \\
+\begin{thm} \underline{\textbf{The Commutative Property of OR}} \\
 	Let $A,B$ be statements. \\
 	Then: $A \lor B \Leftrightarrow B \lor A$ \\ 
 	\prof
 	By Axiom 3 we know: \\ 
-	$\vdash A \lor B \Rightarrow B \lor A$ \hfill [Axiom 3] \\
+	$\vdash A \lor B \Rightarrow B \lor A$ \hfill \hyperlink{Axioms}{[Axiom 3]} \\
 	We can then Substitute B for C: \\
 	$\vdash A \lor C \Rightarrow C \lor A$ \hfill [Principle of Substitution] \\
 	Next we substitute A for B: \\ 
@@ -179,12 +180,12 @@
 	$\vdash A \lor B \Leftrightarrow B \lor A$ \hfill [Definition of Equivalence]
 \end{thm}
 \cut
-\begin{thm} \textbf{Shakespeare's theorem} \\ 
+\begin{thm} \underline{\textbf{Shakespeare's theorem}} \\ 
 	Let $B$ be a statement. \\
 	Then $B \lor \lnot B$ \\ 
 	\prof
 	We have the Axiom: \\
-	$\vdash A \Rightarrow A \lor B$ \hfill [Axiom 2] \\ 
+	$\vdash A \Rightarrow A \lor B$ \hfill \hyperlink{Axioms}{[Axiom 2]} \\ 
 	We can then replace A with B and  we have: \\ 
 	$\vdash B \Rightarrow B \lor B$ \hfill [Principle of Substitution.] \\ 
 	$\vdash \lnot B \lor (B \lor B)$ \hfill [Def. of Implication]\\ 
@@ -193,7 +194,7 @@
 	$\vdash B \lor \lnot B$ \hfill [Commutative Property of Or] 
 \end{thm}
 \cut
-\begin{thm} \textbf{The Tautology Theorem} \\ 
+\begin{thm} \underline{\textbf{The Tautology Theorem}} \\ 
 	Let $A$ be a statement. \\ 
 	Then: $A \Rightarrow A$ and further $A \Leftrightarrow A$ \\
 	\prof
@@ -203,10 +204,12 @@
 	Replace B with A. \\ 
 	$\vdash \lnot A \lor A$ \hfill [Principle of Substitution.] \\
 	By the definition of Implication we have that: \\ 
-	$\vdash A \Rightarrow A$ \hfill [Def. of Logical Implication] 	
+	$\vdash A \Rightarrow A$ \hfill [Def. of Logical Implication] \\
+	Finally by the definition of equivalence we have that: \\ 
+	$\vdash A \Leftrightarrow A$ \hfill [Def. of Equivalence] 	
 \end{thm}
 \cut
-\begin{thm} \textbf{The Double Negative Theorem} \\
+\begin{thm} \underline{\textbf{The Double Negative Theorem}} \\
 	Let $A$ be a statement. \\ 
 	Then $\lnot(\lnot A) \Leftrightarrow A$ \\
 	\prof 
@@ -219,7 +222,7 @@
 	For the next proof we will need the following, substitute $A$ with $\lnot A$ \\ 
 	$\vdash \lnot A \Rightarrow \lnot (\lnot (\lnot A))$ \hfill [Principle of Substitution] *1 \\ \\
 	Now for the other direction, start with axiom 4: \\ 
-	$\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $ \hfill [Axiom 4]\\
+	$\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $ \hfill \hyperlink{Axioms}{[Axiom 4]}\\
 	Substitute $C$ with $\lnot (\lnot A)$ \\
 	$\vdash (A \Rightarrow \lnot (\lnot A)) \Rightarrow (A \lor B \Rightarrow B \lor \lnot (\lnot A) ) $ \hfill [Principle of Substitution]\\
 	Substitute $A$ with $\lnot A$ \\ 
@@ -238,12 +241,12 @@
 	$\vdash \lnot (\lnot A) \Leftrightarrow A$	\hfill [Def. of Logical Equivalence. ]
 \end{thm}
 \cut
-\begin{thm} \textbf{Contra positive} \\ 
+\begin{thm} \underline{\textbf{Contrapositive}} \\ 
 	$(A \Rightarrow B) \Leftrightarrow (\lnot B \Rightarrow \lnot A)$ and $(A \Leftrightarrow B) \Leftrightarrow (\lnot A \Leftrightarrow \lnot B)$ 
 	
 \end{thm}
 \cut 
-\begin{thm} \textbf{Captain Morgan's Laws for Logic} \\ 
+\begin{thm} \underline{\textbf{Captain Morgan's Laws for Logic}} \\ 
 	Let $A,B$ be statements. \\ 
 	Then: $\lnot(A \land B) \Leftrightarrow \lnot A \lor \lnot B$ and $\lnot(A \lor B) \Leftrightarrow \lnot A \land \lnot B$ \\
 	\prof
@@ -267,7 +270,7 @@
 	Which gives us both statements. 
 \end{thm}
 \cut
-\begin{thm} \textbf{De Morgan's laws} \\
+\begin{thm} \underline{\textbf{De Morgan's laws}} \\
 	Let $A,B$ be sets. \\ 
 	Then: $(A \cap B)^c = A^c \cup B^c$ and $(A \cup B)^c = A^c \cap B^c$ \\ 
 	\prof 
@@ -276,25 +279,25 @@
 	$\Rightarrow \lnot(x \in A \land x \in B)$  
 \end{thm}
 \cut
-\begin{def.} \textbf{Subsets} \\ 
+\begin{def.} \underline{\textbf{Subsets}} \\ 
 	Let $A,B$ be sets. \\ 
 	$A \subset B \Leftrightarrow (x \in A \Rightarrow x \in B)$
 \end{def.}
 \cut
-\begin{thm} \textbf{The union only makes things larger} \\
+\begin{thm} \underline{\textbf{The union only makes things larger}} \\
 	Let $A,B$ be sets. \\ 
 	Then: $A \subset A \cup B$ \\ 
 	\prof 
 	Let $x \in A$ and $x\in B$ be statements. \\
 	Then by Axiom 2 we know: \\ 
-	$x \in A \Rightarrow x \in A \lor x \in B$ \hfill [Axiom 2 where the statements are $x \in A$ and $x \in B$] \\ 
+	$x \in A \Rightarrow x \in A \lor x \in B$  \hfill \hyperlink{Axioms}{[Axiom 2} where the statements are $x \in A$ and $x \in B$] \\ 
 	Then by definition of union we know: \\ 
 	$x \in A \Rightarrow x \in A \cup B$ \hfill [Def. Union] \\
 	And so by definition of subsets we know: \\ 
 	$A \subset A \cup B$ \hfill [Def. of Subsets] \\
 \end{thm}
 \cut
-\begin{thm} \textbf{Union and Intersection Distributive Properties} \\ 
+\begin{thm} \underline{\textbf{Union and Intersection Distributive Properties}} \\ 
 	$$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$$ 	
 	$$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$$
 	\prof
@@ -311,12 +314,12 @@
 	$$A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$$ 	
 \end{thm}
 \cut
-\begin{def.} \textbf{Power Set} \\ 
+\begin{def.} \underline{\textbf{Power Set}} \\ 
 	Let $X \not = \phi$ \\ 
 	$$2^X := \{V : V \subseteq X\}$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Injection, Surjection, and Bijection} \\
+\begin{def.} \underline{\textbf{Injection, Surjection, and Bijection}} \\
 	Let $A,B$ be sets and  function $f : A \to B$.
 	f is said to be an Injection if: \\ 
 	$$(\forall x,y \in A)(f(x) = f(y) \Rightarrow x = y)$$
@@ -325,19 +328,19 @@
 	f is said to be a Bijection if it is both an Injection and a Surjection.  
 \end{def.}
 \cut
-\begin{thm} \textbf{It's pretty big.} \\ 
+\begin{thm} \underline{\textbf{It's pretty big.}} \\ 
 	Let $X \not = \phi$ and $M := card(X) < card(\mathbb{N})$ \\
 	Then: $card(2^X) = 2^M$ 
 \end{thm}
 \cut
-\begin{def.} \textbf{K - Combinations} \\
+\begin{def.} \underline{\textbf{K - Combinations}} \\
 	Let $S$ be a non empty finite set where $n = card(S)$ \\ 
 	A K-combination of S is a subset: $K \subset S$ where $card(K) = k$ \\ 
 	We then have the collection: $C(S,k) = \{K \subset S : card(K) = k\}$ \\
 	The number of K-combinations = $card(C(S,k)) = \binom{n}{k}$
 \end{def.}
 \cut
-\begin{def.} \textbf{Equivalence Relations} \\
+\begin{def.} \underline{\textbf{Equivalence Relations}} \\
 	Let $S \not = \phi$ \\ 
 	Then $\approxeq$ is called an Equivalence Relation if: 
 	\begin{itemize}
@@ -348,7 +351,7 @@
 \href{https://en.wikipedia.org/wiki/Equivalence_relation}{Reference}
 \end{def.}
 \cut
-\begin{def.} \textbf{Equivalence Class} \\
+\begin{def.} \underline{\textbf{Equivalence Class}} \\
 	Let $S \not = \phi$ and $a \in S$ and $\approxeq$ be an equivalence relation on $S$. \\
 	Then the equivalence class $[a]$ is defined as follows: 
 		$$[a] := \{x \in S : x \approxeq a\}$$
@@ -356,7 +359,7 @@
 \cut
 \section{Topology}
 
-\begin{def.} \textbf{Topology} \\
+\begin{def.} \underline{\textbf{Topology}} \\
 	Let $X \not = \phi$ \\ 
 	Further let $\tau \subseteq 2^X$ such that: \\ 
 	$$\phi,X \in \tau$$
@@ -364,13 +367,13 @@
 	$$(\forall m \in \mathbb{N})\left(\{U_j\}_{j\in \mathbb{N}_m} \Rightarrow \bigcap_{j=1^m} U_j \in \tau\right)$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Relative Topology} \\
+\begin{def.} \underline{\textbf{Relative Topology}} \\
 	Let $X \not = \phi$ and $Z \subset X$ \\ 
 	Then the relative topology on $Z$ is written as follows: \\ 
 	$$\tau_Z = \{Z \cap U : U \in \tau_X\}$$
 \end{def.}
 \cut
-\begin{thm} \textbf{The Relative Topology is a Topology on Z} \\
+\begin{thm} \underline{\textbf{The Relative Topology is a Topology on Z}} \\
 	Let $E \in \tau_Z$ \\
 	$$\Rightarrow E = Z \cap U \subset Z$$
 	$$\Rightarrow \tau_Z \subseteq 2^Z$$
@@ -386,7 +389,7 @@
 \end{thm}
 \cut
 \section{Change}
-\begin{def.} \textbf{Metric} \\ 
+\begin{def.} \underline{\textbf{Metric}} \\ 
 	Let X be a non-empty set.. \\ 
 	Let $d : X \times X \to \mathbb{R}^+_0$ such that: 
 	\begin{itemize}
@@ -398,7 +401,7 @@
 	\href{https://en.wikipedia.org/wiki/Metric_space}{Reference}
 \end{def.}
 \cut
-\begin{def.} \textbf{Limit of a function} \\ 
+\begin{def.} \underline{\textbf{Limit of a function}} \\ 
 	Let $T : X \to Y$ where $(X,d_X)$ and $(Y,d_Y)$ are metric spaces. \\ 
 	Then fix $x_0 \in X$. \\
 	If:
@@ -407,7 +410,7 @@
 	\href{https://en.wikipedia.org/wiki/Limit_of_a_function}{Reference}
 \end{def.}
 \cut
-\begin{def.} \textbf{Derivative} \\ 
+\begin{def.} \underline{\textbf{Derivative}} \\ 
 	Let $\hat{f} : \mathbb{R} \to \mathbb{R}$ \\ 
 	Further let $f = \hat{f}|_U$ where $U \in \tau_\mathbb{R}$ \\ 
 	Then $f$ is said to be differentiable at $x \in U$ if there exists an $L_x$ such that: \\ 
@@ -417,7 +420,7 @@
 	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
 \end{def.}
 \cut
-\begin{thm} \textbf{Fundamental increment lemma} \\ 
+\begin{thm} \underline{\textbf{Fundamental increment lemma}} \\ 
 	Let $f$ be described as above and be differentiable at x. \\ 
 	Then there exists a function $\phi : \mathbb{R} \to \mathbb{R}$ such that: \\ 
 	$$f(x + h) = f(x) + \frac{d}{dx} f(x)h + \phi(x)h$$
@@ -433,7 +436,7 @@
 	$$= \lim_{h \to 0}\frac{f(x+h) - f(x)}{h} - \lim_{h \to 0} \frac{d}{dx} f(x) = \frac{d}{dx} f(x) - \frac{d}{dx} f(x) = 0$$
 \end{thm}
 \cut
-\begin{def.} \textbf{Partial Derivative} \\
+\begin{def.} \underline{\textbf{Partial Derivative}} \\
 	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ \\
 	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
 	Then $f$ is said to be differentiable at $x \in U$ with respect to the i'th component of $x$ if there exists an $L_{x_i}$ such that: \\  
@@ -443,7 +446,7 @@
 	\href{https://en.wikipedia.org/wiki/Partial_derivative}{Reference}
 \end{def.}
 \cut
-\begin{thm} \textbf{Equivalent characterization} \\ 
+\begin{thm} \underline{\textbf{Equivalent characterization}} \\ 
 	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ \\
 	Further let $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
 	And let $f$ be differentiable at $x \in U$ with respect to the i'th component of $x$, then: 
@@ -453,13 +456,13 @@
 	$$\Leftrightarrow 0 = \lim_{h \to 0} \left[\frac{f(x_1,...,x_i + h,...,x_n) - f(x_1,...,x_i,...,x_n) - \langle L_{x_i} , h \rangle}{h}  \right]$$	
 \end{thm}
 \cut
-\begin{def.} \textbf{Gradient} \\ 
+\begin{def.} \underline{\textbf{Gradient}} \\ 
 	Let $\hat{f} : \mathbb{R}^n \to \mathbb{R}$ and let $f : U \to \mathbb{R}$ such that $f = \hat{f}|_U$ where $U \in \tau_{\mathbb{R}^n}$ \\ 
 	$f$ is said to be differentiable at $x \in U$ if $\exists \nabla f : \mathbb{R}^n \to \mathbb{R}^n$ such that: \\  	
 	$$\lim_{h \to 0}\frac{|f(x + h) - f(x) - \langle \nabla f(x),h \rangle|}{||h||} = 0$$ 
 \end{def.} 
 \cut
-\begin{thm} \textbf{Form of the Gradient} \\ 
+\begin{thm} \underline{\textbf{Form of the Gradient}} \\ 
 	Let $f$ be defined as above. \\ 
 	Then $\nabla f: \mathbb{R}^n \to \mathbb{R}^n$ where: \\ 
 	\[
@@ -479,20 +482,19 @@
 	$$\frac{1}{||h||} |f(x + h) - f(x) - \langle \nabla f(x),h \rangle| = \frac{1}{||h||} \left|f(x + h) - f(x) - \sum_{j=1}^n \frac{\partial}{\partial x_j} f(x)\cdot h_j\right|$$
 \end{thm}
 \cut
-\newpage
-\begin{def.} \textbf{Matrix Functional Differentiability} \\ 
+\begin{def.} \underline{\textbf{Matrix Functional Differentiability}} \\ 
 	Let $\hat{T} : \mathbb{R}^{n \times m} \to \mathbb{R}$ and let $T : U \to \mathbb{R}$ such that $T = \hat{T}|_U$ where $U \in \tau_{\mathbb{R}^{n \times m}}$ \\ 
 	T is said to be differentiable at $x \in U$ if $\exists D : \mathbb{R}^{n \times m} \to \mathbb{R}^{n \times m}$ such that: \\  
 	$$\lim_{h \to 0}\frac{|T(x + h) - T(x) - \langle D T(x),h \rangle|}{||h||} = 0$$
 	where $\langle \cdot, \cdot \rangle$ is an inner product defined on $\mathbb{R}^{n \times m}$
 \end{def.}
 \cut
-\begin{def.} \textbf{Frobenius inner product} \\
+\begin{def.} \underline{\textbf{Frobenius inner product}} \\
 	The Frobenius inner product is defined as: \\ 
 	$$\langle \cdot , \cdot \rangle_{FB} : \mathbb{R}^{n \times m} \times \mathbb{R}^{n \times m} \to \mathbb{R} \text{ such that: } \langle A,B \rangle_{FB} = \sum_{i=1}^n \sum_{j=1}^m a_{i,j}b_{i,j} \text{ for all } A,B \in \mathbb{R}^{n \times m}$$
 \end{def.}
 \cut
-\begin{thm} \textbf{Form of Matrix Functional Derivative} \\
+\begin{thm} \underline{\textbf{Form of Matrix Functional Derivative}} \\
 	\[
 	DT(x) = 
 	\begin{bmatrix}
@@ -501,13 +503,9 @@
 	\frac{\partial}{\partial x_{n,1}} & \cdots & \frac{\partial}{\partial x_{n,m}} \\ 
 	\end{bmatrix}	
 	\]
-
-
 \end{thm}
 \cut
-
-\newpage
-\begin{def.} \textbf{Differentiability of a multi-variable function.} \\
+\begin{def.} \underline{\textbf{Differentiability of a multi-variable function.}} \\
 	Let $\hat{f} : \mathbb{R}^m \to \mathbb{R}^n$ such that: \\ 
 	\[
 	\hat{f}(x) = 
@@ -525,7 +523,7 @@
 	\href{https://en.wikipedia.org/wiki/Differentiable_function}{Reference}
 \end{def.}
 \cut
-\begin{thm} \textbf{If a multi-variable function, f, is differentiable at x then the linear operator J is the Jacobian matrix.} \\ 
+\begin{thm} \underline{\textbf{The Jacobian matrix linear operator for the above system.}} \\ 
 	So our guess is that: \\ 
 	\[
 	J_{f(x)} = 
@@ -538,7 +536,7 @@
 	since this form is a linear operator mapping from the appropriate space to the appropriate space. It should be noted that the transpose of this matrix can not satisfy the definition of differentiability of a multi-variable function and so it is not the correct linear operator. 
 \end{thm}
 \cut
-\begin{def.} \textbf{Matrix operator differentiability} \\ 
+\begin{def.} \underline{\textbf{Matrix operator differentiability}} \\ 
 	Let $T : \mathbb{R}^{n\times m} \to \mathbb{R}^n$ such that: \\
 	\[
 	T(A) = 
@@ -552,10 +550,10 @@
 	\]
 	Then T is said to be differentiable at $A \in \mathbb{R}^{n \times m}$ if there exists a linear operator $D : \mathbb{R}^{n \times m} \to \mathbb{R}^n$ where: \\ 
 	$$\lim_{h \to 0} \frac{||T(A + h) - T(A) + D(h)||_{\mathbb{R}^n}}{||h||_{\mathbb{R}^{n\times m}}} = 0$$
+	If $D$ exists then it is called the Matrix operator derivative and is written: $D_{\mathbb{R}^{n \times m}}T(A)$ \\ 
 \end{def.}
-If $D$ exists then it is called the Matrix operator derivative and is written: $D_{\mathbb{R}^{n \times m}}T(A)$ \\ 
 \cut
-\begin{thm} \textbf{The form of the Matrix operator derivative.} \\ 
+\begin{thm} \underline{\textbf{The form of the Matrix operator derivative.}} \\ 
 	Let $T$ be described as above and differentiable at $A \in \mathbb{R}^{n \times m}$ \\ 
 	\[
 	\frac{T(A + h) - T(A)}{||h||} = 
@@ -576,8 +574,7 @@ If $D$ exists then it is called the Matrix operator derivative and is written: $
 	\]	
 \end{thm}
 \cut
-\newpage
-\begin{def.} \textbf{Subspace Differentiability} \\ 
+\begin{def.} \underline{\textbf{Subspace Differentiability}} \\ 
 	Let $X = \{X_j\}_{j=1}^{n}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j = m_j \times n_j$ \\ 
 	Let $T : \prod_{j=1}^{n} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\ 
 	Let $x_j \in X_j$ for some $j \in \mathbb{N}_n$ \\ 
@@ -596,9 +593,7 @@ If $D$ exists then it is called the Matrix operator derivative and is written: $
 	Then $D$ is called the subspace derivative of $T$ at x with respect to $X_j$ and is written: $D_{x_j} T(x)$ \\ 
 \end{def.}
 \cut
-
-\newpage
-\begin{def.} \textbf{Product space Derivative} \\ 
+\begin{def.} \underline{\textbf{Product space Derivative}} \\ 
 		Let $X = \{X_j\}_{j=0}^{n-1}$ be a sequence of finite dimensional vector spaces where $dim(X_j) = k_j$ \\ 
 		Let $T : \prod_{j=0}^{n-1} X_j \to Y$ where $Y$ is a finite dimensional vector space with $dim(Y) = k_y$ \\
 		Let $\{x_j\}_{j=0}^{n-1}$ be a sequence of vectors such that: $(\forall j \in \{0,...,n-1\})(x_j \in X_j)$ \\ 
@@ -613,16 +608,14 @@ If $D$ exists then it is called the Matrix operator derivative and is written: $
 		\]
 \end{def.}
 \cut
-
-\newpage
-\begin{def.} \textbf{Fréchet derivative} \\ 
+\begin{def.} \underline{\textbf{Fréchet derivative}} \\ 
 		Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 		An operator $f : U \to W$ is said to be Fréchet differentiable if there exists a bounded linear operator $A : V \to W$ such that: \\ 
 		$$\lim_{||h||\to0} \frac{||f(x+h) - f(x) + Ah||_W}{||h||_V} = 0$$
 		\href{https://en.wikipedia.org/wiki/Fr%C3%A9chet_derivative}{Reference}
 \end{def.} 
 \cut
-\begin{thm} \textbf{Fréchet derivative of a bounded linear operator} \\ 
+\begin{thm} \underline{\textbf{Fréchet derivative of a bounded linear operator}} \\ 
 	Let $V,W$ be normed vector spaces and $U \subset V$ be an open set. \\ 
 	Let $\hat{f} : V \to W$ be a bounded linear operator. \\
 	Then lets look at $f = \hat{f}|_{U}$ \\ 
@@ -638,7 +631,7 @@ If $D$ exists then it is called the Matrix operator derivative and is written: $
 \end{thm}
 \cut
 \subsection{Finite Composition Operator}
-\begin{def.} \textbf{Finite Composition Operator} \\ 
+\begin{def.} \underline{\textbf{Finite Composition Operator}} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^{n}$ be a finite sequence of sets. \\ 
 	Further let $\{T_j\}_{j=0}^{n-1}$ be a finite sequence of operators such that $(\forall j \in \mathbb{N}_{n-1})(T_j : X_j \to X_{j+1})$ \\ 
 	Then $T^n : X_0 \to X_{n}$ defined by: 
@@ -646,29 +639,28 @@ If $D$ exists then it is called the Matrix operator derivative and is written: $
 	is called the \textbf{Finite Composition Operator defined on X}. \\ 
 \end{def.}
 \cut
-\begin{def.} \textbf{Multi-variable Finite Composition Iteration} \\ 
+\begin{def.} \underline{\textbf{Multi-variable Finite Composition Iteration}} \\ 
 	Let the collection $X = \{X_j\}_{j=0}^n$ and $Y = \{Y_j\}_{j=0}^{n-1}$ be finite sequences of sets. \\ 
 	Further let $\{T_j\}_{j=0}^{n-1}$ be a finite sequence of operators such that: $(\forall j \in \mathbb{N}_{n-1})(T_j : X_j \times Y_j \to X_{j+1})$ \\
 	Let $T^n : X_0 \times \prod_{j=0}^{n-1}Y_j \to X_n$ where: \\ 
 	$$T^n (x,y) = z_n \text{ where } z_{j+1} = T_j( z_{j},\pi_j (y) ) \text{ or } z_{j+1} = T_j( z_{j} )  \text{ and } z_0 = x \in X_0$$
 \end{def.}
 \cut
-\begin{def.} \textbf{Gradient Descent} \\ 
+\begin{def.} \underline{\textbf{Gradient Descent}} \\ 
 Let $E : \mathbb{R}^n \to \mathbb{R}$ be a differentiable operator. \\ 
 The method of Gradient Descent says that a local minimum of $E$ can be found using the following iteration: \\ 
 $$a_{n+1} = a_n - \gamma \nabla E(a_n)$$
 Where $\gamma > 0$ \\ 
 \end{def.}
 \cut
-\begin{exmp} \textbf{Objective Operator for Data Set Defined Operator Approximation} \\ 		
+\begin{exmp} \underline{\textbf{Objective Operator for Data Set Defined Operator Approximation}} \\ 		
 Let $X \subset \mathbb{R}^n, Y \subset \mathbb{R}^m$ such that $X\times Y$ defines an operator T. \\ 
 $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$ 
 \end{exmp}
 \cut
-\newpage
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
 	Let $B = \{f : \mathbb{R} \to [0,1] | f \text{ is surjective, continuous, and non-decreasing.}\}$ \\ 
-	\begin{thm} \textbf{B is convex. } \\
+	\begin{thm} \underline{\textbf{B is convex.}} \\
 			Let $f,g \in B$ and $h(x) := \lambda f(x) + (1-\lambda)g(x)$ where $\lambda \in [0,1]$ \\ 
 			Then $h$ is still continuous since the linear combination of continuous functions is continuous.  \\ \\
 			\prof
@@ -692,7 +684,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			Thus $B$ is convex. 
 	\end{thm}
 	\cut
-	\begin{thm} \textbf{B is translation invariant.} \\
+	\begin{thm} \underline{\textbf{B is translation invariant.}} \\
 			Let $f \in B$ and $g(x) := f(x+c)$ where $c \in \mathbb{R}$ \\
 			f is continuous and so is the addition operator so g is continuous. \\
 			\prof
@@ -704,19 +696,18 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			Thus $g \in B$ and B is therefore translation invariant. 
 	\end{thm}
 	\cut
-	\begin{thm} \textbf{B is not complete.} \\
+	\begin{thm} \underline{\textbf{B is not complete.}} \\
 			
 	\end{thm}
 	\cut
-	\begin{thm} \textbf{Every element in B can be decomposed as a finite non-trivial convex combination from B} \\
+	\begin{thm} \underline{\textbf{Every element in B can be decomposed as a finite non-trivial convex combination from B}} \\
 	
 	\end{thm}
 	\cut
-	\newpage
 	\section{A topological description of finite metric spaces.}
 	Finite spaces are of interest because they describe the world of computers. This being the case, we would still like to do analysis on these spaces and analysis starts with topological descriptions. \\
 	\cut
-	\begin{thm} \textbf{The First Rule of Induced Topologies on Finite Metric Subspaces is:} \\
+	\begin{thm} \underline{\textbf{The First Rule of Induced Topologies on Finite Metric Subspaces is:}} \\
 		Let $V \subset X$ where $0 < card(V) =: N < card(\mathbb{N})$ and $X$ is a metric space. \\
 		Then the subspace topology on $V$ is the discrete topology. \\ 
 		\prof
@@ -737,7 +728,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		\textbf{Thus the induced topology on a finite subset of a Metric space is the discrete topology. }		
 	\end{thm}
 	\cut
-	\begin{lma} \textbf{Everything is Continuous when your domain is finite.} \\ 
+	\begin{lma} \underline{\textbf{Everything is Continuous when your domain is finite.}} \\ 
 			Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
 			Then ever $f : V \to Y$ is continuous. \\ 
 			\prof
@@ -748,7 +739,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			\textbf{And so every $f : V \to Y$ is continuous. }
 	\end{lma}
 	\cut
-	\begin{thm} \textbf{Everything is Lipschitz continuous when your domain is finite.} \\
+	\begin{thm} \underline{\textbf{Everything is Lipschitz continuous when your domain is finite.}} \\
 		So if we want to have some form of meaningful topological description of continuity for these spaces, we are going to need a "stronger" form of continuity. \\
 		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are metric spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
 		Further let $f : V \to Y$, then $f$ is \textbf{Lipschitz continuous}. \\
@@ -762,7 +753,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		\textbf{And thus $f$ is Lipschitz continuous.} \\ 
 	\end{thm}
 	\cut
-	\begin{def.} \textbf{K - Families} \\ 
+	\begin{def.} \underline{\textbf{K - Families}} \\ 
 		Let $V \subset X$ and $Y \not = \phi$ where $X,Y$ are Normed spaces and $0 < card(V) = N < card(\mathbb{N})$ \\
 		First we have the set of all operators.  
 		$$\Lambda := \{f | f : V \to Y\}$$
@@ -773,7 +764,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		$$B(K) := \{f : V \to Y | (\forall x,y \in V) (||f(x) - f(y)|| \leq K ||x - y||)\}$$
 	\end{def.}
 	\cut
-	\begin{thm} \textbf{K - Properties} 
+	\begin{thm} \underline{\textbf{K - Properties}} 
 		\begin{itemize}
 			\item $B(K) = \bigcup_{L \in [0,K]} \Lambda(L)$ \\
 				\prof
@@ -806,7 +797,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		\end{itemize}
 	\end{thm}
 	\cut
-	\begin{lma} \textbf{Paths through Function spaces} \\ 
+	\begin{lma} \underline{\textbf{Paths through Function spaces}} \\ 
 		Let $f \in \Lambda(K)$ and $g \in \Lambda(L)$ then $h_\lambda(x) := \lambda f(x) + (1-\lambda) g(x)$ at most belongs to the family: $\Lambda(\lambda K + (1-\lambda) L)$
 		Further: $H : [0,1] \to \Gamma $ where $H(\lambda) = h_\lambda$ is a path through the function space:
 		$$\Gamma = \bigcup_{\nu \in [0,1]} \Lambda(\nu \cdot \max(L,K))$$
@@ -816,7 +807,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 		$$\leq \lambda K||x-y|| + (1 - \lambda) L||x - y|| = (\lambda K + (1 - \lambda) L)||x - y|| $$		
 	\end{lma}
 	\cut
-	\begin{thm} \textbf{Ordering} \\ 
+	\begin{thm} \underline{\textbf{Ordering}} \\ 
 		For this theorem, we will need both the domain and co-domain to be finite. \\
 		First, Let $V \subset X$ and $W \subset Y$ where $X,Y$ are normed spaces. \\ 
 		Next let $\Lambda := \{f | f : V \to W\}$ where $0 < card(V) =: N < card(\mathbb{N})$ and $0 < card(W) =: M < card(\mathbb{N})$ \\ 
@@ -827,11 +818,11 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\cut
 
 	\section{Convex Operators} 
-			\begin{thm} \textbf{Invariance under Convex Monotonic Operator Composition} \\
+			\begin{thm} \underline{\textbf{Invariance under Convex Monotonic Operator Composition}} \\
 				\href{https://en.wikipedia.org/wiki/Convex_function}{Reference}
 			\end{thm}
 	\cut
-			\begin{thm} \textbf{Invariance under Affine Composition} \\
+			\begin{thm} \underline{\textbf{Invariance under Affine Composition}} \\
 					Let $f: \mathbb{R}^m \to \mathbb{R}^n$ be a convex operator, then: \\ 
 					$$g(x) = f(Ax + b)$$
 					Is also a convex operator. \\  
