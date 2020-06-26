@@ -35,6 +35,9 @@
 \theoremstyle{plain}
 \newtheorem{exmp}{Example}[section]
 
+\theoremstyle{plain}
+\newtheorem{ruleOfInference}{Rule Of Inference}[section]
+
 \newcommand{\cut}[0]{\noindent\framebox[\linewidth]{\rule{\linewidth}{2pt}}\\}
 \newcommand{\prof}[0]{	\noindent \textbf{Proof:} \rule{500pt}{2pt} \\ }
 
@@ -122,6 +125,11 @@
 	\end{itemize}
 	These statements I am taking as fundamentally true and not needing to be proven. 
 \end{axiom}
+\cut 
+\begin{ruleOfInference} \textbf{Modus Ponens} \\
+	Let $A,B$ be statements. \\
+	If $\vdash A \Rightarrow B$ and $\vdash A$ then $\vdash B$ 
+\end{ruleOfInference}
 \cut
 \begin{def.} \textbf{Logical Implication and Equivalence} \\
 	Let $A,B$ be statements: 
@@ -208,22 +216,26 @@
 	$\vdash \lnot A \lor \lnot (\lnot A)$ \hfill [Principle of Substitution]\\ 
 	Then by the definition of implication we have: \\ 
 	$\vdash A \Rightarrow \lnot (\lnot A)$ \hfill [Def. of Logical Implication] \\
-
-	
-	$\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $ \\
+	For the next proof we will need the following, substitute $A$ with $\lnot A$ \\ 
+	$\vdash \lnot A \Rightarrow \lnot (\lnot (\lnot A))$ \hfill [Principle of Substitution] *1 \\
+	Now for the other direction, start with axiom 4: \\ 
+	$\vdash (A \Rightarrow C) \Rightarrow ( A \lor B \Rightarrow B \lor C ) $ \hfill [Axiom 4]\\
+	Substitute $C$ with $\lnot (\lnot A)$ \\
+	$\vdash (A \Rightarrow \lnot (\lnot A)) \Rightarrow (A \lor B \Rightarrow B \lor \lnot (\lnot A) ) $ \hfill [Principle of Substitution]\\
 	Substitute $A$ with $\lnot A$ \\ 
-	$\vdash (\lnot A \Rightarrow C) \Rightarrow (\lnot A \lor B \Rightarrow B \lor C ) $ \\
-	Substitute $C$ with $A$ \\
-	$\vdash (\lnot A \Rightarrow A) \Rightarrow (\lnot A \lor B \Rightarrow B \lor A ) $ \\
-	Substitute $B$ with $\lnot (\lnot A)$ \\ 
-	$\vdash (\lnot A \Rightarrow A) \Rightarrow (\lnot A \lor \lnot (\lnot A) \Rightarrow \lnot (\lnot A) \lor A ) $ \\
-	$\vdash (\lnot \lnot  A \lor A) \Rightarrow (\lnot A \lor \lnot (\lnot A) \Rightarrow \lnot (\lnot A) \lor A ) $ \\	
-	From Shakespeare's Theorem we know that: \\ 
-	$\lnot A \lor \lnot (\lnot A) \Rightarrow \lnot (\lnot A) \lor A $ \\
-	From Shakespeare's Theorem we  also know that: \\ 
-	$\lnot (\lnot A) \lor A $ \\
-	$\lnot (\lnot (\lnot A)) \lor A$ \\
-	$\lnot (\lnot A) \Rightarrow A$ \\
+	$\vdash (\lnot A \Rightarrow \lnot (\lnot (\lnot A))) \Rightarrow (\lnot A \lor B \Rightarrow B \lor \lnot (\lnot (\lnot A)) ) $ \hfill [Principle of Substitution]\\
+	Substitute $B$ with $A$ \\ 
+	$\vdash (\lnot A \Rightarrow \lnot (\lnot (\lnot A))) \Rightarrow (\lnot A \lor A \Rightarrow A \lor \lnot (\lnot (\lnot A)) ) $ \hfill [Principle of Substitution]\\
+	We have that $\vdash (\lnot A \Rightarrow \lnot (\lnot (\lnot A))) $ from the last part: \\
+	$\vdash \lnot A \lor A \Rightarrow A \lor \lnot (\lnot (\lnot A))  $ \hfill [Modus Ponens knowing: *1 ]\\
+	We have Shakespeare's theorem and so: \\ 
+	$\vdash A \lor \lnot (\lnot (\lnot A))  $ \hfill [Modus Ponens knowing: $\vdash \lnot A \lor A $]\\	
+	We know that OR is commutative and so: \\ 
+	$\vdash \lnot (\lnot (\lnot A))  \lor A$ \hfill [The Commutative Property of OR]\\
+	By the definition of implication we know: \\ 
+	$\vdash \lnot (\lnot A) \Rightarrow A$ \hfill [Def. of Logical Implication.]\\
+	And finally by the definition of equivalence we know: \\ 
+	$\vdash \lnot (\lnot A) \Leftrightarrow A$	\hfill [Def. of Logical Equivalence. ]
 \end{thm}
 \cut
 \begin{thm} \textbf{Captain Morgan's Laws for Logic} \\ 
