@@ -82,10 +82,9 @@
 	and 
 	$$not: \lnot$$
 	Respectively. \\
-	Statements are written: $L,M,N,O,P,Q,... etc$ \\
-	A statement is a sequence of words or symbols which is either true or false. \\
-	So then $L \lor M$ is a new statement composed of $L,\lor,\text{and } M$. \\
-	We can then use this as the definition of a new statement: \\ 
+	The symbol for statements are written: $L,M,N,O,P,Q,... etc$ \\
+	A well formed formula is a sequence of symbols which is either true or false. \\
+	So then $L \lor M$ is a new formula composed of $L,\lor,\text{and } M$. \\
 	$$N := L \lor M$$
 	Which is read: N is defined as L or M. \\
 	So N is true if: 
@@ -96,7 +95,7 @@
 	\end{itemize}
 	Further, N is false if: 
 	L and M are both false. \\ \\
-	Similarly, we can define a new statement: $N := \lnot M$ \\ 
+	Similarly, we can define a new statement: $N := \lnot M$ \\
 	In this case, if M is true then N is false. \\
 	In the same vain, if M is false then N is true. 
 \end{def.}
@@ -142,12 +141,8 @@
 	These statements I am taking as the initial part of our theory M. 
 \end{axiom}
 \cut 
-\begin{ruleOfInference} \underline{\textbf{Modus Ponens}} \\
-	Let $A,B$ be statements. \\
-	If $\vdash A \Rightarrow B$ and $\vdash A$ then $\vdash B$ \\
-	Note that you can't use the Principle of Substitution after you use Modus Ponens. 
-	Written as a single theorem: \\ 
-	$\vdash [(A \Rightarrow B) \wedge A] \Rightarrow B$
+\begin{ruleOfInference} \underline{\textbf{Principle of Substitution}} \\
+If we have a formula P which depends on the statement Q, then we may replace instances of Q with a formula R as long as Q is not dependent on some assumption earlier in the proof. 
 \end{ruleOfInference}
 \cut
 \begin{ruleOfInference} \underline{\textbf{Logical Deduction}} \\
@@ -157,6 +152,14 @@
 	then it is proven that $\vdash P \Rightarrow Q$ \\
 	Note, this does not mean that either $\vdash P$ or $\vdash Q$  \\
 	To show this, instead of writing: $\vdash$ we will write $\ddash$ meaning that there is a dependence on an assumption. 
+\end{ruleOfInference}
+\cut 
+\begin{ruleOfInference} \underline{\textbf{Modus Ponens}} \\
+	Let $A,B$ be statements. \\
+	If $\vdash A \Rightarrow B$ and $\vdash A$ then $\vdash B$ \\
+	This can be written as a single theorem: \\ 
+	$[(A \Rightarrow B) \wedge A] \Rightarrow B$ \\
+	Note that you can't use the Principle of Substitution after you use Modus Ponens. 
 \end{ruleOfInference}
 \cut
 \begin{thm} \underline{\textbf{First Theorem}} \\ 
@@ -758,6 +761,25 @@ Where $\gamma > 0$ \\
 Let $X \subset \mathbb{R}^n, Y \subset \mathbb{R}^m$ such that $X\times Y$ defines an operator T. \\ 
 $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$ 
 \end{exmp}
+\cut
+\section{Calculus}
+\begin{def.}
+	Let $A \subset B$ \\ 
+	Then: $X_A(x) := \begin{Bmatrix}
+	1 & x \in A \\ 
+	0 & x \in A^c 
+	\end{Bmatrix}$
+\end{def.}
+\begin{thm} \textbf{Topological Manipulation} \\
+	$f_a(x) := \frac{x - a}{x - a}$ where $\forall x \in \mathbb{R} \setminus \{a\}$ and $a \in \mathbb{R}$ \\ 
+	Then: $f_a : \mathbb{R} \setminus \{a\} \to \mathbb{R}$ \\ 
+	Question: Is $f_a$ continuous? \\ 
+	Let $g(x) = \prod_{a \in \mathbb{R} \setminus \mathbb{Q} } f_a(x)$ \\ 
+	Is $g$ continuous? \\
+	Is $g : \mathbb{Q} \to \mathbb{R}$ ? \\
+	What is: $\int_{0}^1 g(x) \cdot X_{[0,1]}(x) dx$ ?
+\end{thm}
+
 \cut
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
 	Let $B = \{f : \mathbb{R} \to [0,1] | f \text{ is surjective, continuous, and non-decreasing.}\}$ \\ 
