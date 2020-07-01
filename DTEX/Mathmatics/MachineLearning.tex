@@ -76,14 +76,14 @@
 	$$\mathbb{R}_0^- = \{x \in \mathbb{R} : x \leq 0\}$$
 \end{def.}
 \cut
-\begin{def.} \underline{\textbf{Primitives and Symbols}} \\
+\begin{def.} \underline{\textbf{Primitives, Symbols, and Formulas}} \\
 	The logical or and not are both primitives and are written: \\ 
 	$$\text{logical or: }\lor$$ 
 	and 
 	$$not: \lnot$$
 	Respectively. \\
 	The symbol for statements are written: $L,M,N,O,P,Q,... etc$ \\
-	A well formed formula is a sequence of symbols which is either true or false. \\
+	A well formed formula is a sequence of symbols which is accepted by the formal grammar . \\
 	So then $L \lor M$ is a new formula composed of $L,\lor,\text{and } M$. \\
 	$$N := L \lor M$$
 	Which is read: N is defined as L or M. \\
@@ -159,7 +159,7 @@ If we have a formula P which depends on the statement Q, then we may replace ins
 	If $\vdash A \Rightarrow B$ and $\vdash A$ then $\vdash B$ \\
 	This can be written as a single theorem: \\ 
 	$[(A \Rightarrow B) \wedge A] \Rightarrow B$ \\
-	Note that you can't use the Principle of Substitution after you use Modus Ponens. 
+	Note that you can't use the Principle of Substitution on A after you use Modus Ponens. 
 \end{ruleOfInference}
 \cut
 \begin{thm} \underline{\textbf{First Theorem}} \\ 
