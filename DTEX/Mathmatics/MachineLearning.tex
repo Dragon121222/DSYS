@@ -418,6 +418,13 @@ If we have a formula P which depends on the statement Q, then we may replace ins
 	$$A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$$ 	
 \end{thm}
 \cut
+\begin{axiom} \textbf{Peano's Axioms} \\
+	\begin{itemize}
+		\item $1 \in \mathbb{N}$ 
+		\item $(\forall n \in \mathbb{N})(\exists n' \in \mathbb{N})$
+	\end{itemize}
+\end{axiom}
+\cut
 \begin{def.} \underline{\textbf{Power Set}} \\ 
 	Let $X \not = \phi$ \\ 
 	$$2^X := \{V : V \subseteq X\}$$
@@ -432,10 +439,33 @@ If we have a formula P which depends on the statement Q, then we may replace ins
 	f is said to be a Bijection if it is both an Injection and a Surjection.  
 \end{def.}
 \cut
+\begin{def.} \textbf{Carnality} \\ 
+	Let $A$ and $B$ be sets. \\ 
+	Then $card(A) = card(B) \Leftrightarrow \exists T : A \to B$ where T is a bijection. \\ 
+	Further, if $card(A) = n \Leftrightarrow \exists T : A \to \mathbb{N}_n$ where T is a bijection. \\
+	And finally, if $\exists T : A \to B$ where $T$ is a surjection, then $card(A) \geq card(B)$ 
+\end{def.}
+\cut
 \begin{thm} \underline{\textbf{It's pretty big.}} \\ 
-	Let $X \not = \phi$ and $M := card(X) < card(\mathbb{N})$ \\
+	Let $X \not = \phi$ and $M = card(X) < card(\mathbb{N})$ \\
 	Then: $card(2^X) = 2^M$ 
 \end{thm}
+\cut
+\begin{thm} \textbf{It's always bigger} \\ 
+	Let $X \not = \phi$ then: $card(X) \leq card(2^X)$ 
+\end{thm}
+\cut 
+\begin{def.} \textbf{Aleph null} 
+	$$\aleph_0 := card(\mathbb{N})$$ 
+\end{def.}
+\cut
+\begin{def.} \textbf{Aleph one} 
+	$$\aleph_1 := card(2^\mathbb{N})$$
+\end{def.}
+\cut
+\begin{def.} \textbf{How big are the reals?}
+	$$card(\mathbb{R}) = \aleph_1$$
+\end{def.}
 \cut
 \begin{def.} \underline{\textbf{K - Combinations}} \\
 	Let $S$ be a non empty finite set where $n = card(S)$ \\ 
