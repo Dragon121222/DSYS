@@ -1,16 +1,45 @@
-\documentclass[10pt]{extarticle}
+\documentclass[12pt]{extarticle}
 \usepackage{amsmath}
+\usepackage{tikz}
+
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{color}
 \usepackage{hyperref}
-\usepackage[margin=0.25in]{geometry}
+
+\usepackage[margin=0.5in]{geometry}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+
+\usepackage{amsthm}
+
+\theoremstyle{Definition}
+\newtheorem{def.}{Definition}[section] 
 
 \title{Chemistry}
 \begin{document}
 \maketitle
+\begin{def.} \textbf{Matter and Substances} \\ 
+	Anything that has Mass and Volume. 
+	$$M = \{p : p \text{ has Mass: } p_m \text{ and has Volume: } p_V\}$$ 
+	Then $M$ is the set of all matter and all $p \in M$ are said to be substances. 
+\end{def.}
+\begin{def.} \textbf{Chemistry} \\
+	The study of Matter, it's properties, and how it changes. 
+\end{def.}
+\begin{def.} \textbf{Composition} \\ 
+	The composition of a substance p is the type and amount of simpler substances which make up p. 
+\end{def.}
+\begin{def.} \textbf{States} \\ 
+	A substance in a \textbf{solid state} has a fixed shape disregarding it's container. The particles in a solid will appear directly next to each other in an array. \\ \\
+	A substance in a \textbf{liquid state } doesn't have a fixed shape and will fill a container but will have a fixed volume. The particles will appear randomly around each other. \\ \\
+	A substance in a \textbf{gas state} doesn't have fixed shape and will fill a container will not have a fixed volume. The particles will appear randomly around each other and be separated by non-zero distances. 
+\end{def.}
+\begin{def.}\textbf{Properties} \\ 
+	The properties of a substance are characteristics of the substance which do not changing into or interacting with another substance. \\ 
+\end{def.}
+\newpage
 \noindent
 \section{Orbitals}
 Four quantum numbers can describe an electron in an atom completely:
@@ -22,7 +51,8 @@ Four quantum numbers can describe an electron in an atom completely:
 \end{itemize}
 \href{https://en.wikipedia.org/wiki/Quantum_number}{Reference} \\ \\
 \noindent
-An important problem in quantum mechanics is that of a particle in a spherically symmetric potential, i.e., a potential that depends only on the distance between the particle and a defined center point. In particular, if the particle in question is an electron and the potential is derived from Coulomb's law, then the problem can be used to describe a hydrogen-like (one-electron) atom (or ion). \\ \\
+An important problem in quantum mechanics is that of a particle in a spherically symmetric potential, i.e., a potential that depends only on the distance between the particle and a defined center point. In particular, if the particle in question is an electron and the potential is derived from Coulomb's law, then the problem can be used to describe a hydrogen-like (one-electron) atom (or ion).
+ \\ \\
 In the general case, the dynamics of a particle in a spherically symmetric potential are governed by a Hamiltonian of the following form: 
 $$\hat{H} = \frac{\hat{p}}{2m_0} + V(r)$$
 Where $\hat{p}$ is the momentum operator, $m_0$ is the mass of the particleand the potential $V(r)$ depends only on  r, the length of the radius vector $\vec{r}$.  \\ \\
@@ -50,8 +80,10 @@ For arbitrary real $\alpha$ the polynomial solutions of the following differenti
 $$xy'' + (\alpha +1 - x)y' + ny = 0$$
 are called generalized Laguerre polynomials. \\
 A Recursive formulation for the Generalized Laguerre polynomials is: \\
-$$L_{0}^{(\alpha )}(x)=1$$
-$$L_{1}^{(\alpha )}(x)=1+\alpha -x$$
+$$L_{0}^{(\alpha )}(x)=1
+$$
+$$L_{1}^{(\alpha )}(x)=1+\alpha -x
+$$
 and then using the following recurrence relation for any k $\geq$ 1:
 $$L_{k+1}^{(\alpha )}(x)={\frac {(2k+1+\alpha -x)L_{k}^{(\alpha )}(x)-(k+\alpha )L_{k-1}^{(\alpha )}(x)}{k+1}}$$
 \subsection{Spherical Harmonics}
