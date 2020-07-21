@@ -67,8 +67,22 @@
 #include "../DSRC/DLLC/DLLC.h"
 #endif
 
+#ifndef __DGRAPHICS__
+#include "../DSRC/DGRAPHICS/DGRAPHICS.h"
+#endif
+
 int argcCOPY;
 char** argvCOPY; 
+
+void DGRAPHICS_DEMO(GtkButton * widget, gpointer ptr) { 
+
+    DGRAPHICS * DG = new DGRAPHICS(); 
+
+    DG->topDownGradTest(); 
+
+    delete(DG); 
+
+}
 
 void DLLCDEMO(GtkButton * widget, gpointer ptr) { 
 
@@ -437,6 +451,8 @@ int main(int argc,  char** argv) {
 #endif
     dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
     dwindow->addWidget("DLLC_DEMO","button_with_label",8,0,&DLLCDEMO,"clicked"); 
+    dwindow->addWidget("DGRAPHICS_DEMO","button_with_label",9,0,&DGRAPHICS_DEMO,"clicked"); 
+
 
 	dwindow->constructWindow(); 
 

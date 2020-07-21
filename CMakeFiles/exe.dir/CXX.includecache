@@ -6,19 +6,37 @@
 
 #IncludeRegexTransform: 
 
-/home/drake/Documents/Code/DSYS/DSRC/DLLC/DLLC.cpp
+/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp
+DGRAPHICS.h
+/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
+
+/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
+../DOBJ/DOBJ.h
+/home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.h
+vector
+-
 iostream
 -
-string.h
+stdio.h
+-
+arrayfire.h
+-
+stdlib.h
+-
+cstdlib
+-
+string
 -
 cstring
 -
-DLLC.h
-/home/drake/Documents/Code/DSYS/DSRC/DLLC/DLLC.h
-
-/home/drake/Documents/Code/DSYS/DSRC/DLLC/DLLC.h
-../DOBJ/DOBJ.h
-/home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.h
+fstream
+-
+dirent.h
+-
+math.h
+-
+gmodule.h
+-
 
 /home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.h
 string

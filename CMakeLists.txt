@@ -49,6 +49,7 @@ add_executable(exe DSRC/DOBJ/DOBJ.h DSRC/DOBJ/DOBJ.cpp
 				   DSRC/DML/DML.h DSRC/DML/DML.cpp DSRC/DML/DOP.cpp  		   
 #				   DSRC/DSQL/DSQL.h DSRC/DSQL/DSQL.cpp 
 				   DSRC/DLLC/DLLC.h DSRC/DLLC/DLLC.cpp
+				   DSRC/DGRAPHICS/DGRAPHICS.h DSRC/DGRAPHICS/DGRAPHICS.cpp
 				   DAPP/main.cpp )
 
 target_link_libraries(exe  

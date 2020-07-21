@@ -1,2 +1,7 @@
-\BOOKMARK [1][-]{section.1}{C}{}% 1
-\BOOKMARK [1][-]{section.2}{Agile}{}% 2
+\BOOKMARK [1][-]{section.1}{Agile}{}% 1
+\BOOKMARK [1][-]{section.2}{Java and Maven}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{POM.XML and File Organization}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Maven coordinates:}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{More Tags and dependencies}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Plugin's and Goals}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Repository}{section.2}% 7

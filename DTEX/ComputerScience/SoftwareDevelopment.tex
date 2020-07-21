@@ -30,13 +30,9 @@
 \newtheorem{exmp}{Example}[section]
 
 \begin{document}
-		\maketitle			
-		\section{C}
-		\textbf{printf Format Specifiers: } \\ 
-		
-		\newpage
-		\section{Agile}
-		 The values:
+	\maketitle				
+	\section{Agile}
+		The values:
 		\begin{itemize}
 			\item Individuals and interactions over processes and tools
 			\item Working software over comprehensive documentation
@@ -58,13 +54,107 @@
 			\item Best architectures, requirements, and designs emerge from self-organizing teams
 			\item Regularly, the team reflects on how to become more effective, and adjusts accordingly
 		\end{itemize}
-			
-			
-			
-			
-			
-			
+	\newpage
+	\section{Java and Maven}
+	
+	\subsection{POM.XML and File Organization} 
+		The purpose of the pom.xml file is: To describe the project, configure plugins, and declare dependencies. \\
+		When we create a project, our sources go under the \textbf{src/main} directory. \\ 
+		As an example, we might put our java classes in: \textbf{src/main/java} and our \textbf{classpath resources} are placed in \textbf{src/main/resources} \\ \\
+		The files under the \verb|src/main/java| directories typically follow this pattern: \\ 
+		\begin{center}
+			\verb|src/main/java/org/url/<groupId>/<artifactId>/javaFilesGoHere|
+		\end{center}
+		This makes the package \verb|org.url.groupId.artifactId| which is referenced in the javaFilesGoHere file. 
+	\subsection{Maven coordinates:}
+		\begin{itemize}
+			\item The $<$ArtifactId$>$ is the project's base directory and the name of the project. 
+				\begin{quotation}
+				A unique identifier under groupId that represents a single project.
+				\end{quotation}			
+			\item The $<$groupId$>$ tells you which company or group made the project. 
+				\begin{quotation} 
+				The group, company, team, organization, project, or other group. The convention for group identifiers is that they begin with the reverse domain name of the organization that creates the project. Projects from Sonatype would have a groupId that begins with com.sonatype, and projects in the Apache Software Foundation would have a groupId that starts with org.apache.
+				\end{quotation}			
+			\item The $<$packaging$>$ indicates what the project will build. 
+				\begin{quotation}
+				The type of project, defaulting to jar, describing the packaged output produced by a project. A project with packaging jar produces a JAR archive; a project with packaging war produces a web application. 				
+				\end{quotation}
+			\item The $<$version$>$ is literally just the version of the code. 
+				\begin{quotation}
+				A specific release of a project. Projects that have been released have a fixed version identifier that refers to a specific version of the project. Projects undergoing active development can use a special identifier that marks a version as a SNAPSHOT.
+				\end{quotation}
+			\item The $<$classifier$>$ 
+		\end{itemize}
+		The Maven coordinates uniquely identify a project and are referenced: 
+		\begin{center}
+			\verb|groupId:artifactId:packaging:version|  \\
+			Example: \\ 
+			\verb|mavenbook:my-app:jar:1.0-SNAPSHOT|
+		\end{center}
+		\begin{quotation}
+			Maven always executes against an effective POM, a combination of settings from this project’s pom.xml, all parent POMs, a super-POM defined within Maven, user-defined settings, and active profiles. All projects ultimately extend the super-POM, which defines a set of sensible default configuration settings. While your project might have a relatively minimal pom.xml, the contents of your project’s POM are interpolated with the contents of all parent POMs, user settings, and any active profiles. To see this "effective" POM, run the following command in the simple project’s base directory.
+			\begin{center}
+				\verb|mvn help:effective-pom| 
+			\end{center} 				
+			When you run this, you should see a much larger POM which exposes the default settings of Maven. This goal can come in handy if you are trying to debug a build and want to see how all of the current project’s ancestor POMs are contributing to the effective POM.
+		\end{quotation}			
+		\begin{quotation}
+			When Maven executes a goal, each goal has access to the information defined in a project’s POM. When the jar:jar goal needs to create a JAR file, it looks to the POM to find out what the JAR file’s name is. When the compiler:compile goal compiles Java source code into bytecode, it looks to the POM to see if there are any parameters for the compile goal. Goals execute in the context of a POM. Goals are actions we wish to take upon a project, and a project is defined by a POM. The POM names the project, provides a set of unique identifiers (coordinates) for a project, and defines the relationships between this project and others through dependencies, parents, and prerequisites. A POM can also customize plugin behavior and supply information about the community and developers involved in a project.
+		\end{quotation}
+		\subsection{More Tags and dependencies} 
+			The: \verb|<configuration>| tag allows you to set things like: \verb|<source>| and \verb|<target>| which set A and B respectively. \\
+			The: \verb|<name>| tag allows you to: \\
+			The: \verb|<url>| tag allows you to: \\ 
+			To add dependencies we need to know the \verb|<groupID>|, the \verb|<artifactID>|, and the \verb|<version>|. In addition, you may want to include a \verb|<scope>| tag which does: \\
+			We can find the available groupId and artifactId values \href{https://repository.sonatype.org/#welcome}{here}, the sonatype repository. 
+			With this information we can then add a dependency as follows: \\ \\
+			\verb|<dependencies>| \\
+			\tab \verb|<dependency>| \\
+			\tab \tab \verb|<groupId>superSpecialDevGroup</groupId>|\\
+			\tab \tab \verb|<artifactId>dep_0</artifactId>|\\
+			\tab \tab \verb|<version>69.420.69</version>|\\
+			\tab \verb|<\dependency>|\\
+			\tab \verb|<dependency>|\\
+			\tab \tab \verb|<groupId>boringNormalDevGroup</groupId>|\\
+			\tab \tab \verb|<artifactId>dep_1</artifactId>|\\
+			\tab \tab \verb|<version>1.0.0</version>| \\
+			\tab \tab \verb|<scope>test</scope>| \\			
+			\tab \verb|<\dependency>| \\
+			\verb|<\dependencies>| \\
 
-		
-		
+			
+	\subsection{Plugin's and Goals}		
+		In general, Maven plugin is a collection of goals. \\
+		An example of a goal would be creating a jar file, compiling some code, doing unit tests, or generating reports. \\
+		When Maven executes a plugin goal, it prints out the plugin identifier and goal identifier to standard output:
+		\begin{center}
+			\verb|[INFO] [archetype:generate]| 
+		\end{center}
+		In this example, maven is attempting to execute the archetype plugin's generate goal. \\ 
+		A custom plugin can be written in Java, Ant, Groovy, beanshell, Ruby or others. \\ 
+		If a plugin isn't already defined and ready to go for Mavin, it will download them from the central Maven repository. \\
+		When the programmer calls: 
+		\verb|mvn install| \\
+		This is equivalent to calling: \\ 
+		\verb|mvn resources:resources \| \\
+		\tab \verb|compiler:compile \| \\
+		\tab \verb|resources:testResources \| \\
+		\tab \verb|compiler:testCompile \|  \\
+		\tab \verb|surefire:test \| \\
+		\tab \verb|jar:jar \| \\
+		\tab \verb|install:install | \\		
+	\subsection{Repository}
+		A repository is a collection of project artifacts stored in a directory structure that closely matches a project’s Maven coordinates.
+		\begin{center}
+			\href{https://repo1.maven.org/maven2/}{Example}
+		\end{center}
+		The standard for a Maven repository is to store an artifact in the following directory relative to the root of the repository:
+		\begin{center}
+			\verb|/<groupId>/<artifactId>/<version>/<artifactId>-<version>.<packaging>|
+		\end{center}
+		\begin{quotation}
+			Maven downloads artifacts and plugins from a remote repository to your local machine and stores these artifacts in your local Maven repository. Once Maven has downloaded an artifact from the remote Maven repository it never needs to download that artifact again as Maven will always look for the artifact in the local repository before looking elsewhere. On Unix systems, your local Maven repository is available in ~/.m2/repository.
+		\end{quotation}
+
 \end{document}

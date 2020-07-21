@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
+  "CMakeFiles/exe.dir/DSRC/DGRAPHICS/DGRAPHICS.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.o"
   "CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o"
