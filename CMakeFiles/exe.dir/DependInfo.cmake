@@ -4,20 +4,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/drake/Documents/Code/DSYS/DAPP/main.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DAPP/main.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGRAPHICS/DGRAPHICS.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DLLC/DLLC.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DML/DML.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DML/DOP.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DNETWORK/DNETWORK.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
-  "/home/drake/Documents/Code/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" "/home/drake/Documents/Code/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
+  "/home/drake/DSYS/DAPP/main.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DAPP/main.cpp.o"
+  "/home/drake/DSYS/DSRC/DCLIENTTCP/DCLIENTTCP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTTCP/DCLIENTTCP.cpp.o"
+  "/home/drake/DSYS/DSRC/DCLIENTUDP/DCLIENTUDP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DCLIENTUDP/DCLIENTUDP.cpp.o"
+  "/home/drake/DSYS/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/DGLUTWINDOW.cpp.o"
+  "/home/drake/DSYS/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGLUTWINDOW/GLUTHELPERFUNCTIONS.cpp.o"
+  "/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGRAPHICS/DGRAPHICS.cpp.o"
+  "/home/drake/DSYS/DSRC/DGTKWINDOW/DGTKWINDOW.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DGTKWINDOW/DGTKWINDOW.cpp.o"
+  "/home/drake/DSYS/DSRC/DLLC/DLLC.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DLLC/DLLC.cpp.o"
+  "/home/drake/DSYS/DSRC/DML/DML.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DML/DML.cpp.o"
+  "/home/drake/DSYS/DSRC/DML/DOP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DML/DOP.cpp.o"
+  "/home/drake/DSYS/DSRC/DNETWORK/DNETWORK.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DNETWORK/DNETWORK.cpp.o"
+  "/home/drake/DSYS/DSRC/DOBJ/DOBJ.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DOBJ/DOBJ.cpp.o"
+  "/home/drake/DSYS/DSRC/DSERVERTCP/DSERVERTCP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERTCP/DSERVERTCP.cpp.o"
+  "/home/drake/DSYS/DSRC/DSERVERUDP/DSERVERUDP.cpp" "/home/drake/DSYS/CMakeFiles/exe.dir/DSRC/DSERVERUDP/DSERVERUDP.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -40,7 +40,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/freetype2"
   "/usr/include/libpng16"
   "/usr/include/fribidi"
-  "/usr/include/uuid"
   "/usr/include/cairo"
   "/usr/include/pixman-1"
   "/usr/include/gdk-pixbuf-2.0"

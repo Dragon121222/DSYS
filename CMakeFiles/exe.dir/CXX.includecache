@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp
+/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp
 DGRAPHICS.h
-/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
+/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
 
-/home/drake/Documents/Code/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
+/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
 ../DOBJ/DOBJ.h
-/home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.h
+/home/drake/DSYS/DSRC/DOBJ/DOBJ.h
 vector
 -
 iostream
@@ -38,7 +38,7 @@ math.h
 gmodule.h
 -
 
-/home/drake/Documents/Code/DSYS/DSRC/DOBJ/DOBJ.h
+/home/drake/DSYS/DSRC/DOBJ/DOBJ.h
 string
 -
 gtk/gtk.h

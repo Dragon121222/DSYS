@@ -28,17 +28,21 @@ class DGRAPHICS : public DOBJ {
 
 	public: 
 
+		//Constructor and Deconstructor
 		DGRAPHICS(); 
 		~DGRAPHICS(); 
 
 		// Functions
-
 		void topDownGrad(af::array &I, af::array &O);
 
 		// Unit Tests
-
 		void topDownGradTest(); 
+		void vectorAnalysisTest(); 
 
+		// Diagnostics
+		void vectorAnalysis(af::array &I, std::string name = "Default"); 
+		std::string Type(af::array &I); 
+		
 	private: 
 
 
