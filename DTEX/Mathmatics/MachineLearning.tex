@@ -830,9 +830,10 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	some more stuff that should be proven is that: \\ 
 	$$\mu(\mathbb{N}_n) = \mu(-1\cdot\mathbb{N}_n) = n \text{ and } \mu(\{0\}) = 1$$
 	This gives us our starting point which is that: \\ 
-	$$\mu(B_1(n)) = 2n + 1$$
+	$$\mu(B_1(n)) = 2n + 1 = p_1(n)$$
 	Alright this is great, we have worked  out the first dimensional case, but what about the two dimension case? \\ 
-	To answer this, we need the following equation: 
+	To answer this, I will start with the d dimensional case and make some observations. \\ 
+	We will need the following equation. \\
 	$$T_{n+1} : \mathbb{Z}^n \times \mathbb{Z} \to \mathbb{Z}^{n+1} \text{ where } T(x,a) = \begin{bmatrix}
 	x_1 \\ 
 	\vdots \\ 
@@ -847,7 +848,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	$$B_{d+1}(n) = \bigcup_{j=-n}^n T(B_{d}(n-|j|),j )$$
 	This needs to be proven. \\ 
 	With this we can actually start working on the 2 dimensional case. \\ 
-	$$B_{2}(n) = \bigcup_{j=-n}^n T(B_{1}(n-|j|),j ) = \bigcup_{j=-n}^{-1} T(B_{1}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{1}(n-|j|),j ) \cup T(B_{1}(n),0 )$$
+	$$B_{d}(n) = \bigcup_{j=-n}^n T(B_{1}(n-|j|),j ) = \bigcup_{j=-n}^{-1} T(B_{1}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{1}(n-|j|),j ) \cup T(B_{1}(n),0 )$$
 	Since $T(B_{d}(n-|j|),j ) \cap T(B_{d}(n-|k|),k ) = \phi$ for every $j \not = k$ where $j,k \in \mathbb{Z}$ \\
 	and we know that: $\mu(T(B_{d}(n-|j|),j) = \mu(T(B_{d}(n-|-j|),-j )))$ \\
 	and that: $\mu(T(B_{d}(n-|j|),j) = \mu(B_{d}(n-|j|))$ \\
@@ -856,8 +857,17 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	$$= \mu\left( \bigcup_{j=-n}^{-1} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
 	$$= \mu\left( \bigcup_{j=1}^{n} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
 	$$ = \mu(B_d(n)) + 2 \sum_{j=1}^n \mu(B_{d}(n-|j|))$$
-	
-	
+	Notice that since we know that $mu(B_1(n))$ is a polynomial, we then know that $\mu(B_{d+1}(n)) $ is also a polynomial because the set of polynomials is a vector space. \\
+	so $p_1(n) = 2n + 1$
+	Knowing this observe: \\ 
+	$$\mu(B_{2}(n)) = \mu(B_1(n)) + 2 \sum_{j=1}^n \mu(B_{1}(n-|j|) < \mu(B_1(n)) + 2 \sum_{j=1}^n \mu(B_{1}(n)) $$
+	$$= (2n+1) +  2n(2n+1)  = (2n+1)(2n+1) = 4n^2 + 4n + 1 \in P(2)$$
+	And so this shows us that $\mu(B_{2}(n))$ is either still in $P(1)$ or in $P(2)$ but can't be in any other polynomial space. \\
+	That claim needs proof. \\
+	This leads me to a general extension of this. \\ 
+	$$\mu(B_{d}(n)) < (2n+1)^d$$
+	Showing this would tell us that: \\ 
+	$$\mu(B_{d}(n)) \in P(d-1) \text{ or } \mu(B_{d}(n)) \in P(d)$$
 \end{def.}
 
 \cut
