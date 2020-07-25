@@ -867,7 +867,36 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	This leads me to a general extension of this. \\ 
 	$$\mu(B_{d}(n)) < (2n+1)^d$$
 	Showing this would tell us that: \\ 
-	$$\mu(B_{d}(n)) \in P(d-1) \text{ or } \mu(B_{d}(n)) \in P(d)$$
+	$$\mu(B_{d}(n)) \in  \bigcup_{k=1}^dP(k)$$
+	We need to get a lower bound to show that $\mu(B_{d}(n)) \in  P(d)$\\
+	One candidate inequality we could star with is: \\
+	$$n^d < \mu(B_{d}(n))$$
+	Once we have proven that $\mu(B_{d}(n)) \in P(d)$ we can then know the following equation always has a solution. \\ 
+	$$A^n_d x = b^n_d$$
+	Where: 
+	$$A^n_d = 
+	\begin{bmatrix}
+	1 & 1 & 1 & \hdots & 1 & 1 & 1 \\
+	 2^d  & 2^{d-1}  & 2^{d-2}  &  \hdots & 2^2 & 2 & 1 \\
+	 3^d  & 3^{d-1}  & 3^{d-2}  &  \hdots & 3^2 & 3 & 1 \\
+	\vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+	(d-2)^d & (d-2)^{d-1} & (n-2)^{d-2} & \hdots & (d-2)^2 & d-2 & 1\\ 
+	(d-1)^d & (d-1)^{d-1} & (d-1)^{d-2} & \hdots & (d-1)^2 & d-1 & 1\\ 
+	d^d & d^{d-1} & d^{d-2} & \hdots & d^2 & d & 1\\ 
+	\end{bmatrix} 
+	\text{ and } 
+	b^n_d = 
+	\begin{bmatrix}
+	\mu(B_{d}(0)) \\
+	\mu(B_{d}(1)) \\ 
+	\mu(B_{d}(2)) \\ 
+	\vdots \\ 
+	\mu(B_{d}(d-2)) \\ 
+	\mu(B_{d}(d-1)) \\ 
+	\mu(B_{d}(d))   
+	\end{bmatrix}
+	$$
+	And is $\mu(B_{d}(n)) \in P(d)$ then we have $d+1$ unknowns and $d+1$ equations. \\ 
 \end{def.}
 
 \cut
