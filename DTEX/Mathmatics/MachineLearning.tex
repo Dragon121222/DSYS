@@ -809,6 +809,56 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	Is $g : \mathbb{Q} \to \mathbb{R}$ ? \\
 	What is: $\int_{0}^1 g(x) \cdot X_{[0,1]}(x) dx$ ?
 \end{thm}
+\cut 
+\begin{def.} \textbf{The Diamond Problem} \\ 
+	To start this problem, we first need to start with a definition. \\ 
+	Let $B_d(0,n) = \{x \in \mathbb{Z}^d : d_1(0,x) \leq n\}$ 
+	where $d_1(x,y) = \sum_{j=1}^{d} |x_j-y_j|$ \\
+	So since 0 is fixed, it's clear that $B_d$ can be written as: \\ 
+	$$B_d(n) = \{x \in \mathbb{Z}^d : \sum_{j=1}^{d} |x_j| \leq n\}$$
+	The proof of this is left to the reader. \\ 
+	So an interesting question that arises from this is that of it's cardinality and the set $B_d(n)$ \\ 
+	specifically, we would like to be able to calculate $\mu(B_d(n)) = card(B_d(n))$ without a recursive equation. \\ 
+	A recursive equation is a place we can start though. \\ 
+	First we can start with $card(B_1(n))$ \\ 
+	This turns into looking at the following: \\ 
+	$B_1(n) = \{x \in \mathbb{Z}^1 : |x| \leq n\}$ \\ 
+	Since we know that $card(N_n) = n$ and we can show that $B_1(n) = \mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}$ and we know that: 
+	$$\mathbb{N}_n \cap -1\cdot\mathbb{N}_n = \phi, \mathbb{N}_n \cap \{0\} = \phi, -1\cdot\mathbb{N}_n \cap \{0\} = \phi$$
+	we know that: \\
+	$$\mu(B_1(n)) = \mu(\mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}) = \mu(\mathbb{N}_n) + \mu(-1\cdot\mathbb{N}_n) + \mu(\{0\})$$
+	some more stuff that should be proven is that: \\ 
+	$$\mu(\mathbb{N}_n) = \mu(-1\cdot\mathbb{N}_n) = n \text{ and } \mu(\{0\}) = 1$$
+	This gives us our starting point which is that: \\ 
+	$$\mu(B_1(n)) = 2n + 1$$
+	Alright this is great, we have worked  out the first dimensional case, but what about the two dimension case? \\ 
+	To answer this, we need the following equation: 
+	$$T_{n+1} : \mathbb{Z}^n \times \mathbb{Z} \to \mathbb{Z}^{n+1} \text{ where } T(x,a) = \begin{bmatrix}
+	x_1 \\ 
+	\vdots \\ 
+	x_n \\ 
+	a
+	\end{bmatrix} \text{ for every } x = \begin{bmatrix}
+	x_1 \\ 
+	\vdots \\
+	x_n
+	\end{bmatrix} \in \mathbb{Z}^n, a \in \mathbb{Z}$$
+	With this, we get a recursive characterization of $B_{d+1}(n)$ with  $B_{d}(n)$
+	$$B_{d+1}(n) = \bigcup_{j=-n}^n T(B_{d}(n-|j|),j )$$
+	This needs to be proven. \\ 
+	With this we can actually start working on the 2 dimensional case. \\ 
+	$$B_{2}(n) = \bigcup_{j=-n}^n T(B_{1}(n-|j|),j ) = \bigcup_{j=-n}^{-1} T(B_{1}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{1}(n-|j|),j ) \cup T(B_{1}(n),0 )$$
+	Since $T(B_{d}(n-|j|),j ) \cap T(B_{d}(n-|k|),k ) = \phi$ for every $j \not = k$ where $j,k \in \mathbb{Z}$ \\
+	and we know that: $\mu(T(B_{d}(n-|j|),j) = \mu(T(B_{d}(n-|-j|),-j )))$ \\
+	and that: $\mu(T(B_{d}(n-|j|),j) = \mu(B_{d}(n-|j|))$ \\
+	We can show that: \\ 
+	$$\mu(B_{d+1}(n))  = \mu\left( \bigcup_{j=-n}^{-1} T(B_{d}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \cup T(B_{d}(n),0 ) \right)$$
+	$$= \mu\left( \bigcup_{j=-n}^{-1} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
+	$$= \mu\left( \bigcup_{j=1}^{n} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
+	$$ = \mu(B_d(n)) + 2 \sum_{j=1}^n \mu(B_{d}(n-|j|))$$
+	
+	
+\end{def.}
 
 \cut
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
