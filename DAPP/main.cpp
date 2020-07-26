@@ -79,8 +79,9 @@ void DGRAPHICS_DEMO(GtkButton * widget, gpointer ptr) {
     DGRAPHICS * DG = new DGRAPHICS(); 
 
 //    DG->topDownGradTest(); 
-    DG->vectorAnalysisTest(); 
-
+//    DG->vectorAnalysisTest(); 
+    DG->centralWaveGradTest(); 
+    
     delete(DG); 
 
 }

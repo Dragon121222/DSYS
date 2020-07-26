@@ -33,10 +33,17 @@ class DGRAPHICS : public DOBJ {
 		~DGRAPHICS(); 
 
 		// Functions
-		void topDownGrad(af::array &I, af::array &O);
+		void topDownGrad(af::array &IO);
+		void topDownSin(af::array &IO, float lambda = 1);
+		void sinOpp(af::array &IO,float lambda = 1,float bias = 0); 
+		void ball2D(af::array &IO); 
 
-		// Unit Tests
+		// Graphics Unit Tests
 		void topDownGradTest(); 
+		void topDownSinTest(); 
+		void centralWaveGradTest(); 
+
+		// Diagnostics Unit Tests
 		void vectorAnalysisTest(); 
 
 		// Diagnostics

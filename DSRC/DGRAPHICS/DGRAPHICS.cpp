@@ -11,25 +11,46 @@ DGRAPHICS::~DGRAPHICS() {
 
 }
 
-void DGRAPHICS::topDownGrad(af::array &I, af::array &O) { 
+void DGRAPHICS::topDownGrad(af::array &IO) { 
 
-	int width = I.dims(0); 
-	int height = I.dims(1); 
+	int width = IO.dims(0); 
+	int height = IO.dims(1); 
 
 	af::array r = af::range(width); 
 
-	af::array grad = af::tile(r,1,height);  
+	IO = af::tile(r,1,height);  
 
-	O = grad; 
+	IO = IO / af::max<float>(IO); 
 
 } 
+
+void DGRAPHICS::sinOpp(af::array &IO,float lambda, float bias) { 
+
+	IO = (af::sin(af::Pi*2*IO*lambda + bias) + 1)/2; 
+
+}
+
+void DGRAPHICS::topDownSin(af::array &IO, float lambda) { 
+
+	topDownGrad(IO); 
+
+	IO = IO*2*af::Pi; 
+
+	IO = lambda*IO; 
+
+	IO = (af::sin(IO) + 1)/2; 
+
+}
 
 void DGRAPHICS::topDownGradTest() { 
 
 	std::cout << "Starting topDownGradTest\n";
 
 	af::array test = af::array(200,200); 
-	topDownGrad(test,test); 
+
+	topDownGrad(test); 
+
+	vectorAnalysis(test); 
 
     af::Window myWindow("topDownGradTest");
 
@@ -37,8 +58,56 @@ void DGRAPHICS::topDownGradTest() {
 		myWindow.image(test);
 	} 
 
+} 
+
+void DGRAPHICS::topDownSinTest() { 
+
+	std::cout << "Starting topDownGradTest\n";
+
+	af::array test = af::array(200,200); 
+
+	topDownSin(test); 
+
+	vectorAnalysis(test); 
+
+    af::Window myWindow("topDownGradTest");
+
+	while (!myWindow.close()) {
+		myWindow.image(test);
+	} 
 
 } 
+
+void DGRAPHICS::ball2D(af::array &IO) { 
+	int width = IO.dims(0); 
+	int height = IO.dims(1); 
+
+	for(float i = 0; i < width; i++) { 
+		for(float j = 0; j < height; j++) { 
+			IO(i,j) = ((i/width)*(i/width) + (j/height)*(j/height));
+		}
+	}
+}
+
+void DGRAPHICS::centralWaveGradTest() { 
+	
+	std::cout << "Starting centralWaveGradTest\n";
+    af::Window myWindow("centralWaveGradTest");
+
+	af::array test = af::array(200,200); 
+    float t = 0; 
+
+	ball2D(test); 
+	af::array b = test; 
+
+	while (!myWindow.close()) {
+		b = test; 
+		sinOpp(b,3*(sin(t)+1)+5,3*t); 
+		myWindow.image(b);
+		t += 0.02f; 
+	} 
+
+}
 
 void DGRAPHICS::vectorAnalysis(af::array &I, std::string name) { 
 
