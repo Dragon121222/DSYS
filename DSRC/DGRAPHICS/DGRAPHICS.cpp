@@ -94,17 +94,32 @@ void DGRAPHICS::centralWaveGradTest() {
 	std::cout << "Starting centralWaveGradTest\n";
     af::Window myWindow("centralWaveGradTest");
 
-	af::array test = af::array(200,200); 
+	af::array test = af::array(200,400); 
     float t = 0; 
 
 	ball2D(test); 
-	af::array b = test; 
 
-	while (!myWindow.close()) {
-		b = test; 
+	af::array b = af::flip(test,1);
+
+	b = af::rotate(b,af::Pi); 
+
+	af::array f = af::rotate(test,af::Pi); 
+
+	af::array c = af::join(1,f,b); 
+
+	af::array d = af::rotate(c,af::Pi); 
+
+	af::array e = af::join(0,c,d); 
+
+	std::string name = "t"; 
+
+	while (!myWindow.close() && t < 2*af::Pi) {
+		b = e; 
 		sinOpp(b,3*(sin(t)+1)+5,3*t); 
 		myWindow.image(b);
-		t += 0.02f; 
+		t += 0.01f;
+		name = std::string("DPICTURES/sinOpp/") + std::to_string(t) + std::string(".png"); 
+		saveimage(name.c_str(),b); 
 	} 
 
 }

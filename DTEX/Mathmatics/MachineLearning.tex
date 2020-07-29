@@ -812,25 +812,25 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 \cut 
 \begin{def.} \textbf{The Diamond Problem} \\ 
 	To start this problem, we first need to start with a definition. \\ 
-	Let $B_d(0,n) = \{x \in \mathbb{Z}^d : d_1(0,x) \leq n\}$ 
+	Let $D_d(0,n) = \{x \in \mathbb{Z}^d : d_1(0,x) \leq n\}$ 
 	where $d_1(x,y) = \sum_{j=1}^{d} |x_j-y_j|$ \\
-	So since 0 is fixed, it's clear that $B_d$ can be written as: \\ 
-	$$B_d(n) = \{x \in \mathbb{Z}^d : \sum_{j=1}^{d} |x_j| \leq n\}$$
+	So since 0 is fixed, it's clear that $D_d$ can be written as: \\ 
+	$$D_d(n) = \{x \in \mathbb{Z}^d : \sum_{j=1}^{d} |x_j| \leq n\}$$
 	The proof of this is left to the reader. \\ 
-	So an interesting question that arises from this is that of it's cardinality and the set $B_d(n)$ \\ 
-	specifically, we would like to be able to calculate $\mu(B_d(n)) = card(B_d(n))$ without a recursive equation. \\ 
+	So an interesting question that arises from this is that of it's cardinality and the set $D_d(n)$ \\ 
+	specifically, we would like to be able to calculate $\mu(D_d(n)) = card(D_d(n))$ without a recursive equation. \\ 
 	A recursive equation is a place we can start though. \\ 
-	First we can start with $card(B_1(n))$ \\ 
+	First we can start with $card(D_1(n))$ \\ 
 	This turns into looking at the following: \\ 
-	$B_1(n) = \{x \in \mathbb{Z}^1 : |x| \leq n\}$ \\ 
-	Since we know that $card(N_n) = n$ and we can show that $B_1(n) = \mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}$ and we know that: 
+	$D_1(n) = \{x \in \mathbb{Z}^1 : |x| \leq n\}$ \\ 
+	Since we know that $card(N_n) = n$ and we can show that $D_1(n) = \mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}$ and we know that: 
 	$$\mathbb{N}_n \cap -1\cdot\mathbb{N}_n = \phi, \mathbb{N}_n \cap \{0\} = \phi, -1\cdot\mathbb{N}_n \cap \{0\} = \phi$$
 	we know that: \\
-	$$\mu(B_1(n)) = \mu(\mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}) = \mu(\mathbb{N}_n) + \mu(-1\cdot\mathbb{N}_n) + \mu(\{0\})$$
+	$$\mu(D_1(n)) = \mu(\mathbb{N}_n \cup -1\cdot\mathbb{N}_n  \cup \{0\}) = \mu(\mathbb{N}_n) + \mu(-1\cdot\mathbb{N}_n) + \mu(\{0\})$$
 	some more stuff that should be proven is that: \\ 
 	$$\mu(\mathbb{N}_n) = \mu(-1\cdot\mathbb{N}_n) = n \text{ and } \mu(\{0\}) = 1$$
 	This gives us our starting point which is that: \\ 
-	$$\mu(B_1(n)) = 2n + 1 = p_1(n)$$
+	$$\mu(D_1(n)) = 2n + 1 = p_1(n)$$
 	Alright this is great, we have worked  out the first dimensional case, but what about the two dimension case? \\ 
 	To answer this, I will start with the d dimensional case and make some observations. \\ 
 	We will need the following equation. \\
@@ -845,34 +845,38 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	x_n
 	\end{bmatrix} \in \mathbb{Z}^n, a \in \mathbb{Z}$$
 	With this, we get a recursive characterization of $B_{d+1}(n)$ with  $B_{d}(n)$
-	$$B_{d+1}(n) = \bigcup_{j=-n}^n T(B_{d}(n-|j|),j )$$
+	$$D_{d+1}(n) = \bigcup_{j=-n}^n T(B_{d}(n-|j|),j )$$
 	This needs to be proven. \\ 
 	With this we can actually start working on the 2 dimensional case. \\ 
-	$$B_{d}(n) = \bigcup_{j=-n}^n T(B_{1}(n-|j|),j ) = \bigcup_{j=-n}^{-1} T(B_{1}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{1}(n-|j|),j ) \cup T(B_{1}(n),0 )$$
-	Since $T(B_{d}(n-|j|),j ) \cap T(B_{d}(n-|k|),k ) = \phi$ for every $j \not = k$ where $j,k \in \mathbb{Z}$ \\
-	and we know that: $\mu(T(B_{d}(n-|j|),j) = \mu(T(B_{d}(n-|-j|),-j )))$ \\
-	and that: $\mu(T(B_{d}(n-|j|),j) = \mu(B_{d}(n-|j|))$ \\
+	$$D_{d}(n) = \bigcup_{j=-n}^n T(D_{1}(n-|j|),j ) = \bigcup_{j=-n}^{-1} T(D_{1}(n-|j|),j ) \cup \bigcup_{j=1}^n T(D_{1}(n-|j|),j ) \cup T(B_{1}(n),0 )$$
+	Since $T(D_{d}(n-|j|),j ) \cap T(D_{d}(n-|k|),k ) = \phi$ for every $j \not = k$ where $j,k \in \mathbb{Z}$ \\
+	and we know that: $\mu(T(D_{d}(n-|j|),j) = \mu(T(D_{d}(n-|-j|),-j )))$ \\
+	and that: $\mu(T(D_{d}(n-|j|),j) = \mu(D_{d}(n-|j|))$ \\
 	We can show that: \\ 
-	$$\mu(B_{d+1}(n))  = \mu\left( \bigcup_{j=-n}^{-1} T(B_{d}(n-|j|),j ) \cup \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \cup T(B_{d}(n),0 ) \right)$$
-	$$= \mu\left( \bigcup_{j=-n}^{-1} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
-	$$= \mu\left( \bigcup_{j=1}^{n} T(B_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(B_{d}(n-|j|),j ) \right) + \mu\left(  T(B_{d}(n),0 ) \right)$$
-	$$ = \mu(B_d(n)) + 2 \sum_{j=1}^n \mu(B_{d}(n-|j|))$$
-	Notice that since we know that $mu(B_1(n))$ is a polynomial, we then know that $\mu(B_{d+1}(n)) $ is also a polynomial because the set of polynomials is a vector space. \\
+	$$\mu(D_{d+1}(n))  = \mu\left( \bigcup_{j=-n}^{-1} T(D_{d}(n-|j|),j ) \cup \bigcup_{j=1}^n T(D_{d}(n-|j|),j ) \cup T(D_{d}(n),0 ) \right)$$
+	$$= \mu\left( \bigcup_{j=-n}^{-1} T(D_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(D_{d}(n-|j|),j ) \right) + \mu\left(  T(D_{d}(n),0 ) \right)$$
+	$$= \mu\left( \bigcup_{j=1}^{n} T(D_{d}(n-|j|),j ) \right) + \mu\left( \bigcup_{j=1}^n T(D_{d}(n-|j|),j ) \right) + \mu\left(  T(D_{d}(n),0 ) \right)$$
+	$$ = \mu(D_d(n)) + 2 \sum_{j=1}^n \mu(D_{d}(n-|j|))$$
+	Notice that since we know that $mu(D_1(n))$ is a polynomial, we then know that $\mu(D_{d+1}(n)) $ is also a polynomial because the set of polynomials is a vector space. \\
 	so $p_1(n) = 2n + 1$
 	Knowing this observe: \\ 
-	$$\mu(B_{2}(n)) = \mu(B_1(n)) + 2 \sum_{j=1}^n \mu(B_{1}(n-|j|) < \mu(B_1(n)) + 2 \sum_{j=1}^n \mu(B_{1}(n)) $$
+	$$\mu(D_{2}(n)) = \mu(D_1(n)) + 2 \sum_{j=1}^n \mu(D_{1}(n-|j|) < \mu(D_1(n)) + 2 \sum_{j=1}^n \mu(D_{1}(n)) $$
 	$$= (2n+1) +  2n(2n+1)  = (2n+1)(2n+1) = 4n^2 + 4n + 1 \in P(2)$$
-	And so this shows us that $\mu(B_{2}(n))$ is either still in $P(1)$ or in $P(2)$ but can't be in any other polynomial space. \\
+	And so this shows us that $\mu(D_{2}(n))$ is either still in $P(1)$ or in $P(2)$ but can't be in any other polynomial space. \\
 	That claim needs proof. \\
 	This leads me to a general extension of this. \\ 
-	$$\mu(B_{d}(n)) < (2n+1)^d$$
+	$$\mu(D_{d}(n)) < (2n+1)^d$$
+	To prove this we notice that: 
+	
+	
+	
 	Showing this would tell us that: \\ 
 	$$\mu(B_{d}(n)) \in  \bigcup_{k=1}^dP(k)$$
 	We need to get a lower bound to show that $\mu(B_{d}(n)) \in  P(d)$\\
 	One candidate inequality we could star with is: \\
 	$$n^d < \mu(B_{d}(n))$$
 	Once we have proven that $\mu(B_{d}(n)) \in P(d)$ we can then know the following equation always has a solution. \\ 
-	$$A^n_d x = b^n_d$$
+	$$A_d x = b_d$$
 	Where: 
 	$$A^n_d = 
 	\begin{bmatrix}

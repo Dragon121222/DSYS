@@ -1,0 +1,7 @@
+#! /bin/bash
+#Usage ./j2asc infile.jpg outfile.jpg
+
+echo "converting $1 to $2"
+convert $1 tmp.jpg 
+jp2a --width=800 --height=400 -i tmp.jpg --output=tmp.txt
+convert -size 800x400 -undercolor black -fill white -pointsize 1 -font Source-Code-Pro-Bold text:tmp.txt $2
