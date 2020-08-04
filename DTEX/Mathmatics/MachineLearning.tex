@@ -867,18 +867,24 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	This leads me to a general extension of this. \\ 
 	$$\mu(D_{d}(n)) < (2n+1)^d$$
 	To prove this we notice that: 
+	$$D_d(n) \subset C_d(n)$$
+	And then prove it. \\ 
+	$$C_d(n) = \{x \in \mathbb{Z}^n : max_{j\in \mathbb{N}_d}(|x_i|) \leq n\}$$
+	Let $x \in D_d(n) \Rightarrow \sum_{j=1}^{d} |x_j| \leq n$ \\ 
+	$\Rightarrow \max_{j \in \mathbb{N}_d}(|x_j|) \leq n$ \\ 
+	$\Rightarrow x \in C_d(n)$ \\ 
+	$\Rightarrow D_d(n) \subset C_d(n)$ \\ 
+	With this now I just need to show that $\mu(C_d(n)) = (2n+1)^d$ \\ \\
 	
 	
 	
-	Showing this would tell us that: \\ 
-	$$\mu(B_{d}(n)) \in  \bigcup_{k=1}^dP(k)$$
-	We need to get a lower bound to show that $\mu(B_{d}(n)) \in  P(d)$\\
+	We need to get a lower bound to show that $\mu(D_{d}(n)) \in  P(d)$\\
 	One candidate inequality we could star with is: \\
-	$$n^d < \mu(B_{d}(n))$$
-	Once we have proven that $\mu(B_{d}(n)) \in P(d)$ we can then know the following equation always has a solution. \\ 
+	$$n^d < \mu(D_{d}(n))$$
+	Once we have proven that $\mu(D_{d}(n)) \in P(d)$ we can then know the following equation always has a solution. \\ 
 	$$A_d x = b_d$$
 	Where: 
-	$$A^n_d = 
+	$$A_d = 
 	\begin{bmatrix}
 	1 & 1 & 1 & \hdots & 1 & 1 & 1 \\
 	 2^d  & 2^{d-1}  & 2^{d-2}  &  \hdots & 2^2 & 2 & 1 \\
@@ -889,18 +895,18 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	d^d & d^{d-1} & d^{d-2} & \hdots & d^2 & d & 1\\ 
 	\end{bmatrix} 
 	\text{ and } 
-	b^n_d = 
+	b_d = 
 	\begin{bmatrix}
-	\mu(B_{d}(0)) \\
-	\mu(B_{d}(1)) \\ 
-	\mu(B_{d}(2)) \\ 
+	\mu(D_{d}(0)) \\
+	\mu(D_{d}(1)) \\ 
+	\mu(D_{d}(2)) \\ 
 	\vdots \\ 
-	\mu(B_{d}(d-2)) \\ 
-	\mu(B_{d}(d-1)) \\ 
-	\mu(B_{d}(d))   
+	\mu(D_{d}(d-2)) \\ 
+	\mu(D_{d}(d-1)) \\ 
+	\mu(D_{d}(d))   
 	\end{bmatrix}
 	$$
-	And is $\mu(B_{d}(n)) \in P(d)$ then we have $d+1$ unknowns and $d+1$ equations. \\ 
+	And is $\mu(D_{d}(n)) \in P(d)$ then we have $d+1$ unknowns and $d+1$ equations. \\ 
 \end{def.}
 
 \cut
