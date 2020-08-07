@@ -1,0 +1,1 @@
+gcc -x c++ APP/DEMOMAIN.cpp SRC/DEMOCLASS.h SRC/DEMOCLASS.cpp -o DEMOEXE -lstdc++ -Wl,--trace

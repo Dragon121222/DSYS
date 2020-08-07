@@ -1,0 +1,1 @@
+ffmpeg -f x11grab -y -r 30 -s 1920x1080 -i :0.0 -vcodec huffyuv ../DVIDEO/out.avi
