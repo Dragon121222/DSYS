@@ -793,6 +793,27 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 \end{exmp}
 \cut
 \section{Calculus}
+\begin{def.} \textbf{Riemann Sum} \\
+	Let $f : [a,b] \to \mathbb{R}$ \\
+	Further let $P_n = \{[x_0,x_1],[x_1,x_2],...,[x_{n-1},x_n]\}$ be a partition of I where: $a = x_0 < x_1 < ... < x_{n-1} < x_n = b$ 
+	Then the \textbf{Riemann Sum S} of f over I with partition $P_n$ is: \\ 
+	$$S = \sum_{i=1}^{n} f(x_i^*) \Delta x_i$$
+	Where $x_i^* \in [x_{i-1}, x_i]$ and $\Delta x_i = x_i - x_{i-1}$  \\
+	Notice that our $\Delta x_i$ is denoting the length of the i'th partition. 
+	We are measuring this partition and multiplying it by the height to get an approximation of the area under the curve.
+\end{def.}
+\begin{def.}\textbf{Left and Right Riemann Sum} \\ 
+	Since we are free to choose where $x_i^*$ is in $[x_{i-1},x_i]$ and what our partition P looks like we are able to make some new definitions by picking a specific place in $[x_{i-1},x_i]$. \\ 
+	The partition most people use is that one where $P$ is divided up into sections of equal length, that is: \\ 
+	Given $n \in \mathbb{N}$ then $\Delta x = \frac{b - a}{n}$ \\ 
+	$P_n = \{[a,a+\Delta x],[a+\Delta x,a+2\Delta x],...,[a+(n-2)\Delta x,a+(n-1)\Delta x],[a+(n-1)\Delta x,b]\}$ \\
+	If $x_i^* = x_{i-1}$ then S is called the left Riemann sum notated $S_l$ \\ 
+	If $x_i^* = x_i$ then S is called the right Riemann sum notated $S_r$ \\ 
+	For each of these, we can work out the sums. \\ 
+	$$S_l = \sum_{j=1}^{n}f(x_i^*)\Delta x_j = \sum_{j=1}^{n}f(x_{j-1})\Delta x = \sum_{j=0}^{n-1}f(x_{j})\Delta x = f(a)\Delta x + \Delta x\sum_{j=1}^{n-1}f(x_{j})$$
+	$$S_r = \sum_{j=1}^{n}f(x_i^*)\Delta x_j = \sum_{j=1}^{n}f(x_{j})\Delta x = f(b)\Delta x + \Delta x\sum_{j=1}^{n-1}f(x_{j})$$
+	$$A_{trap} = \frac{S_l + S_r}{2} = \frac{f(a)+f(b)}{2}\Delta x +\Delta x\sum_{j=1}^{n-1}f(x_{j})$$
+\end{def.}
 \begin{def.}
 	Let $A \subset B$ \\ 
 	Then: $X_A(x) := \begin{Bmatrix}

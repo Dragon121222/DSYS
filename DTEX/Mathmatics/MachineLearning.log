@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.21)  28 JUL 2020 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.7.19)  7 AUG 2020 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1665,7 +1665,7 @@ type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on MachineLearning.pdf (26 pages, 277647 bytes).
+Output written on MachineLearning.pdf (26 pages, 277721 bytes).
 PDF statistics:
  352 PDF objects out of 1000 (max. 8388607)
  303 compressed objects within 4 object streams
