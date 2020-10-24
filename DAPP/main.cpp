@@ -71,8 +71,116 @@
 #include "../DSRC/DGRAPHICS/DGRAPHICS.h"
 #endif
 
+#ifndef __DOPENCV__
+#include "../DSRC/DOPENCV/DOPENCV.h"
+#endif
+
+#ifndef __DFILE__
+#include "../DSRC/DFILE/DFILE.h"
+#endif
+
+#ifndef __DTALK__
+#include "../DSRC/DTALK/DTALK.h"
+#endif
+
+#ifndef __DMODELMANAGER__
+#include "../DSRC/D3DMODELER/DMODELMANAGER.h"
+#endif
+
+#include <glog/logging.h>
+
+#ifndef __DXM__
+#include "../DSRC/DXM/DXM.h"
+#endif
+
+using std::unique_ptr;
+
 int argcCOPY;
 char** argvCOPY; 
+
+void DMODELMANAGER_TEST(GtkButton * widget, gpointer ptr) { 
+
+    DMODELMANAGER * DDD = new DMODELMANAGER(); 
+
+    DDD->startGUI(); 
+
+    delete(DDD); 
+
+}
+
+void DOPTIMIZATION_DOMAIN_RANDOM_SEARCHING_TEST(GtkButton * widget, gpointer ptr) {
+
+    af::setSeed(time(NULL));
+
+    DML * M = new DML(); 
+
+    std::vector<af::array> inputVectors; 
+    std::vector<af::array> labelVectors;
+
+    M->formNeuralNet(10,5); 
+
+    M->debugMachine();
+
+    M->generateData(100,10,5,inputVectors,labelVectors);
+
+    M->Optimization_Domain_Random_Searching(inputVectors,labelVectors); 
+
+    delete(M); 
+
+}
+
+void DCONV_TEST(GtkButton * widget, gpointer ptr) { 
+
+    DML * M = new DML();  
+
+    af::array x = af::randu(10); 
+
+    af::array y = af::array(5);
+
+    M->v_conv(x,y);
+
+    af::print("Input",x);
+    af::print("Output",y);
+
+    delete(M); 
+
+}
+
+
+void DTALK_DEMO(GtkButton * widget, gpointer ptr) { 
+
+    DTALK * DT = new DTALK(); 
+
+    DT->say("Hello World\n");
+
+    delete(DT);
+
+}
+
+void DFILE_DEMO(GtkButton * widget, gpointer ptr) { 
+
+    DFILE * FT = new DFILE(); 
+
+    FT->open('w'); 
+    FT->write("Hello World\n"); 
+    FT->close();  
+    FT->open('r'); 
+    FT->read(); 
+    FT->close();  
+
+    delete(FT);
+
+}
+
+void DOPENCV_DEMO(GtkButton * widget, gpointer ptr) { 
+
+    DOPENCV * CV = new DOPENCV(); 
+
+    CV->streamWebCam(); 
+
+    delete(CV);
+
+}
 
 void DGRAPHICS_DEMO(GtkButton * widget, gpointer ptr) { 
 
@@ -409,17 +517,16 @@ void DML_DEMO(GtkButton * widget, gpointer ptr) {
 
     DML * dml = new DML(); 
 
-    dml->appendOp(add,"add",5,5); 
-    dml->appendOp(add,"add",5,5);     
+    dml->formNeuralNet(5,2);     
 
     af::array testInput = af::constant(5,5); 
-    af::array testOutput = af::array(5); 
+    af::array testOutput = af::array(2); 
 
     dml->fire(testInput,testOutput); 
 
     af::print("testOutput", testOutput); 
 
-    dml->debugMachine(); 
+//    dml->debugMachine(); 
 
     delete(dml); 
 
@@ -432,37 +539,76 @@ int main(int argc,  char** argv) {
 	argcCOPY = argc;
 	argvCOPY = argv; 
 
-	gtk_init (&argc, &argv);
 
-	DGTKWINDOW * dwindow = new DGTKWINDOW(); 
 
-	dwindow->defaultBuilder(); 
 
-	std::cout << "\t\tCalling Demo Window\n"; 
+    if(argc > 0) { 
 
-//	dwindow->addWidget("DCLIENTTCP_UNITY_CONNECT","button_with_label",0,0,&DCLIENTTCP_UNITY_CONNECT,"clicked"); 
-    dwindow->addWidget("DCLIENTUDP_DSERVERUDP_DEMO","button_with_label",0,0,&DCLIENTUDP_DSERVERUDP_DEMO,"clicked"); 
-	dwindow->addWidget("DCLIENTTCP_DSERVERTCP_DEMO","button_with_label",1,0,&DCLIENTTCP_DSERVERTCP_DEMO,"clicked"); 
-	dwindow->addWidget("DGTKDEMO","button_with_label",2,0,&DGTKDEMO,"clicked"); 
-	dwindow->addWidget("DGLUTDEMO","button_with_label",3,0,&DGLUTDEMO,"clicked"); 
+        std::string a = std::string(argv[1]);
+
+        if(a == "x") { 
+
+            std::cout << "Starting X11 Manager\n";
+
+//            ::google::InitGoogleLogging(argv[0]);
+
+            unique_ptr<DXM> dxm(DXM::Create());
+
+            if (!dxm) {
+//                LOG(ERROR) << "Failed to initialize window manager.";
+                return EXIT_FAILURE;
+            }
+
+            dxm->Run();
+
+            return EXIT_SUCCESS;
+
+        } else { 
+
+            gtk_init (&argc, &argv);
+
+            DGTKWINDOW * dwindow = new DGTKWINDOW(); 
+
+            dwindow->defaultBuilder(); 
+
+            std::cout << "\t\tCalling Demo Window\n"; 
+
+        //  dwindow->addWidget("DCLIENTTCP_UNITY_CONNECT","button_with_label",0,0,&DCLIENTTCP_UNITY_CONNECT,"clicked"); 
+            dwindow->addWidget("DCLIENTUDP_DSERVERUDP_DEMO","button_with_label",0,0,&DCLIENTUDP_DSERVERUDP_DEMO,"clicked"); 
+            dwindow->addWidget("DCLIENTTCP_DSERVERTCP_DEMO","button_with_label",1,0,&DCLIENTTCP_DSERVERTCP_DEMO,"clicked"); 
+            dwindow->addWidget("DGTKDEMO","button_with_label",2,0,&DGTKDEMO,"clicked"); 
+            dwindow->addWidget("DGLUTDEMO","button_with_label",3,0,&DGLUTDEMO,"clicked"); 
 #ifdef __DKINECT__
-	dwindow->addWidget("DKINECT_DEMO","button_with_label",4,0,&DKINECT_DEMO,"clicked"); 
-    dwindow->addWidget("DKINECT_DEMO_RECORD","button_with_label",4,0,&DKINECT_DEMO_RECORD,"clicked");     
-//    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
-    dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
+            dwindow->addWidget("DKINECT_DEMO","button_with_label",4,0,&DKINECT_DEMO,"clicked"); 
+            dwindow->addWidget("DKINECT_DEMO_RECORD","button_with_label",4,0,&DKINECT_DEMO_RECORD,"clicked");     
+        //    dwindow->addWidget("DKINECT_NETWORK_STREAM","button_with_label",5,0,&DKINECT_NETWORK_STREAM,"clicked"); 
+            dwindow->addWidget("DKINECT_UNIT_TESTS","button_with_label",6,0,&DKINECT_UNIT_TESTS,"clicked");     
 #endif
-    dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
-    dwindow->addWidget("DLLC_DEMO","button_with_label",8,0,&DLLCDEMO,"clicked"); 
-    dwindow->addWidget("DGRAPHICS_DEMO","button_with_label",9,0,&DGRAPHICS_DEMO,"clicked"); 
+            dwindow->addWidget("DML_DEMO","button_with_label",7,0,&DML_DEMO,"clicked");     
+            dwindow->addWidget("DLLC_DEMO","button_with_label",8,0,&DLLCDEMO,"clicked"); 
+            dwindow->addWidget("DGRAPHICS_DEMO","button_with_label",9,0,&DGRAPHICS_DEMO,"clicked"); 
+            dwindow->addWidget("DOPENCV_DEMO","button_with_label",10,0,&DOPENCV_DEMO,"clicked"); 
+            dwindow->addWidget("DFILE_DEMO","button_with_label",11,0,&DFILE_DEMO,"clicked"); 
+            dwindow->addWidget("DTALK_DEMO","button_with_label",12,0,&DTALK_DEMO,"clicked"); 
+            dwindow->addWidget("DCONV_TEST","button_with_label",13,0,&DCONV_TEST,"clicked"); 
+            dwindow->addWidget("DOPTIMIZATION_DOMAIN_RANDOM_SEARCHING_TEST","button_with_label",14,0,&DOPTIMIZATION_DOMAIN_RANDOM_SEARCHING_TEST,"clicked"); 
+            dwindow->addWidget("DMODELMANAGER_TEST","button_with_label",15,0,&DMODELMANAGER_TEST,"clicked"); 
+
+            dwindow->constructWindow(); 
+
+            dwindow->defaultDisplay(); 
+
+            gtk_main();
+
+            delete(dwindow); 
+
+        }
 
 
-	dwindow->constructWindow(); 
 
-	dwindow->defaultDisplay(); 
+    }
 
-	gtk_main();
 
-	delete(dwindow); 
 
 	return 0;
 }

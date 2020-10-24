@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+
 \usepackage{mathtools}
 \usepackage{color}
 \usepackage{hyperref}
@@ -43,7 +44,7 @@
 \newcommand{\cut}[0]{\noindent\framebox[\linewidth]{\rule{\linewidth}{2pt}}\\}
 \newcommand{\prof}[0]{	\noindent \textbf{Proof:} \rule{500pt}{2pt} \\ }
 
-\newcommand{\ddash}{\boxed{\vdash}}
+\newcommand{\ddash}{\boxed{\vdash} }
 
 \begin{document}
 \maketitle			
@@ -928,7 +929,33 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\end{bmatrix}
 	$$
 	And is $\mu(D_{d}(n)) \in P(d)$ then we have $d+1$ unknowns and $d+1$ equations. \\ 
+	
 \end{def.}
+
+\begin{thm} \textbf{Permutation of digits with extra conditions} \\
+	Suppose we have the set of all sequences such that: 
+	$$S(n,d) = \{z : z = \{z_j\}_{j=1}^d \subset \mathbb{Z}^d \pitchfork \sum_{j=1}^d |z_j| \leq n \}$$ 
+	What is $card(S(n,d))$ of for every $n,d \in \mathbb{N}$? \\
+	An associated problem that may be easier is: \\ 
+	$$P(n,d) = \{z : z = \{z_j\}_{j=1}^d \subset \mathbb{Z}^d \pitchfork \sum_{j=1}^d |z_j| = n \}$$ 
+	If we can solve this then we just need to add up the results. \\ 
+	$$card(S(n,d)) = \sum_{j=0}^n card(P(j,d))$$
+	So let's look at the set: 
+	$P(n,d)$ \\ 
+	First we note that if $-a$ is the j'th element in a valid sequence then the sequence with all the same digits, but with $a$ at the j'th element is also a part of the set and vise versa.  
+	Given this, it makes sense to start with all the positive sequences then use this face to deduce the remaining number of sequences. \\
+	Now we are left with the remaining even simpler problem. \\ 
+	$$Q(n,d) = \{z : z = \{z_j\}_{j=1}^d \subset \mathbb{N}^d \pitchfork \sum_{j=1}^d |z_j| = n \}$$ 	
+	Suppose that $n = 10$ and $d = 2$
+	Then the valid solutions are: \\ 
+	$$Q(10,2) = \{(0,10),(1,9),(2,8),(3,7),(4,6),(5,5),(6,4),(7,3),(8,2),(9,1),(10,0)\}$$
+	So Q is pretty simple when d = 2 but if d = 3 then it gets more complex. 
+	And the cardinallity is 11. \\ 
+	We can break this new problem down into 3 different sub problems. \\ 
+	Case 1: $n = d$ \\
+	Case 2: $n < d$ \\ 
+	Case 3: $n > d$ \\ 
+\end{thm}
 
 \cut
 \section{Surjective Continuous Non-decreasing Bounded Functionals}
@@ -1090,7 +1117,7 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 	\end{thm}
 	\cut
 
-	\begin{thm} A vector space over a finite fieldwould only be able to have the discrete topology \\
+	\begin{thm} A vector space over a finite field would only be able to have the discrete topology \\
 	\end{thm}
 
 	\section{Convex Operators} 
@@ -1105,6 +1132,74 @@ $$E(a) = \sum_{x \in X} ||T(x) - T^n(x,a)||$$
 			\end{thm}
 	\cut
 	
+	\section{Cameras}
 	
-	
+	\begin{def.} \textbf{Basic Stuff} \\
+		Let $FPS(t) := \frac{1 \text{ Frame}}{t \text{ Seconds}} \forall t \in \mathbb{N}$ \hfill [Frames Per Second] \\
+		Let $PPF(w,h) := \frac{w*h}{1 \text{ Frame}} \forall w,h \in \mathbb{N}$ \hfill [Pixels Per Frame] \\
+		Let $DPP(w,h,c) := $
+		
+	\end{def.}
+	\newpage
+	\cut
+	\section{Optimization}
+		Neural Networks Optimization Problem: \\ 
+		Given a function $T: X \to Y$ \\
+		And an approximation function $F : W \times X \to Y$ \\ \\
+		We want to minimize an objective function: \\ 
+		$$E(w) = \sum_{j=1}^{M} ||T(x_j) - F(w,x_j)||$$
+		Where $\{x_j\}_{j=1}^M \subset X$ which is "sufficiently large" subset of X. \\
+		Our data set is defined as: $\{(x_j),T(x_j)\}_{j=1}^M \subset X \times Y$ and the idea is that entire amount of information we have available to try and approximate T on all of X. How large M is, how complex T is, how large X is, and how well we can find an appropriate w are the limiting factors in this problem. \\
+		
+		\subsection{Domain Random Searching Technique 1}
+		Suppose the we have the Neural Networks Optimization Problem. \\ 
+		Then we want $E(w)$ to be as small as possible. \\ \\
+		Let $w_1$ be a starting random value in W. \\ 
+		$t_1 = w_1 - min\{E(w_n),1\}*z$ where $z \overset{R}{\in} B(0,1) \subset W$ \\ 
+		if: $E(t_1) < E(w_0)$ then: $w_2 = t_1$ \\ 
+		Otherwise, pick a new $z' \overset{R}{\in} B(0,1) \setminus \{z\} \subset W$ and repeat with z'. \\ \\
+		Then in general given a state: $w_n \in W$ \\
+		$t_{n} = w_n - min\{E(w_n),1\}*z$ where $z \overset{R}{\in} B(0,1) \subset W$ \\ 
+		if: $E(t_{n}) < E(w_n)$ then: $w_{n+1} = t_{n}$ \\
+		Otherwise, pick a new $z' \overset{R}{\in} B(0,1) \setminus \{z\} \subset W$ and repeat with z'.  \\ \\
+		Suppose that we have used this algorithm to generate a sequence $\{w_j\}_{j=1}^N$ \\ 
+		Then we know that: $(\forall j \in \mathbb{N}_{N-1})(E(w_{j+1}) < E(w_j))$ \\
+		And so we have created a decreasing sequence for $E$
+		\newpage
+		\subsection{Subgradient method}
+			\begin{def.} \textbf{Quasisecant} \\
+				Let $f : X \to Y$ \\ 
+				A vector $v \in X$ is called a Quasisecant of the function f at the point $x_0$ in the direction $e \in B(0,1) \subset X$ if: \\ 
+				$$||f(x_0+he) - f(x_0)||_Y \leq h\langle v,e \rangle$$
+				If v satisfies this inequality we label it: $v(x_0,e,h)$
+			\end{def.}
+		\noindent
+		We need to understand what this means. \\
+		We start with a point, x which is our current point in the domain. 
+		We then would like to move away from that point a little bit and that is where $x+he$ comes from. 
+		e is the direction we are moving in and h is the length. 
+		We then Look at how for the output of our function has moved from $x_0$ to $x_0+he$ \\
+		The is a distance so we have: $d_Y(f(x_0+he),f(x)) = ||f(x_0+he) - f(x_0)||_Y$ which is a metric in a normed space. 
+		To get a sense of scale, we look at the ratio of the distance in the codomain and the domain. 
+		$$\frac{d_Y(f(x_0+he),f(x_0))}{d_X(x_0+he,x_0)} = \frac{||f(x_0+he)-f(x_0)||_Y}{||x_0+he - x_0||_X} = \frac{||f(x_0+he)-f(x_0)||_Y}{h||e||_X} = M$$
+		As $h \to 0$ we get the slope of the tangent line at $x_0$ if $f$ is differentiable. 
+		However when $h > 0$ we get the slope of a "secant line" also known as a line that intersects a curve at two distinct points. 
+		One such line is: $s(\lambda) = \lambda(f(x_0)) + (1-\lambda)(f(x_0+he))$
+		\newpage
+		\noindent
+		Here is the method: \\ \\
+		Let $h>0$, $c>0$ and $\delta >0$ be given numbers.
+		\begin{enumerate}
+			\item Select any $d_1 \in B(0,1) \subset X$ and compute a quasisecant $v_1=v(x,d_1,h)$ with respect to this direction. Set $v' = v_1$ 
+			\item Solve the problem: minimize $\phi(\lambda) = ||\lambda v_k - (1-\lambda)v_k'||$ where $\lambda \in [0,1]$ 
+			\item Set: $\hat{v_k} = \hat{\lambda} v_k - (1-\hat{\lambda})v_k'$ where $\hat{\lambda}$ is the solution to the minimization problem. 
+			\item If $||\hat{v_k}|| < \delta$ then stop. Else continue. 
+			\item Compute: $\hat{d_k} = -\frac{\hat{v_k}}{||\hat{v_k}||}$
+			\item If $||f(x + h\hat{d_k}) - f(x)|| \leq -c h||\hat{v_k}||$ then stop. Else continue. 
+			\item Compute: $v_{k+1} = v(x,\hat{d_k},h)$, $v_{k+1}' = \hat{v_k}$ and go to step 2. 
+		\end{enumerate}
+
+
+
+		
 \end{document}

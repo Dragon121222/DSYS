@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.cpp
-DGRAPHICS.h
-/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
+/home/drake/Documents/DSYS/DSRC/DOBJ/DOBJ.h
+string
+-
+gtk/gtk.h
+-
 
-/home/drake/DSYS/DSRC/DGRAPHICS/DGRAPHICS.h
-../DOBJ/DOBJ.h
-/home/drake/DSYS/DSRC/DOBJ/DOBJ.h
+/home/drake/Documents/DSYS/DSRC/DXM/DXM.cpp
+DXM.h
+/home/drake/Documents/DSYS/DSRC/DXM/DXM.h
 vector
 -
 iostream
@@ -37,11 +39,45 @@ math.h
 -
 gmodule.h
 -
+algorithm
+-
+glog/logging.h
+-
 
-/home/drake/DSYS/DSRC/DOBJ/DOBJ.h
+/home/drake/Documents/DSYS/DSRC/DXM/DXM.h
+../DOBJ/DOBJ.h
+/home/drake/Documents/DSYS/DSRC/DOBJ/DOBJ.h
+vector
+-
+iostream
+-
+stdio.h
+-
+arrayfire.h
+-
+stdlib.h
+-
+cstdlib
+-
 string
 -
-gtk/gtk.h
+cstring
+-
+fstream
+-
+dirent.h
+-
+math.h
+-
+gmodule.h
+-
+X11/Xlib.h
+-
+memory
+-
+mutex
+-
+string
 -
 
 /usr/include/atk-1.0/atk/atk-enum-types.h
@@ -4414,6 +4450,10 @@ hb-buffer.h
 hb-font.h
 /usr/include/harfbuzz/hb-font.h
 
+/usr/include/harfbuzz/hb-style.h
+hb.h
+/usr/include/harfbuzz/hb.h
+
 /usr/include/harfbuzz/hb-unicode.h
 hb-common.h
 /usr/include/harfbuzz/hb-common.h
@@ -4445,6 +4485,8 @@ hb-shape.h
 /usr/include/harfbuzz/hb-shape.h
 hb-shape-plan.h
 /usr/include/harfbuzz/hb-shape-plan.h
+hb-style.h
+/usr/include/harfbuzz/hb-style.h
 hb-unicode.h
 /usr/include/harfbuzz/hb-unicode.h
 hb-version.h

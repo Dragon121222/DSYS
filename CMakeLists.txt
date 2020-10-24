@@ -34,6 +34,14 @@ find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS} ${LIBUSB_INCLUDE_DIR})
 
+#Add X11 Libraries
+find_package(X11 REQUIRED)
+include_directories(${X11_INCLUDE_DIR})
+link_directories(${X11_LIBRARIES})
+
+
+find_package( OpenCV REQUIRED )
+
 #Add mysql Libraries
 
 
@@ -50,6 +58,12 @@ add_executable(exe DSRC/DOBJ/DOBJ.h DSRC/DOBJ/DOBJ.cpp
 #				   DSRC/DSQL/DSQL.h DSRC/DSQL/DSQL.cpp 
 				   DSRC/DLLC/DLLC.h DSRC/DLLC/DLLC.cpp
 				   DSRC/DGRAPHICS/DGRAPHICS.h DSRC/DGRAPHICS/DGRAPHICS.cpp
+				   DSRC/DOPENCV/DOPENCV.cpp
+				   DSRC/DFILE/DFILE.h DSRC/DFILE/DFILE.cpp
+				   DSRC/DTALK/DTALK.h DSRC/DTALK/DTALK.cpp
+				   DSRC/D3DMODELER/DMODELMANAGER.h DSRC/D3DMODELER/DMODELMANAGER.cpp DSRC/D3DMODELER/DMODELMANAGER_APP.cpp
+				   DSRC/DMODEL/DMODEL.h DSRC/DMODEL/DMODEL.cpp
+				   DSRC/DXM/DXM.h DSRC/DXM/DXM.cpp
 				   DAPP/main.cpp )
 
 target_link_libraries(exe  
@@ -63,10 +77,12 @@ target_link_libraries(exe
 					  ${MATH_LIB} ${LIBUSB_LIBRARY} 
 #					  ${libfreenect_LIBRARIES} 
 					    mysqlclient
-					    mysqlcppconn
+#					    mysqlcppconn
 					    crypto
 					    ssl
 					    resolv
+					  ${OpenCV_LIBS}
+					  ${X11_LIBRARIES}
 					  )
 
 

@@ -118,3 +118,127 @@ make: *** [Makefile:141: cmTC_c77d6/fast] Error 2
 
 
 
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4e8f7/fast && make: Warning: File 'Makefile' has modification time 64 s in the future
+/usr/bin/make  -f CMakeFiles/cmTC_4e8f7.dir/build.make CMakeFiles/cmTC_4e8f7.dir/build
+make[1]: Entering directory '/home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_4e8f7.dir/flags.make' has modification time 64 s in the future
+Building C object CMakeFiles/cmTC_4e8f7.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4e8f7.dir/src.c.o   -c /home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_4e8f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e8f7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_4e8f7.dir/src.c.o  -o cmTC_4e8f7 
+/usr/bin/ld: CMakeFiles/cmTC_4e8f7.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4e8f7.dir/build.make:107: cmTC_4e8f7] Error 1
+make[1]: Leaving directory '/home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_4e8f7/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a3da3/fast && make: Warning: File 'Makefile' has modification time 64 s in the future
+/usr/bin/make  -f CMakeFiles/cmTC_a3da3.dir/build.make CMakeFiles/cmTC_a3da3.dir/build
+make[1]: Entering directory '/home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_a3da3.dir/flags.make' has modification time 64 s in the future
+Building C object CMakeFiles/cmTC_a3da3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a3da3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.17/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a3da3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3da3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a3da3.dir/CheckFunctionExists.c.o  -o cmTC_a3da3  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a3da3.dir/build.make:107: cmTC_a3da3] Error 1
+make[1]: Leaving directory '/home/drake/HOME/Documents/DSYS/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_a3da3/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/drake/Documents/DSYS/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_faf2c/fast && /usr/bin/make  -f CMakeFiles/cmTC_faf2c.dir/build.make CMakeFiles/cmTC_faf2c.dir/build
+make[1]: Entering directory '/home/drake/Documents/DSYS/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_faf2c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_faf2c.dir/src.c.o -c /home/drake/Documents/DSYS/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_faf2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_faf2c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_faf2c.dir/src.c.o -o cmTC_faf2c 
+/usr/bin/ld: CMakeFiles/cmTC_faf2c.dir/src.c.o: in function `main':
+src.c:(.text+0x3e): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4a): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x56): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x67): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_faf2c.dir/build.make:106: cmTC_faf2c] Error 1
+make[1]: Leaving directory '/home/drake/Documents/DSYS/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_faf2c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/drake/Documents/DSYS/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e4adf/fast && /usr/bin/make  -f CMakeFiles/cmTC_e4adf.dir/build.make CMakeFiles/cmTC_e4adf.dir/build
+make[1]: Entering directory '/home/drake/Documents/DSYS/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e4adf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_e4adf.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e4adf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4adf.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_e4adf.dir/CheckFunctionExists.c.o -o cmTC_e4adf  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e4adf.dir/build.make:106: cmTC_e4adf] Error 1
+make[1]: Leaving directory '/home/drake/Documents/DSYS/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_e4adf/fast] Error 2
+
+
+

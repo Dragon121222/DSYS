@@ -1,0 +1,108 @@
+\documentclass[12pt]{extarticle}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{hyperref}
+
+\usepackage[margin=0.5in]{geometry}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{collectbox}
+\DeclarePairedDelimiter\ceil{\lceils}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\usepackage{amsthm}
+%opening
+\title{Radio}
+\author{Daniel Drake}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section] 
+
+\theoremstyle{plain}
+\newtheorem{axiom}{Axiom}[section] 
+
+\theoremstyle{plain}
+\newtheorem{lma}{Lemma}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{def.}{Definition}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{prf}{Proof}[section] 
+
+\theoremstyle{Definition}
+\newtheorem{quest}{Question}[section] 
+
+\theoremstyle{plain}
+\newtheorem{exmp}{Example}[section]
+
+\theoremstyle{plain}
+\newtheorem{ruleOfInference}{Rule Of Inference}[section]
+
+\newcommand{\cut}[0]{\noindent\framebox[\linewidth]{\rule{\linewidth}{2pt}}\\}
+\newcommand{\prof}[0]{	\noindent \textbf{Proof:} \rule{500pt}{2pt} \\ }
+
+\newcommand{\ddash}{\boxed{\vdash}}
+
+\begin{document}
+	\maketitle
+	\begin{def.} \textbf{Call Signs} \\ \\
+		Call signs are a \textbf{legal identification }of a \textbf{station or operator}. Call signs meant for amateur radio follow the ITU's Article 19, specifically 19.68 and 19.69. An amateur operator's call sign is made of a prefix, a numeral, and a suffix. Formats are written: nxm where n is the number of characters before the separating numeral, and m is the number of characters after the separating numeral. So for example, r2d2 and c3p0 would both be 1x2. Call signs begin with a one- two- or three-character prefix chosen from a range assigned by the ITU to the amateur's country of operation or other internationally recognized jurisdiction.
+	\end{def.}
+
+	\begin{quest}
+		What mode is responsible for allowing over-the-horizon VHF and UHF communications to ranges of approximately 300 miles on a regular basis? (T3C06)
+	\end{quest}
+
+	\begin{def.} \textbf{Very high frequency} \\ 
+		Very high frequency or VHF is the ITU designation for the set of radio frequencies 30Mhz - 300Mhz
+		$$VHF_\Lambda = \{\lambda : 30 Mhz \leq \lambda \leq 300Mhz\}$$
+		The wavelengths associated with the VHF set is: 
+		$$VHF_L = \{l : 1m \leq l \leq 10m\}$$
+		where $m$ is meters. 
+	\end{def.}
+
+	\begin{def.} \textbf{Tropospheric ducting} \\ 
+		Tropospheric ducting is a type of radio propagation that tends to happen during periods of stable, anticyclonic weather. In this propagation method, when the signal encounters a rise in temperature in the atmosphere instead of the normal decrease (known as a temperature inversion), the higher refractive index of the atmosphere there will cause the signal to be bent. Tropospheric ducting affects all frequencies, and signals enhanced this way tend to travel up to 800 miles (1,300 km) (though some people have received "tropo" beyond 1,000 miles / 1,600 km), while with tropospheric-bending, stable signals with good signal strength from 500+ miles (800+ km) away are not uncommon when the refractive index of the atmosphere is fairly high. 
+	\end{def.}
+
+	\begin{quest}
+		Which of the following is an accepted practice for an amateur operator who has checked into a net? (T2C07) \\ \\
+		D. 	Remain on frequency without transmitting until asked to do so by the net control station
+	\end{quest}
+
+	\begin{quest}
+		What may result when correspondence from the FCC is returned as undeliverable because the grantee failed to provide and maintain a correct mailing address with the FCC? (T1C07) \\ \\
+		Revocation of the station license or suspension of the operator license
+	\end{quest}
+
+	\begin{quest}
+		What is the approximate maximum bandwidth required to transmit a CW signal? \\ \\
+		The approximate maximum bandwidth required to transmit a CW signal is 150 Hz. (T8A11)
+	\end{quest}
+
+	\begin{quest}
+		What is the primary purpose of a dummy load? (T7C01)\\ \\
+		To prevent transmitting signals over the air when making tests
+	\end{quest}
+
+	\begin{quest}
+		What instrument is used to measure resistance? \\ \\ 
+		An ohmmeter. 
+	\end{quest}
+
+	\begin{quest}
+		What is impedance? (T5C12) \\ \\ 
+		A measure of the opposition to AC current flow in a circuit
+	\end{quest}
+
+	\begin{quest}
+		When is an amateur station permitted to transmit without a control operator? (T1E01) \\ \\
+		Never
+	\end{quest}
+
+\end{document}

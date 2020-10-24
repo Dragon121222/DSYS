@@ -33,10 +33,26 @@ class DML : public DOBJ {
 		DML(); 
 		~DML(); 
 
-		void appendOp(DOP op, std::string name, int inputDim, int outputDim); 
+		//Active Functions
 		void fire(af::array& input, af::array& output); 
+		void Optimization_Domain_Random_Searching(std::vector<af::array> & inputVectors, std::vector<af::array> & labelVectors); 
+		void Optimization_Simple_Quasisecant_Method(std::vector<af::array> & inputVectors, std::vector<af::array> & labelVectors);
+		void Find_Quasisecant(std::vector<af::array> & dir, std::vector<af::array> & qsec, float h = 0.1f, float d = 0.1f ); 
+
+		//Std vector array Functions
+		float ObjectiveOperator(std::vector<af::array> & inputVectors,std::vector<af::array> & labelVectors); 
+		void Generate_Kernel_Translation_Vector(std::vector<af::array> & translation); 
+
+		//Architecture Operations
+		void appendOp(DOP op, std::string name, int inputDim, int outputDim); 
+		void formNeuralNet(int inputDim, int outputDim); 	
+
+		//Test Functions
+		void v_conv(af::array & input, af::array & output); 
+		void generateData(int size,int inputDim,int outputDim, std::vector<af::array> & inputVectors,std::vector<af::array> & labelsVectors); 
+
+		//Debug Functions
 		void debugMachine(); 
-		void debugMachine(int index); 		
 
 	private: 
 
@@ -49,6 +65,16 @@ class DML : public DOBJ {
 
 };
 
-void add(af::array & input, af::array & output, af::array & kernel); 
+void v_add(af::array & input, af::array & output, af::array & kernel); 
+void v_matrix(af::array & input, af::array & output, af::array & kernel); 
+void v_atan(af::array & input, af::array & output, af::array & kernel); 
+
+void Add_Std_Vector_Array(std::vector<af::array> & in_1, std::vector<af::array> & in_2, std::vector<af::array> & out); 
+void Add_Std_Vector_Array(std::vector<af::array> & in, std::vector<af::array> & in_out); 
+void Add_Std_Vector_Array(float constant, std::vector<af::array> & in_out); 
+float Norm_Std_Vector_Array(std::vector<af::array> & in_out); 
+
+void Scale_Std_Vector_Array(float sclr, std::vector<af::array> & in_1, std::vector<af::array> & out);
+void Scale_Std_Vector_Array(float sclr, std::vector<af::array> & in_out); 
 
 #endif
